@@ -1,0 +1,280 @@
+.sectionHeader {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.headerComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 1089px;
+  width: 100%;
+}
+
+.headerImage {
+  max-height: 900px;
+  position: relative;
+  z-index: 20;
+  width: auto;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.headerImage:hover {
+  transform: translateY(-5px);
+}
+
+.backgroundHeader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.floatStatsHeader {
+  position: absolute;
+  z-index: 30;
+  max-width: 300px;
+  width: 100%;
+  transition: all 0.3s ease;
+  will-change: transform;
+}
+
+/* Floating Card Positions */
+.floatStatsHeader._1 {
+  top: 20%;
+  left: 5%;
+  animation-delay: 0.1s;
+}
+.floatStatsHeader._2 {
+  bottom: 15%;
+  left: 4%;
+  animation-delay: 0.2s;
+}
+.floatStatsHeader._3 {
+  top: 25%;
+  right: 5%;
+  animation-delay: 0.3s;
+}
+.floatStatsHeader._4 {
+  bottom: 10%;
+  right: 4%;
+  animation-delay: 0.4s;
+}
+
+.glassCard {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  /* padding: 10px; */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.glassCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floatAnimation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.textEnterAnimation {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.imageEnterAnimation {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Loading Spinner */
+.loadingSpinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Icon Colors */
+.iconScan {
+  color: #1c91ff;
+}
+.iconConvert {
+  color: #4f46e5;
+}
+.iconSend {
+  color: #4f46e5;
+}
+.iconTrade {
+  color: #1c91ff;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .custmFont {
+    font-size: 10px !important;
+  }
+  .sectionHeader {
+    padding: 2rem 6px;
+  }
+
+  .floatStatsHeader {
+    max-width: 200px;
+  }
+
+  .glassCard {
+    min-width: 220px;
+  }
+  .floatStatsHeader._1 {
+    top: -6%;
+    left: 10%;
+  }
+  .floatStatsHeader._2 {
+    bottom: 30%;
+    left: 10%;
+  }
+  .floatStatsHeader._3 {
+    top: 26%;
+    right: 10%;
+  }
+  .floatStatsHeader._4 {
+    bottom: 1%;
+    right: 10%;
+  }
+
+  .cardIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+  }
+
+  .cardDescription {
+    font-size: 12px;
+  }
+}
+
+/* Performance Optimizations */
+@media (prefers-reduced-motion: reduce) {
+  .floatAnimation,
+  .glassCard,
+  .headerImage,
+  .textEnterAnimation,
+  .imageEnterAnimation {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Google-style animated border */
+.googleBorderButton {
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff9900,
+    #ffff00,
+    #00ff00,
+    #00ffff,
+    #0000ff,
+    #9900ff,
+    #ff00ff,
+    #ff0000
+  );
+  background-size: 400% 400%;
+  animation: google-gradient 3s ease infinite;
+  padding: 3px;
+  width: fit-content;
+}
+
+@keyframes google-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.googleBorderButton > button {
+  position: relative;
+  z-index: 1;
+}

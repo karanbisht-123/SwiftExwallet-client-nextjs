@@ -1,0 +1,146 @@
+.topPromo {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.topPromo .promoText {
+  width: 58.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.topPromo.landingPromo .promoImg {
+  width: 30%;
+  margin-left: 9.5%;
+  line-height: 0;
+  overflow: hidden;
+  padding-top: 51%;
+  position: relative;
+}
+
+.topPromo.landingPromo .promoImg .imageWrapper {
+  width: 100%;
+  margin-bottom: -108px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* ✅ FIXED: Added class names for video and img */
+.topPromo.landingPromo .promoImg .imageWrapper .promoVideo,
+.topPromo.landingPromo .promoImg .imageWrapper .promoImage {
+  max-width: 100%;
+  width: 100%;
+}
+
+.topPromo.landingPromo .promoImg .imageWrapper .promoVideo {
+  padding: 2% 2.5%;
+  border-radius: 47px;
+  position: absolute;
+  z-index: 10;
+}
+
+.topPromo.landingPromo .promoImg .imageWrapper .screenPlug,
+.topPromo.landingPromo .promoImg .imageWrapper .promoVideo {
+  padding: 2% 2.5%;
+  border-radius: 47px;
+  position: absolute;
+  z-index: 20;
+}
+
+.promoImg .imageWrapper .promoImage {
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 40;
+}
+
+@media (max-width: 1024px) {
+  .topPromo {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  .topPromo .promoText {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .topPromo.landingPromo .promoImg {
+    width: 80%;
+    margin-left: 0;
+    padding-top: 80%;
+  }
+
+  .topPromo.landingPromo .promoImg .imageWrapper .promoVideo,
+  .topPromo.landingPromo .promoImg .imageWrapper .promoImage {
+    max-width: 100%;
+    width: 70%;
+    margin-left: 130px;
+  }
+
+  .topPromo.landingPromo .promoImg .imageWrapper .screenPlug,
+  .topPromo.landingPromo .promoImg .imageWrapper .promoVideo {
+    padding: 2% 2.5%;
+    border-radius: 60px;
+    position: absolute;
+    z-index: 20;
+  }
+}
+
+@media (max-width: 768px) {
+  .topPromo {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .topPromo .promoText {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .topPromo.landingPromo .promoImg {
+    width: 60%;
+    margin-left: 0;
+    padding-top: 100%;
+  }
+
+  .topPromo.landingPromo .promoImg .imageWrapper {
+    margin-bottom: -80px;
+  }
+
+  .topPromo.landingPromo .promoImg .imageWrapper .promoVideo,
+  .topPromo.landingPromo .promoImg .imageWrapper .promoImage {
+    padding: 0;
+    top: 0px;
+    width: 100%;
+  }
+
+  .topPromo.landingPromo .promoImg .imageWrapper .promoVideo,
+  .topPromo.landingPromo .promoImg .imageWrapper .promoImage {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .topPromo.landingPromo .promoImg .imageWrapper .screenPlug,
+  .topPromo.landingPromo .promoImg .imageWrapper .promoVideo {
+    padding: 2% 2.5%;
+    border-radius: 30px;
+    position: absolute;
+    z-index: 20;
+  }
+
+  .promoVideo {
+    width: 90%;
+  }
+}

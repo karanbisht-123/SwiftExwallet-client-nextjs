@@ -1,26 +1,220 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import 'tailwindcss';
+html {
+  font-family: var(--font-ubuntu), ui-sans-serif, system-ui, sans-serif;
 }
+:root {
+  --bg-body: #ffffff;
+  --bg-hero: #020e46;
+  --bg-section: #f9fafb;
+  --bg-section-end: #f3f4f6;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --text-primary: #334155;
+  --text-hero: #f1f8e8;
+  --text-muted: rgba(241, 248, 232, 0.8);
+
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --card-text: #000000;
+
+  --btn-gradient-from: #2563eb;
+  --btn-gradient-to: #1e40af;
+  --btn-hover-from: #3b82f6;
+  --btn-hover-to: #2563eb;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-body: #0a0a0a;
+    --bg-hero: #020e46;
+    --bg-section: #1e293b;
+    --bg-section-end: #334155;
+
+    --text-primary: #f1f5f9;
+    --text-hero: #f1f8e8;
+    --text-muted: rgba(241, 248, 232, 0.8);
+
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-text: #f1f5f9;
+
+    --btn-gradient-from: #3b82f6;
+    --btn-gradient-to: #2563eb;
+    --btn-hover-from: #60a5fa;
+    --btn-hover-to: #3b82f6;
   }
 }
 
+@theme inline {
+  --color-bg-body: var(--bg-body);
+  --color-bg-hero: var(--bg-hero);
+  --color-bg-section: var(--bg-section);
+  --color-bg-section-end: var(--bg-section-end);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-hero: var(--text-hero);
+  --color-text-muted: var(--text-muted);
+
+  --color-card-bg: var(--card-bg);
+  --color-card-text: var(--card-text);
+
+  --color-btn-from: var(--btn-gradient-from);
+  --color-btn-to: var(--btn-gradient-to);
+  --color-btn-hover-from: var(--btn-hover-from);
+  --color-btn-hover-to: var(--btn-hover-to);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #334155;
+}
+
+.ql-editor {
+  min-height: 400px !important;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.ql-editor p {
+  font-size: 1rem !important;
+  line-height: 1.75 !important;
+  margin-bottom: 1rem !important;
+}
+
+.prose h1 {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  color: #111827 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  border-bottom: 2px solid #e5e7eb !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.styled-content h2 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: black !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.styled-content h2 strong {
+  font-weight: 600 !important;
+}
+
+.styled-content h3 {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color: black !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.ql-editor h4 {
+  font-size: 1.3rem !important;
+  font-weight: bold !important;
+  color: black !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.ql-editor a {
+  color: #2563eb !important;
+  text-decoration: underline !important;
+  transition: color 0.2s ease !important;
+}
+
+.ql-editor a:hover {
+  color: #1d4ed8 !important;
+}
+
+.ql-editor blockquote {
+  border-left: 4px solid #e5e7eb !important;
+  padding-left: 1rem !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  font-style: italic !important;
+  color: #4b5563 !important;
+}
+
+.ql-editor ul {
+  list-style-type: disc !important;
+  padding-left: 1.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.ql-editor ol {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.ql-editor li {
+  margin-bottom: 0.5rem !important;
+}
+
+.ql-editor code {
+  background-color: #f3f4f6 !important;
+  padding: 0.2rem 0.4rem !important;
+  border-radius: 0.25rem !important;
+  font-family: monospace !important;
+  font-size: 0.875rem !important;
+  color: #dc2626 !important;
+}
+
+.ql-editor pre {
+  background-color: #1f2937 !important;
+  color: #f3f4f6 !important;
+  padding: 1rem !important;
+  border-radius: 0.5rem !important;
+  overflow: auto !important;
+  margin-bottom: 1rem !important;
+}
+
+.ql-editor img {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 0.5rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.ql-editor table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  margin-bottom: 1rem !important;
+}
+
+.ql-editor th,
+.ql-editor td {
+  border: 1px solid #e5e7eb !important;
+  padding: 0.75rem !important;
+  text-align: left !important;
+}
+
+.ql-editor th {
+  background-color: #f9fafb !important;
+  font-weight: 600 !important;
+}
+
+.ql-toolbar {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb !important;
+}
+
+.ql-container {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border: 1px solid #e5e7eb !important;
+  border-top: none !important;
+  font-family: inherit;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
