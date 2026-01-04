@@ -10,6 +10,7 @@ interface PageProps {
     search?: string;
   }>;
 }
+
 export const revalidate = 60;
 
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
@@ -22,10 +23,14 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   return {
     title,
     description,
+    alternates: {
+      canonical: 'https://swiftexchange.io/blog',
+    },
     openGraph: {
       title,
       description,
       type: 'website',
+      url: 'https://swiftexchange.io/blog',
     },
     twitter: {
       card: 'summary_large_image',
@@ -75,7 +80,6 @@ async function BlogContent({ searchParams }: PageProps) {
       search: search || undefined,
     });
 
-    // Optimize tag extraction
     const allTags =
       posts.length > 0 ? Array.from(new Set(posts.flatMap(blog => blog.tags || []))) : [];
     const uniqueTags = ['All', ...allTags];

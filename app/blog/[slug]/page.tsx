@@ -8,7 +8,7 @@ interface PageProps {
     slug: string;
   }>;
 }
-
+const S3_BASE_URL = process.env.NEXT_PUBLIC_S3_BASE_URL || '';
 export async function generateStaticParams() {
   try {
     const slugs = await blogService.getAllBlogSlugs();
@@ -24,21 +24,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const { slug } = await params;
     const data = await blogService.getBlogBySlug(slug);
     const blog = data.post;
+    const url = `https://swiftexchange.io/blog/${slug}`;
+    const imageUrl = blog.imageUrl ? `${S3_BASE_URL}/${blog.imageUrl}` : '';
 
     return {
       title: `${blog.title} | SwiftEx Blog`,
       description: blog.excerpt || blog.content.substring(0, 160),
       keywords: [...blog.tags, 'SwiftEx', 'crypto', 'blockchain', 'cryptocurrency'],
+      alternates: { canonical: url },
       authors: [{ name: blog.author.username }],
       openGraph: {
         title: blog.title,
         description: blog.excerpt || blog.content.substring(0, 160),
+        url,
         type: 'article',
         publishedTime: blog.date,
         authors: [blog.author.username],
         images: [
           {
-            url: blog.imageUrl,
+            url: imageUrl,
             width: 1200,
             height: 630,
             alt: blog.title,
@@ -51,7 +55,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         site: '@SwiftExwallet',
         title: blog.title,
         description: blog.excerpt || blog.content.substring(0, 160),
-        images: [blog.imageUrl],
+        images: imageUrl ? [imageUrl] : [],
       },
     };
   } catch (error) {

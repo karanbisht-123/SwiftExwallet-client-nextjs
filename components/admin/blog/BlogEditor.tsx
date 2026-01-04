@@ -35,6 +35,26 @@ interface DraftPost extends BlogPost {
   savedAt: string;
 }
 
+const S3_BASE_URL = process.env.NEXT_PUBLIC_S3_BASE_URL || '';
+
+const getFullImageUrl = (url: string): string => {
+  if (!url) return '';
+  if (url.startsWith('http://') || url.startsWith('https://')) return url;
+  return `${S3_BASE_URL}/${url}`;
+};
+
+const processHtmlContent = (html: string): string => {
+  if (!html) return html;
+  return html.replace(/<img\s+[^>]*src="([^"]*)"[^>]*>/g, (match, src) => {
+    return match.replace(src, getFullImageUrl(src));
+  });
+};
+
+const stripBaseUrlFromContent = (html: string): string => {
+  if (!html) return html;
+  return html.replace(new RegExp(S3_BASE_URL, 'g'), '');
+};
+
 const BlogPreview: React.FC<{ post: BlogPost; onClose: () => void }> = ({ post, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
@@ -49,7 +69,7 @@ const BlogPreview: React.FC<{ post: BlogPost; onClose: () => void }> = ({ post, 
         <article className="p-8">
           {post.imageUrl && (
             <img
-              src={post.imageUrl}
+              src={getFullImageUrl(post.imageUrl)}
               alt={post.title}
               className="w-full h-64 object-cover rounded-xl mb-6"
             />
@@ -72,7 +92,9 @@ const BlogPreview: React.FC<{ post: BlogPost; onClose: () => void }> = ({ post, 
 
           <div
             className="prose prose-lg max-w-none"
-            dangerouslySetInnerHTML={{ __html: post.content || '<p>No content yet...</p>' }}
+            dangerouslySetInnerHTML={{
+              __html: processHtmlContent(post.content) || '<p>No content yet...</p>',
+            }}
           />
         </article>
       </div>
@@ -389,9 +411,12 @@ export const BlogEditor: React.FC<BlogEditorProps> = ({ postId }) => {
         const response = await adminService.getPost(postId);
         const postData = response?.post || response;
 
+        // Process content to add full URLs to images
+        const processedContent = postData?.content ? processHtmlContent(postData.content) : '';
+
         setPost({
           title: postData?.title || '',
-          content: postData?.content || '',
+          content: processedContent,
           tags: Array.isArray(postData?.tags) ? postData.tags : [],
           excerpt: postData?.excerpt || '',
           imageUrl: postData?.imageUrl || '',
@@ -523,7 +548,7 @@ export const BlogEditor: React.FC<BlogEditorProps> = ({ postId }) => {
     try {
       const completePost: BlogPost = {
         title: post?.title?.trim() || '',
-        content: post?.content?.trim() || '',
+        content: stripBaseUrlFromContent(post?.content?.trim() || ''),
         tags: post?.tags || [],
         excerpt: post?.excerpt?.trim() || '',
         imageUrl: post?.imageUrl || '',
@@ -741,7 +766,7 @@ export const BlogEditor: React.FC<BlogEditorProps> = ({ postId }) => {
             </h3>
             <ImageUpload
               onImageSelect={handleFeaturedImageUpload}
-              previewUrl={post?.imageUrl}
+              previewUrl={post?.imageUrl ? getFullImageUrl(post.imageUrl) : undefined}
               onRemove={() => setPost(prevPost => ({ ...prevPost, imageUrl: '' }))}
               isLoading={isUploading}
             />

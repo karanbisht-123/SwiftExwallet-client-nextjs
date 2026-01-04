@@ -29,6 +29,18 @@ interface BlogDetailClientProps {
   };
 }
 
+const S3_BASE_URL = process.env.NEXT_PUBLIC_S3_BASE_URL || '';
+
+const prependS3UrlToContent = (html: string) => {
+  if (!html) return html;
+
+  return html.replace(/(src|href)=["']([^"']+)["']/g, (_match, attr, value) => {
+    if (/^(https?:|data:|mailto:)/.test(value)) {
+      return `${attr}="${value}"`;
+    }
+    return `${attr}="${S3_BASE_URL}/${value}"`;
+  });
+};
 export default function BlogDetailClient({
   blog,
   initialRelatedBlogs,
@@ -41,9 +53,9 @@ export default function BlogDetailClient({
   const processedBlog = useMemo(
     () => ({
       ...blog,
-      content: replaceS3Url(blog.content),
-      imageUrl: blog.imageUrl ? replaceS3Url(blog.imageUrl) : null,
-      excerpt: blog.excerpt ? replaceS3Url(blog.excerpt) : null,
+      content: prependS3UrlToContent(blog.content),
+      imageUrl: blog.imageUrl ? `${S3_BASE_URL}/${blog.imageUrl}` : null,
+      excerpt: blog.excerpt ? `${S3_BASE_URL}/${blog.imageUrl}` : null,
     }),
     [blog]
   );
@@ -75,101 +87,140 @@ export default function BlogDetailClient({
     <>
       <style jsx global>{`
         .styled-content {
+          color: #374151 !important;
+          font-size: 1.125rem !important;
+          line-height: 1.8 !important;
+          max-width: 100% !important;
+          overflow-wrap: break-word !important;
           font-family:
-            -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-            sans-serif;
-          line-height: 1.6;
-          color: #2d3748;
+            'Inter',
+            ui-sans-serif,
+            system-ui,
+            -apple-system,
+            sans-serif !important;
         }
+
         .styled-content h1 {
-          font-size: 2.25rem;
-          font-weight: 800;
-          color: #1a202c;
-          margin-bottom: 1rem;
-          line-height: 1.2;
+          font-size: clamp(2rem, 5vw, 2.75rem) !important;
+          font-weight: 700 !important;
+          color: #111827 !important;
+          margin: 2.5rem 0 1.5rem !important;
+          line-height: 1.2 !important;
+          letter-spacing: -0.025em !important;
         }
+
         .styled-content h2 {
-          font-size: 1.75rem;
-          font-weight: 700;
-          color: #1a202c;
-          margin-top: 1.5rem;
-          margin-bottom: 0.75rem;
-          line-height: 1.3;
-          border-bottom: 2px solid #e2e8f0;
-          padding-bottom: 0.25rem;
+          font-size: clamp(1.5rem, 4vw, 2rem) !important;
+          font-weight: 700 !important;
+          color: #111827 !important;
+          margin: 2rem 0 1rem !important;
+          line-height: 1.3 !important;
         }
+
         .styled-content h3 {
-          font-size: 1.375rem;
-          font-weight: 600;
-          color: #2d3748;
-          margin-top: 1.25rem;
-          margin-bottom: 0.5rem;
-          line-height: 1.4;
+          font-size: 1.5rem !important;
+          font-weight: 600 !important;
+          color: #1f2937 !important;
+          margin: 1.5rem 0 0.75rem !important;
         }
+
         .styled-content p {
-          margin-bottom: 1rem;
-          line-height: 1.6;
-          color: #4a5568;
-          font-size: 1rem;
+          margin-bottom: 1.5rem !important;
+          color: #4b5563 !important;
+          line-height: 1.8 !important;
         }
-        .styled-content ul,
+
+        .styled-content ul {
+          list-style-type: disc !important;
+          margin-bottom: 1.5rem !important;
+          padding-left: 1.5rem !important;
+        }
+
         .styled-content ol {
-          margin-bottom: 1rem;
-          padding-left: 1.5rem;
+          list-style-type: decimal !important;
+          margin-bottom: 1.5rem !important;
+          padding-left: 1.5rem !important;
         }
+
         .styled-content li {
-          margin-bottom: 0.5rem;
-          color: #4a5568;
-          line-height: 1.6;
+          margin-bottom: 0.5rem !important;
+          padding-left: 0.5rem !important;
+          color: #4b5563 !important;
+          display: list-item !important;
         }
-        .styled-content a {
-          color: #3182ce;
-          text-decoration: none;
-          font-weight: 500;
-          border-bottom: 1px solid transparent;
-          transition: all 0.2s ease;
-        }
-        .styled-content a:hover {
-          color: #2c5282;
-          border-bottom-color: #3182ce;
-        }
-        .styled-content pre {
-          background-color: #f7fafc;
-          border: 1px solid #e2e8f0;
-          border-radius: 6px;
-          padding: 1rem;
-          margin: 1rem 0;
-          overflow-x: auto;
-        }
-        .styled-content code {
-          background-color: #f7fafc;
-          color: #e53e3e;
-          padding: 0.15rem 0.3rem;
-          border-radius: 3px;
-          font-size: 0.875rem;
-        }
-        .styled-content blockquote {
-          border-left: 4px solid #3182ce;
-          background-color: #f7fafc;
-          padding: 0.75rem 1rem;
-          margin: 1rem 0;
-          color: #4a5568;
-          font-style: italic;
-        }
+
         .styled-content img {
-          max-width: 100%;
-          height: auto;
-          border-radius: 8px;
-          margin: 1.5rem auto;
-          display: block;
+          max-width: 100% !important;
+          height: auto !important;
+          border-radius: 12px !important;
+          margin: 2.5rem auto !important;
+          display: block !important;
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        .styled-content blockquote {
+          border-left: 4px solid #2563eb !important;
+          background-color: #f8fafc !important;
+          padding: 1.5rem 2rem !important;
+          margin: 2rem 0 !important;
+          color: #1e40af !important;
+          font-style: italic !important;
+          font-size: 1.25rem !important;
+          border-radius: 0 12px 12px 0 !important;
+        }
+
+        .styled-content pre {
+          background-color: #111827 !important;
+          color: #f3f4f6 !important;
+          border-radius: 12px !important;
+          padding: 1.25rem !important;
+          margin: 1.5rem 0 !important;
+          overflow-x: auto !important;
+        }
+
+        .styled-content code {
+          background-color: #f3f4f6 !important;
+          color: #dc2626 !important;
+          padding: 0.2rem 0.4rem !important;
+          border-radius: 6px !important;
+          font-size: 0.9em !important;
+          font-family: ui-monospace, monospace !important;
+        }
+
+        .styled-content a {
+          color: #2563eb !important;
+          // text-decoration: underline !important;
+          // text-underline-offset: 4px !important;
+          font-weight: 600 !important;
+          transition: all 0.2s ease !important;
+        }
+
+        .styled-content a:hover {
+          color: #1d4ed8 !important;
+          text-decoration-color: #1d4ed8 !important;
+        }
+
+        @media (max-width: 768px) {
+          .styled-content {
+            font-size: 1rem !important;
+          }
+
+          .styled-content blockquote {
+            padding: 1rem 1.25rem !important;
+            font-size: 1.1rem !important;
+          }
+
+          .styled-content ul,
+          .styled-content ol {
+            padding-left: 1.25rem !important;
+          }
         }
       `}</style>
-
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="max-w-7xl mx-auto p-2 md:p-6 bg-white rounded-lg border border-gray-200 mt-3 lg:mt-10"
+        className="max-w-7xl mx-auto p-2 md:p-6 bg-white lg:rounded-lg lg:border border-gray-200 mt-3 lg:mt-10"
       >
         <header className="flex justify-between items-center mb-8">
           <Link
@@ -188,7 +239,7 @@ export default function BlogDetailClient({
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight"
+                className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight"
               >
                 {processedBlog.title}
               </motion.h1>
@@ -346,7 +397,7 @@ function RelatedPosts({ relatedBlogs, pagination, onPageChange, isLoading }: any
       </div>
 
       {pagination.totalPages > 1 && (
-        <div className="flex justify-center items-center space-x-2 mt-6">
+        <div className="flex justify-center items-center space-x-2 mt-12">
           <button
             onClick={() => onPageChange(pagination.currentPage - 1)}
             disabled={pagination.currentPage === 1}
@@ -358,19 +409,59 @@ function RelatedPosts({ relatedBlogs, pagination, onPageChange, isLoading }: any
           >
             <ChevronLeft size={18} />
           </button>
-          {[...Array(pagination.totalPages)].map((_, index) => (
-            <button
-              key={index}
-              onClick={() => onPageChange(index + 1)}
-              className={`w-10 h-10 rounded-lg border transition-colors duration-200 ${
-                pagination.currentPage === index + 1
-                  ? 'bg-blue-600 text-white border-blue-600'
-                  : 'text-blue-600 hover:bg-blue-50 border-blue-200'
-              }`}
-            >
-              {index + 1}
-            </button>
-          ))}
+
+          {(() => {
+            const current = pagination.currentPage;
+            const total = pagination.totalPages;
+            const pages = [];
+
+            if (total <= 5) {
+              for (let i = 1; i <= total; i++) pages.push(i);
+            } else {
+              pages.push(1);
+
+              if (current > 3) {
+                pages.push('...');
+              }
+              const start = Math.max(2, current - 1);
+              const end = Math.min(total - 1, current + 1);
+
+              for (let i = start; i <= end; i++) {
+                if (!pages.includes(i)) pages.push(i);
+              }
+
+              if (current < total - 2) {
+                pages.push('...');
+              }
+              if (!pages.includes(total)) pages.push(total);
+            }
+
+            return pages.map((page, index) => {
+              if (page === '...') {
+                return (
+                  <span key={`dots-${index}`} className="px-2 text-gray-400">
+                    ...
+                  </span>
+                );
+              }
+
+              return (
+                <button
+                  key={index}
+                  onClick={() => onPageChange(page as number)}
+                  className={`w-10 h-10 rounded-lg border font-medium transition-colors duration-200 ${
+                    pagination.currentPage === page
+                      ? 'bg-blue-600 text-white border-blue-600 shadow-md'
+                      : 'text-gray-600 hover:bg-blue-50 border-gray-200'
+                  }`}
+                >
+                  {page}
+                </button>
+              );
+            });
+          })()}
+
+          {/* Next Button */}
           <button
             onClick={() => onPageChange(pagination.currentPage + 1)}
             disabled={pagination.currentPage === pagination.totalPages}

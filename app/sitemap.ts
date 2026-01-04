@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next';
+import { blogService } from '@/lib/blogService';
 
 const BASE_URL = 'https://swiftexchange.io';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
@@ -22,12 +23,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-
     {
       url: `${BASE_URL}/blog`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${BASE_URL}/about-us`,
@@ -43,5 +43,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return [...staticRoutes];
+  let blogRoutes: MetadataRoute.Sitemap = [];
+  try {
+    const slugs = await blogService.getAllBlogSlugs();
+
+    blogRoutes = slugs.map(slug => ({
+      url: `${BASE_URL}/blog/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    }));
+  } catch (error) {
+    console.error('Error fetching slugs for sitemap:', error);
+  }
+  return [...staticRoutes, ...blogRoutes];
 }

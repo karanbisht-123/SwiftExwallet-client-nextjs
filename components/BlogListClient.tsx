@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation';
 import { Search, X, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import { Blog } from '@/types/blog';
-import { replaceS3Url } from '@/utils/imageUtils';
 
 interface BlogListClientProps {
   initialBlogs: Blog[];
@@ -21,6 +20,7 @@ interface BlogListClientProps {
 }
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://swiftexchange.io/api/v2';
+const S3_BASE_URL = process.env.NEXT_PUBLIC_S3_BASE_URL || '';
 const DEFAULT_IMAGE = '/images/logo.avif';
 
 const BlogCardSkeleton = memo(() => (
@@ -144,10 +144,8 @@ export default function BlogListClient({
     window.history.replaceState({}, '', newUrl);
   }, []);
 
-  // Fetch blogs from API
   const fetchBlogs = useCallback(
     async (page: number, category: string, search: string, append: boolean = false) => {
-      // Prevent concurrent requests
       if (abortControllerRef.current) {
         abortControllerRef.current.abort();
       }
@@ -162,18 +160,16 @@ export default function BlogListClient({
           limit: '6',
         });
 
-        // Only add tags if not 'All'
         if (category && category !== 'All') {
           params.set('tags', category);
         }
 
-        // Only add search if it exists
         if (search?.trim()) {
           params.set('search', search.trim());
         }
 
         const url = `${API_BASE_URL}/blogs?${params.toString()}`;
-        console.log('Fetching:', url); // Debug log
+        console.log('Fetching:', url);
 
         const res = await fetch(url, {
           cache: 'no-store',
@@ -224,14 +220,12 @@ export default function BlogListClient({
     []
   );
 
-  // Handle category filter change
   const handleCategoryChange = useCallback(
     (category: string) => {
       if (category === selectedCategory && !searchTerm) return;
 
-      console.log('Category changed to:', category); // Debug log
+      console.log('Category changed to:', category);
 
-      // Update all state immediately
       setSelectedCategory(category);
       setSearchTerm('');
       setDebouncedSearchTerm('');
@@ -248,12 +242,10 @@ export default function BlogListClient({
     [selectedCategory, searchTerm, updateURL, fetchBlogs]
   );
 
-  // Handle search input change
   const handleSearch = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   }, []);
 
-  // Clear search
   const clearSearch = useCallback(() => {
     setIsSearchExpanded(false);
     setSearchTerm('');
@@ -265,22 +257,18 @@ export default function BlogListClient({
     fetchBlogs(1, selectedCategory, '', false);
   }, [selectedCategory, updateURL, fetchBlogs]);
 
-  // Handle debounced search term changes
   useEffect(() => {
-    // Skip on initial mount
     if (isInitialMount.current) {
       isInitialMount.current = false;
       return;
     }
 
-    // Reset and fetch with new search term
     setCurrentPage(1);
     setBlogs([]);
     updateURL(selectedCategory, debouncedSearchTerm);
     fetchBlogs(1, selectedCategory, debouncedSearchTerm, false);
   }, [debouncedSearchTerm]);
 
-  // Infinite scroll observer
   useEffect(() => {
     if (!observerTarget.current || initialLoading || !blogs.length) return;
 
@@ -312,12 +300,11 @@ export default function BlogListClient({
     blogs.length,
   ]);
 
-  // Process blogs with image URLs and extract only first tag
   const processedBlogs = useMemo(
     () =>
       blogs.map(blog => ({
         ...blog,
-        imageUrl: blog.imageUrl ? replaceS3Url(blog.imageUrl) : null,
+        imageUrl: blog.imageUrl ? `${S3_BASE_URL}/${blog.imageUrl}` : null,
         tags: blog.tags && blog.tags.length > 0 ? [blog.tags[0]] : [],
       })),
     [blogs]

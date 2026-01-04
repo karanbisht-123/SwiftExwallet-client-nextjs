@@ -35,7 +35,7 @@ export default function DeferredAnalytics() {
       setIsLoaded(true);
     };
 
-    timeoutId = setTimeout(loadGA, 5000);
+    timeoutId = setTimeout(loadGA, 2000);
 
     const events = ['mousedown', 'touchstart', 'keydown', 'scroll'];
     const handleInteraction = () => {
