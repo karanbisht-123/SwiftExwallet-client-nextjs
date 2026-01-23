@@ -74,6 +74,7 @@ const navigationItemsLabels: string[] = [
   'White Paper',
   'Contact Us',
   'Blog',
+  'Market',
 ];
 
 const navigationItems: NavItem[] = navigationItemsLabels.map(label => ({

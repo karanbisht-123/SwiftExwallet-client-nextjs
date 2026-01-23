@@ -8,13 +8,12 @@ const nextConfig: NextConfig = {
     removeConsole:
       process.env.NODE_ENV === 'production'
         ? {
-            exclude: ['error', 'warn'],
-          }
+          exclude: ['error', 'warn'],
+        }
         : false,
   },
 
   experimental: {
-    // optimizePackageImports: ['lucide-react', 'framer-motion'],
     optimizeCss: true,
   },
 
@@ -30,11 +29,17 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'swift-ex-web-app.s3.us-east-2.amazonaws.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'coin-images.coingecko.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.coinranking.com',
+      },
     ],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
   async headers() {
@@ -57,8 +62,30 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
     ];
   },
+
 };
 
 export default nextConfig;

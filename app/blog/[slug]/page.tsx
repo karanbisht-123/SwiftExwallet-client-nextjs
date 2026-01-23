@@ -11,8 +11,8 @@ interface PageProps {
 const S3_BASE_URL = process.env.NEXT_PUBLIC_S3_BASE_URL || '';
 export async function generateStaticParams() {
   try {
-    const slugs = await blogService.getAllBlogSlugs();
-    return slugs.map(slug => ({ slug }));
+    const posts = await blogService.getAllPostsMetadata();
+    return posts.map(post => ({ slug: post.slug }));
   } catch (error) {
     console.error('Error generating static params:', error);
     return [];
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const imageUrl = blog.imageUrl ? `${S3_BASE_URL}/${blog.imageUrl}` : '';
 
     return {
-      title: `${blog.title} | SwiftEx Blog`,
+      title: `${blog.title}`,
       description: blog.excerpt || blog.content.substring(0, 160),
       keywords: [...blog.tags, 'SwiftEx', 'crypto', 'blockchain', 'cryptocurrency'],
       alternates: { canonical: url },

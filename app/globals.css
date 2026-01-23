@@ -1,7 +1,9 @@
 @import 'tailwindcss';
+
 html {
   font-family: var(--font-ubuntu), ui-sans-serif, system-ui, sans-serif;
 }
+
 :root {
   --bg-body: #ffffff;
   --bg-hero: #020e46;
@@ -64,4 +66,36 @@ html {
 body {
   background: #ffffff;
   color: #334155;
+}
+
+/* Recharts tooltip fix - remove ugly border/outline on click */
+.recharts-tooltip-wrapper {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.recharts-tooltip-wrapper:focus,
+.recharts-tooltip-wrapper:focus-visible {
+  outline: none !important;
+}
+
+.recharts-surface:focus {
+  outline: none !important;
+}
+
+@layer utilities {
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+  }
 }

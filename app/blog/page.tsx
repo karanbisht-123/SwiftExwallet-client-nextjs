@@ -17,8 +17,8 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   const params = await searchParams;
   const category = params.tags || 'All';
 
-  const title = `SwiftEx Blog | ${category !== 'All' ? category + ' ' : ''}Crypto News & Insights`;
-  const description = `Stay updated with the latest crypto news, market insights, and blockchain innovations on the SwiftEx blog.`;
+  const title = `${category !== 'All' ? category + ' ' : ''}Crypto News & Insights`;
+  const description = `Stay updated with the latest crypto news, market insights, and blockchain innovations on the SwiftEx.`;
 
   return {
     title,

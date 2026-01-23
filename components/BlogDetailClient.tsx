@@ -101,50 +101,45 @@ export default function BlogDetailClient({
         }
 
         .styled-content h1 {
-          font-size: clamp(2rem, 5vw, 2.75rem) !important;
-          font-weight: 700 !important;
+          font-size: clamp(1.75rem, 4vw, 2.25rem) !important;
+          font-weight: 600 !important;
           color: #111827 !important;
-          margin: 2.5rem 0 1.5rem !important;
-          line-height: 1.2 !important;
-          letter-spacing: -0.025em !important;
+          margin: 1.75rem 0 1rem !important;
+          line-height: 1.25 !important;
+          letter-spacing: -0.02em !important;
         }
 
         .styled-content h2 {
-          font-size: clamp(1.5rem, 4vw, 2rem) !important;
-          font-weight: 700 !important;
+          font-size: clamp(1.35rem, 3.5vw, 1.75rem) !important;
+          font-weight: 600 !important;
           color: #111827 !important;
-          margin: 2rem 0 1rem !important;
-          line-height: 1.3 !important;
+          margin: 1.5rem 0 0.75rem !important;
+          line-height: 1.35 !important;
         }
 
         .styled-content h3 {
-          font-size: 1.5rem !important;
+          font-size: 1.25rem !important;
           font-weight: 600 !important;
           color: #1f2937 !important;
-          margin: 1.5rem 0 0.75rem !important;
+          margin: 1.25rem 0 0.5rem !important;
         }
 
         .styled-content p {
-          margin-bottom: 1.5rem !important;
           color: #4b5563 !important;
-          line-height: 1.8 !important;
+      
         }
 
         .styled-content ul {
           list-style-type: disc !important;
-          margin-bottom: 1.5rem !important;
           padding-left: 1.5rem !important;
         }
 
         .styled-content ol {
           list-style-type: decimal !important;
-          margin-bottom: 1.5rem !important;
           padding-left: 1.5rem !important;
         }
 
         .styled-content li {
-          margin-bottom: 0.5rem !important;
-          padding-left: 0.5rem !important;
           color: #4b5563 !important;
           display: list-item !important;
         }
@@ -189,15 +184,29 @@ export default function BlogDetailClient({
 
         .styled-content a {
           color: #2563eb !important;
-          // text-decoration: underline !important;
-          // text-underline-offset: 4px !important;
-          font-weight: 600 !important;
+          font-weight: 500 !important;
           transition: all 0.2s ease !important;
+          display: inline !important;
         }
 
         .styled-content a:hover {
           color: #1d4ed8 !important;
           text-decoration-color: #1d4ed8 !important;
+        }
+
+        /* Normalize link styling - remove unwanted bold/underline from nested elements */
+        .styled-content a strong,
+        .styled-content a b,
+        .styled-content a u {
+          font-weight: inherit !important;
+          text-decoration: none !important;
+        }
+
+        .styled-content p u,
+        .styled-content p strong a,
+        .styled-content p u a {
+          font-weight: 500 !important;
+          text-decoration: none !important;
         }
 
         @media (max-width: 768px) {
@@ -276,7 +285,7 @@ export default function BlogDetailClient({
             </article>
           </div>
 
-          <div className="lg:w-1/3 sticky top-24 self-start space-y-6">
+          <aside className="lg:w-1/3 sticky top-24 self-start space-y-6">
             <SharePost
               url={typeof window !== 'undefined' ? window.location.href : ''}
               title={processedBlog.title}
@@ -287,7 +296,7 @@ export default function BlogDetailClient({
               onPageChange={fetchRelatedBlogs}
               isLoading={isLoadingRelated}
             />
-          </div>
+          </aside>
         </div>
       </motion.div>
     </>
@@ -310,9 +319,10 @@ function RelatedPosts({ relatedBlogs, pagination, onPageChange, isLoading }: any
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.6 }}
-      className="bg-gray-50 p-6 rounded-lg border border-gray-200"
+      className="bg-gray-50 p-5 rounded-lg border border-gray-200"
+      data-nosnippet
     >
-      <h2 className="text-xl font-bold mb-6 text-gray-900">Related Posts</h2>
+      <h2 className="text-lg font-semibold mb-4 text-gray-900">Related Posts</h2>
       <div className="space-y-4">
         {isLoading ? (
           <div className="text-center py-4">Loading...</div>
@@ -322,57 +332,57 @@ function RelatedPosts({ relatedBlogs, pagination, onPageChange, isLoading }: any
               _id: Key | null | undefined;
               slug: any;
               title:
+              | string
+              | number
+              | bigint
+              | boolean
+              | ReactElement<unknown, string | JSXElementConstructor<any>>
+              | Iterable<ReactNode>
+              | ReactPortal
+              | Promise<
                 | string
                 | number
                 | bigint
                 | boolean
+                | ReactPortal
                 | ReactElement<unknown, string | JSXElementConstructor<any>>
                 | Iterable<ReactNode>
-                | ReactPortal
-                | Promise<
-                    | string
-                    | number
-                    | bigint
-                    | boolean
-                    | ReactPortal
-                    | ReactElement<unknown, string | JSXElementConstructor<any>>
-                    | Iterable<ReactNode>
-                    | null
-                    | undefined
-                  >
                 | null
-                | undefined;
+                | undefined
+              >
+              | null
+              | undefined;
               excerpt:
+              | string
+              | number
+              | bigint
+              | boolean
+              | ReactElement<unknown, string | JSXElementConstructor<any>>
+              | Iterable<ReactNode>
+              | ReactPortal
+              | Promise<
                 | string
                 | number
                 | bigint
                 | boolean
+                | ReactPortal
                 | ReactElement<unknown, string | JSXElementConstructor<any>>
                 | Iterable<ReactNode>
-                | ReactPortal
-                | Promise<
-                    | string
-                    | number
-                    | bigint
-                    | boolean
-                    | ReactPortal
-                    | ReactElement<unknown, string | JSXElementConstructor<any>>
-                    | Iterable<ReactNode>
-                    | null
-                    | undefined
-                  >
                 | null
-                | undefined;
+                | undefined
+              >
+              | null
+              | undefined;
             }) => (
               <Link key={blog._id} href={`/blog/${blog.slug}`} className="block">
                 <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 transition-all duration-200"
+                  whileHover={{ scale: 1.01 }}
+                  className="bg-white border border-gray-200 rounded-lg p-3 hover:border-blue-300 transition-all duration-200"
                 >
-                  <h3 className="text-lg font-semibold mb-2 text-gray-900 line-clamp-2">
+                  <h3 className="text-base font-medium mb-1.5 text-gray-900 line-clamp-2 leading-snug">
                     {blog.title}
                   </h3>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">{blog.excerpt}</p>
+                  <p className="text-sm text-gray-600 mb-2 line-clamp-2 leading-relaxed">{blog.excerpt}</p>
                   <span className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium text-sm">
                     Read article
                     <svg
@@ -397,15 +407,14 @@ function RelatedPosts({ relatedBlogs, pagination, onPageChange, isLoading }: any
       </div>
 
       {pagination.totalPages > 1 && (
-        <div className="flex justify-center items-center space-x-2 mt-12">
+        <div className="flex justify-center items-center space-x-2 mt-6">
           <button
             onClick={() => onPageChange(pagination.currentPage - 1)}
             disabled={pagination.currentPage === 1}
-            className={`p-2 rounded-lg border transition-colors duration-200 ${
-              pagination.currentPage === 1
-                ? 'text-gray-400 cursor-not-allowed border-gray-200'
-                : 'text-blue-600 hover:bg-blue-50 border-blue-200'
-            }`}
+            className={`p-2 rounded-lg border transition-colors duration-200 ${pagination.currentPage === 1
+              ? 'text-gray-400 cursor-not-allowed border-gray-200'
+              : 'text-blue-600 hover:bg-blue-50 border-blue-200'
+              }`}
           >
             <ChevronLeft size={18} />
           </button>
@@ -449,11 +458,10 @@ function RelatedPosts({ relatedBlogs, pagination, onPageChange, isLoading }: any
                 <button
                   key={index}
                   onClick={() => onPageChange(page as number)}
-                  className={`w-10 h-10 rounded-lg border font-medium transition-colors duration-200 ${
-                    pagination.currentPage === page
-                      ? 'bg-blue-600 text-white border-blue-600 shadow-md'
-                      : 'text-gray-600 hover:bg-blue-50 border-gray-200'
-                  }`}
+                  className={`w-10 h-10 rounded-lg border font-medium transition-colors duration-200 ${pagination.currentPage === page
+                    ? 'bg-blue-600 text-white border-blue-600 shadow-md'
+                    : 'text-gray-600 hover:bg-blue-50 border-gray-200'
+                    }`}
                 >
                   {page}
                 </button>
@@ -461,15 +469,14 @@ function RelatedPosts({ relatedBlogs, pagination, onPageChange, isLoading }: any
             });
           })()}
 
-          {/* Next Button */}
+
           <button
             onClick={() => onPageChange(pagination.currentPage + 1)}
             disabled={pagination.currentPage === pagination.totalPages}
-            className={`p-2 rounded-lg border transition-colors duration-200 ${
-              pagination.currentPage === pagination.totalPages
-                ? 'text-gray-400 cursor-not-allowed border-gray-200'
-                : 'text-blue-600 hover:bg-blue-50 border-blue-200'
-            }`}
+            className={`p-2 rounded-lg border transition-colors duration-200 ${pagination.currentPage === pagination.totalPages
+              ? 'text-gray-400 cursor-not-allowed border-gray-200'
+              : 'text-blue-600 hover:bg-blue-50 border-blue-200'
+              }`}
           >
             <ChevronRight size={18} />
           </button>

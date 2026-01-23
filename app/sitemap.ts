@@ -4,6 +4,26 @@ import { blogService } from '@/lib/blogService';
 const BASE_URL = 'https://swiftexchange.io';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  let blogRoutes: MetadataRoute.Sitemap = [];
+  let lastBlogUpdate = new Date();
+
+  try {
+    const posts = await blogService.getAllPostsMetadata();
+    if (posts.length > 0) {
+      const dates = posts.map(p => new Date(p.date).getTime());
+      lastBlogUpdate = new Date(Math.max(...dates));
+    }
+
+    blogRoutes = posts.map(post => ({
+      url: `${BASE_URL}/blog/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    }));
+  } catch (error) {
+    console.error('Error fetching slugs for sitemap:', error);
+  }
+
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
@@ -25,8 +45,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${BASE_URL}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
+      lastModified: lastBlogUpdate, // Use the most recent blog post date
+      changeFrequency: 'daily', // Listing page changes daily if you post daily
       priority: 0.8,
     },
     {
@@ -43,18 +63,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  let blogRoutes: MetadataRoute.Sitemap = [];
-  try {
-    const slugs = await blogService.getAllBlogSlugs();
-
-    blogRoutes = slugs.map(slug => ({
-      url: `${BASE_URL}/blog/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
-    }));
-  } catch (error) {
-    console.error('Error fetching slugs for sitemap:', error);
-  }
   return [...staticRoutes, ...blogRoutes];
 }

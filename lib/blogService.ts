@@ -19,9 +19,6 @@ export const blogService = {
     const response = await fetch(`${API_BASE_URL}/blogs?${queryParams}`, {
       next: { revalidate: 60 },
     });
-
-    console.log(response, 'fnfnfdnkjdnjfknfdkjnfkj');
-
     if (!response.ok) {
       throw new Error('Failed to fetch blogs');
     }
@@ -41,7 +38,7 @@ export const blogService = {
     return response.json();
   },
 
-  async getAllBlogSlugs(): Promise<string[]> {
+  async getAllPostsMetadata(): Promise<{ slug: string; date: string }[]> {
     try {
       const response = await fetch(`${API_BASE_URL}/blogs?limit=1000`, {
         next: { revalidate: 3600 },
@@ -52,7 +49,10 @@ export const blogService = {
       }
 
       const data: BlogListResponse = await response.json();
-      return data.posts.map(post => post.slug);
+      return data.posts.map(post => ({
+        slug: post.slug,
+        date: post.date,
+      }));
     } catch (error) {
       console.error('Error fetching blog slugs:', error);
       return [];

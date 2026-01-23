@@ -287,8 +287,8 @@ export const categories: Category[] = [
             `,
             keywords: ['home screen', 'navigation', 'swiftex', 'crypto'],
             relatedArticles: [
-              'send-receive-crypto-send',
-              'send-receive-crypto-receive',
+              'send-crypto',
+              'receive-crypto',
               'swapping-assets',
               'deposit-withdraw',
             ],
@@ -310,7 +310,7 @@ export const categories: Category[] = [
         name: 'Send Crypto',
         articles: [
           {
-            id: 'send-receive-crypto-send',
+            id: 'send-crypto',
             title: 'Sending Crypto with SwiftEx',
             headerImage:
               'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958525/efcwwfkhibrrlembh0ij_c9bmrq.avif',
@@ -365,11 +365,11 @@ export const categories: Category[] = [
             `,
             keywords: ['send', 'crypto', 'wallet', 'swiftex'],
             relatedArticles: [
-              'send-receive-crypto-receive',
+              'receive-crypto',
               'swapping-assets',
               'transaction-stuck',
             ],
-            path: '/send-receive-crypto-send',
+            path: '/send-crypto',
           },
         ],
       },
@@ -378,7 +378,7 @@ export const categories: Category[] = [
         name: 'Receive Crypto',
         articles: [
           {
-            id: 'send-receive-crypto-receive',
+            id: 'receive-crypto',
             title: 'Receiving Crypto with SwiftEx',
             headerImage:
               'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958525/efcwwfkhibrrlembh0ij_c9bmrq.avif',
@@ -437,8 +437,8 @@ export const categories: Category[] = [
               </ul>
             `,
             keywords: ['receive', 'crypto', 'wallet', 'swiftex'],
-            relatedArticles: ['send-receive-crypto-send', 'swapping-assets', 'transaction-stuck'],
-            path: '/send-receive-crypto-receive',
+            relatedArticles: ['send-crypto', 'swapping-assets', 'transaction-stuck'],
+            path: '/receive-crypto',
           },
         ],
       },
@@ -511,11 +511,11 @@ export const categories: Category[] = [
         ],
       },
       {
-        id: 'Bridging asset',
+        id: 'Bridging-asset',
         name: 'Bridging Asset on Trade Wallet',
         articles: [
           {
-            id: 'Bridging asset',
+            id: 'bridging-asset',
             title: 'Bridging Asset on Trade Wallet',
             modifiedDate: 'Fri, 20 Jun 2025 at 11:27 AM',
             content: `
@@ -551,7 +551,7 @@ export const categories: Category[] = [
             `,
             keywords: ['trade', 'spot trading', 'crypto', 'trade wallet', 'swiftex'],
             relatedArticles: ['swapping-assets', 'large-order-trade', 'usdc-import'],
-            path: '/instant-trade',
+            path: '/bridging-asset',
           },
         ],
       },
@@ -728,8 +728,8 @@ export const categories: Category[] = [
             relatedArticles: [
               'usdc-import',
               'swapping-assets',
-              'send-receive-crypto-send',
-              'send-receive-crypto-receive',
+              'send-crypto',
+              'receive-crypto',
             ],
             path: '/add-custom-tokens',
           },
@@ -850,8 +850,8 @@ export const categories: Category[] = [
             keywords: ['exchange wallet', 'send', 'receive', 'crypto', 'swiftex'],
             relatedArticles: [
               'usdc-import',
-              'send-receive-crypto-send',
-              'send-receive-crypto-receive',
+              'send-crypto',
+              'receive-crypto',
               'add-custom-tokens',
             ],
             path: '/exchange-wallet',
@@ -1147,8 +1147,8 @@ export const categories: Category[] = [
             keywords: ['transaction', 'stuck', 'pending', 'troubleshooting', 'swiftex'],
             relatedArticles: [
               'cannot-send-funds',
-              'send-receive-crypto-send',
-              'send-receive-crypto-receive',
+              'send-crypto',
+              'receive-crypto',
             ],
             path: '/transaction-stuck',
           },
@@ -1182,8 +1182,8 @@ export const categories: Category[] = [
             keywords: ['receive', 'troubleshooting', 'crypto', 'swiftex'],
             relatedArticles: [
               'transaction-stuck',
-              'send-receive-crypto-send',
-              'send-receive-crypto-receive',
+              'send-crypto',
+              'receive-crypto',
             ],
             path: '/cannot-send-funds',
           },

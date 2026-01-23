@@ -354,7 +354,8 @@ export const BlogEditor: React.FC<BlogEditorProps> = ({ postId }) => {
                     const quill = quillRef.current?.getEditor();
                     if (quill) {
                       const range = quill.getSelection(true);
-                      quill.insertEmbed(range.index, 'image', result.imageUrl);
+                      const displayUrl = getFullImageUrl(result.imageUrl);
+                      quill.insertEmbed(range.index, 'image', displayUrl);
                       quill.setSelection(range.index + 1);
                     }
                     showToast('Image inserted successfully', 'success');
@@ -685,11 +686,10 @@ export const BlogEditor: React.FC<BlogEditorProps> = ({ postId }) => {
               <button
                 onClick={handleSave}
                 disabled={isSaving || isUploading}
-                className={`px-6 py-2.5 rounded-lg flex items-center gap-2 transition-all duration-200 font-medium shadow-md ${
-                  isSaving || isUploading
-                    ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg hover:scale-105'
-                }`}
+                className={`px-6 py-2.5 rounded-lg flex items-center gap-2 transition-all duration-200 font-medium shadow-md ${isSaving || isUploading
+                  ? 'bg-gray-400 cursor-not-allowed'
+                  : 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg hover:scale-105'
+                  }`}
               >
                 {isSaving ? (
                   <>
@@ -719,9 +719,8 @@ export const BlogEditor: React.FC<BlogEditorProps> = ({ postId }) => {
                 setPost(prevPost => ({ ...prevPost, title: e.target.value }));
                 clearValidationError('title');
               }}
-              className={`w-full text-3xl font-bold p-0 border-0 focus:outline-none focus:ring-0 placeholder-gray-300 ${
-                validationErrors?.title ? 'text-red-500' : 'text-gray-900'
-              }`}
+              className={`w-full text-3xl font-bold p-0 border-0 focus:outline-none focus:ring-0 placeholder-gray-300 ${validationErrors?.title ? 'text-red-500' : 'text-gray-900'
+                }`}
               disabled={isSaving}
             />
             {validationErrors?.title && (
@@ -778,11 +777,10 @@ export const BlogEditor: React.FC<BlogEditorProps> = ({ postId }) => {
               Tags
             </h3>
             <div
-              className={`flex items-center gap-2 p-3 border-2 rounded-xl mb-4 transition-all duration-200 ${
-                validationErrors?.tags
-                  ? 'border-red-500 bg-red-50'
-                  : 'border-gray-200 focus-within:border-blue-500 focus-within:bg-blue-50'
-              }`}
+              className={`flex items-center gap-2 p-3 border-2 rounded-xl mb-4 transition-all duration-200 ${validationErrors?.tags
+                ? 'border-red-500 bg-red-50'
+                : 'border-gray-200 focus-within:border-blue-500 focus-within:bg-blue-50'
+                }`}
             >
               <input
                 type="text"
@@ -834,9 +832,8 @@ export const BlogEditor: React.FC<BlogEditorProps> = ({ postId }) => {
                   }));
                   clearValidationError('excerpt');
                 }}
-                className={`w-full h-28 p-3 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all ${
-                  validationErrors?.excerpt ? 'border-red-500 bg-red-50' : 'border-gray-200'
-                }`}
+                className={`w-full h-28 p-3 border rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all ${validationErrors?.excerpt ? 'border-red-500 bg-red-50' : 'border-gray-200'
+                  }`}
                 placeholder="Write a compelling description for search engines..."
                 disabled={isSaving}
                 maxLength={500}
