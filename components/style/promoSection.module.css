@@ -15,8 +15,10 @@
 }
 
 .topPromo.landingPromo .promoImg {
-  width: 30%;
-  margin-left: 9.5%;
+  width: 35%;
+  /* Increased from 30% for zoom */
+  margin-left: 7%;
+  /* Adjusted centering */
   line-height: 0;
   overflow: hidden;
   padding-top: 51%;
@@ -82,8 +84,8 @@
   .topPromo.landingPromo .promoImg .imageWrapper .promoVideo,
   .topPromo.landingPromo .promoImg .imageWrapper .promoImage {
     max-width: 100%;
-    width: 70%;
-    margin-left: 130px;
+    width: 100%;
+    margin-left: 0;
   }
 
   .topPromo.landingPromo .promoImg .imageWrapper .screenPlug,
@@ -127,9 +129,9 @@
 
   .topPromo.landingPromo .promoImg .imageWrapper .promoVideo,
   .topPromo.landingPromo .promoImg .imageWrapper .promoImage {
-    max-width: 100%;
+    max-width: none;
     width: 100%;
-    margin: 0 auto;
+    margin-left: 0;
   }
 
   .topPromo.landingPromo .promoImg .imageWrapper .screenPlug,

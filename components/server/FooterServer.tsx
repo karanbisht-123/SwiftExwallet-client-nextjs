@@ -98,8 +98,7 @@ export default function Footer() {
             </Link>
 
             <p className="mt-4 max-w-xs text-gray-500">
-              SwiftEx Wallet and Exchange is architected as a comprehensive solution to the
-              multifaceted challenges that beset the cryptocurrency market.
+              SwiftEx Wallet is a non-custodial wallet interface. SwiftEx does not operate an exchange, brokerage, or financial service.
             </p>
           </div>
 

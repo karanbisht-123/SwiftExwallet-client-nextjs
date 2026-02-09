@@ -4,7 +4,7 @@ import './globals.css';
 import Footer from '@/components/server/FooterServer';
 import NavBarServer from '@/components/server/NavBarServer';
 import ContactWaitlistSection from '@/components/server/ContactWaitlistSection';
-import DeferredAnalytics from '@/components/DeferredAnalytics';
+// import DeferredAnalytics from '@/components/DeferredAnalytics';
 
 const ubuntu = Ubuntu({
   weight: ['300', '400', '500', '700'],
@@ -16,16 +16,16 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  title: 'SwiftEx | Non-Custodial Crypto Wallet & Fiat Exchange',
+  title: 'SwiftEx | Non-Custodial Crypto Wallet & Fiat Access',
   description:
-    'The non-custodial wallet for EVM and Stellar chains. Seamlessly trade, swap, and use fiat on/off-ramps with 0% platform fees. Full control over your keys.',
+    'The non-custodial wallet for EVM and Stellar chains. Seamlessly swap and use third-party fiat on/off-ramps (via licensed partners) with 0% platform fees. Full control over your keys.',
   applicationName: 'SwiftEx',
   keywords: [
     'assets',
     'SwiftEx',
     'Non-custodial Wallet',
-    'Fiat Exchange',
-    'Stellar DEX',
+    'Fiat Access',
+    'Stellar DeFi',
     '0% Platform Fee',
     'Cross-chain Swaps',
     'Buy Crypto',
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://swiftexchange.io',
     siteName: 'SwiftEx',
-    title: 'SwiftEx | Non-Custodial Wallet & Fiat Exchange',
+    title: 'SwiftEx | Non-Custodial Wallet & Fiat Access',
     description:
-      'Trade securely with 0% platform fees. A non-custodial wallet and fiat exchange built on the Stellar Blockchain.',
+      'Manage assets securely with 0% platform fees. A non-custodial wallet and third-party fiat ramp (via licensed partners) built on the Stellar Blockchain.',
     images: [
       {
         url: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958364/exchnagesimpale_fwag0j.avif',
@@ -55,9 +55,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@SwiftExwallet',
     creator: '@SwiftExwallet',
-    title: 'SwiftEx | Non-Custodial Wallet & Fiat Exchange',
+    title: 'SwiftEx | Non-Custodial Wallet & Fiat Access',
     description:
-      'Secure crypto trading with 0% platform fees. Instant cross-chain swaps and fiat on-ramps.',
+      'Secure crypto management with 0% platform fees. Instant cross-chain swaps and third-party fiat on-ramps (via licensed partners).',
     images: [
       'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958364/exchnagesimpale_fwag0j.avif',
     ],
@@ -89,7 +89,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="min-h-screen">{children}</main>
         <ContactWaitlistSection />
         <Footer />
-        <DeferredAnalytics />
+        {/* <DeferredAnalytics /> */}
       </body>
     </html>
   );

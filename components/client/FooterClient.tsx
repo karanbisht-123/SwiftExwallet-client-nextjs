@@ -30,11 +30,6 @@ export default function FooterClient() {
           <p className="font-medium text-gray-900">Services</p>
           <ul className="mt-6 space-y-4 text-sm">
             <li>
-              <a href="/fiat-exchange" className="text-gray-700 hover:opacity-75 transition">
-                Fiat Exchange
-              </a>
-            </li>
-            <li>
               <a href="/swiftex-wallet" className="text-gray-700 hover:opacity-75 transition">
                 SwiftEx Wallet
               </a>
@@ -43,7 +38,7 @@ export default function FooterClient() {
         </div>
 
         {/* Company */}
-        <div>
+        {/* <div>
           <p className="font-medium text-gray-900">Company</p>
           <ul className="mt-6 space-y-4 text-sm">
             <li>
@@ -57,7 +52,7 @@ export default function FooterClient() {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         {/* Helpful Links */}
         <div>
@@ -74,11 +69,6 @@ export default function FooterClient() {
               </a>
             </li>
             <li>
-              <a href="/blogs" className="text-gray-700 hover:opacity-75 transition">
-                Blogs
-              </a>
-            </li>
-            <li>
               <a href="/terms-of-service" className="text-gray-700 hover:opacity-75 transition">
                 Terms of Service
               </a>
@@ -88,7 +78,7 @@ export default function FooterClient() {
                 href="/anti-money-laundering"
                 className="text-gray-700 hover:opacity-75 transition"
               >
-                AML Policy
+                AML & Compliance Statement
               </a>
             </li>
             <li>

@@ -1,5 +1,5 @@
 {
-  "name": "swiftexblog-client",
+  "name": "swiftexwallet-client",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -18,17 +18,13 @@
     "pre-commit": "npm run format && npm run lint:fix && npm run type-check"
   },
   "dependencies": {
-    "@tanstack/react-virtual": "^3.13.18",
     "framer-motion": "^12.23.24",
     "gsap": "^3.12.5",
     "lucide-react": "^0.548.0",
     "next": "^16.0.8",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "react-intersection-observer": "^10.0.0",
-    "react-quill-new": "^3.6.0",
-    "react-share": "^5.2.2",
-    "recharts": "^3.6.0"
+    "react-intersection-observer": "^10.0.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

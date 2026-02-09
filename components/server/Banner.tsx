@@ -3,13 +3,13 @@ import { BannerContent } from '../client/BannerContent';
 export default function Banner() {
   const content = {
     heading: 'Experience the Future of',
-    highlightedText: 'Crypto',
-    subHeading: 'Trading',
+    highlightedText: 'Crypto Wallets',
+    subHeading: '',
     description:
-      'SwiftEx provides a secure, all-in-one solution for managing and exchanging digital assets. Our platform combines a non-custodial wallet with an Anchor-based fiat currency decentralized exchange on the Stellar Blockchain.',
+      'SwiftEx provides a secure, multichain wallet for managing digital assets. The app connects users to decentralized networks and licensed providers, fully non-custodial.',
     buttonText: 'Download Now',
     imageSrc: '/images/logo.avif',
-    imageAlt: 'SwiftEx Wallet and Exchange Interface',
+    imageAlt: 'SwiftEx Wallet Interface',
   };
 
   return (

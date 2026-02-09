@@ -58,16 +58,19 @@
   left: 5%;
   animation-delay: 0.1s;
 }
+
 .floatStatsHeader._2 {
   bottom: 15%;
   left: 4%;
   animation-delay: 0.2s;
 }
+
 .floatStatsHeader._3 {
   top: 25%;
   right: 5%;
   animation-delay: 0.3s;
 }
+
 .floatStatsHeader._4 {
   bottom: 10%;
   right: 4%;
@@ -75,7 +78,7 @@
 }
 
 .glassCard {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 15px;
@@ -95,9 +98,11 @@
   0% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -120,6 +125,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -130,6 +136,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -150,6 +157,7 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -159,12 +167,15 @@
 .iconScan {
   color: #1c91ff;
 }
+
 .iconConvert {
   color: #4f46e5;
 }
+
 .iconSend {
   color: #4f46e5;
 }
+
 .iconTrade {
   color: #1c91ff;
 }
@@ -186,6 +197,7 @@
   .custmFont {
     font-size: 10px !important;
   }
+
   .sectionHeader {
     padding: 2rem 6px;
   }
@@ -197,18 +209,22 @@
   .glassCard {
     min-width: 220px;
   }
+
   .floatStatsHeader._1 {
     top: -6%;
     left: 10%;
   }
+
   .floatStatsHeader._2 {
     bottom: 30%;
     left: 10%;
   }
+
   .floatStatsHeader._3 {
     top: 26%;
     right: 10%;
   }
+
   .floatStatsHeader._4 {
     bottom: 1%;
     right: 10%;
@@ -230,6 +246,7 @@
 
 /* Performance Optimizations */
 @media (prefers-reduced-motion: reduce) {
+
   .floatAnimation,
   .glassCard,
   .headerImage,
@@ -244,18 +261,16 @@
 .googleBorderButton {
   position: relative;
   border-radius: 20px;
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff9900,
-    #ffff00,
-    #00ff00,
-    #00ffff,
-    #0000ff,
-    #9900ff,
-    #ff00ff,
-    #ff0000
-  );
+  background: linear-gradient(45deg,
+      #ff0000,
+      #ff9900,
+      #ffff00,
+      #00ff00,
+      #00ffff,
+      #0000ff,
+      #9900ff,
+      #ff00ff,
+      #ff0000);
   background-size: 400% 400%;
   animation: google-gradient 3s ease infinite;
   padding: 3px;
@@ -266,15 +281,17 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
-.googleBorderButton > button {
+.googleBorderButton>button {
   position: relative;
   z-index: 1;
 }

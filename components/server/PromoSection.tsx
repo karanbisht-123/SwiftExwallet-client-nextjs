@@ -15,29 +15,14 @@ export default function PromoSection({
   imageSrc,
   videoSrc,
 }: PromoSectionProps) {
-  const defaultSubtitle = (
-    <>
-      Your Gateway
-      <br />
-      Effortless Fiat and
-      <br />
-      Cryptocurrency Exchange
-    </>
-  );
 
-  const defaultDescription = (
-    <>
-      Your Gateway to Seamless Cryptocurrency Management. Trade Swiftly,
-      <br />
-      Trade Securely
-    </>
-  );
+
 
   return (
     <PromoSectionClient
       title={title}
-      subtitle={subtitle || defaultSubtitle}
-      description={description || defaultDescription}
+      subtitle={subtitle || ''}
+      description={description || ''}
       imageSrc={imageSrc}
       videoSrc={videoSrc}
     />

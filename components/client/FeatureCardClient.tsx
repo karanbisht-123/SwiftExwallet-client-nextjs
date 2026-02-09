@@ -52,9 +52,8 @@ export function FeatureCard({ title, description, iconName, index }: FeatureCard
   return (
     <motion.div
       ref={ref}
-      className={`w-full border-b md:w-1/2 ${
-        index % 3 !== 2 ? 'md:border-r' : ''
-      } lg:w-1/3 py-12 lg:px-8 p-3`}
+      className={`w-full border-b md:w-1/2 ${index % 3 !== 2 ? 'md:border-r' : ''
+        } lg:w-1/3 py-12 lg:px-8 p-3`}
       initial="hidden"
       animate={inView ? 'visible' : 'hidden'}
       variants={cardVariants}

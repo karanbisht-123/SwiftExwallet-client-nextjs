@@ -70,12 +70,12 @@ export const categories: Category[] = [
                     <li>
                       <strong>Create a New Wallet</strong><br>
                       Ideal for first-time users looking to generate a fresh <strong>wallet</strong>.<br>
-                      <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1755954057/createwaalet_mggtyy.webp" alt="Create a New Wallet">
+                      <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770300232/image_12_dd5ffm.webp" alt="Create a New Wallet">
                     </li>
                     <li>
                       <strong>Import an Existing Wallet</strong><br>
                       If you already have a <strong>wallet</strong> (using <strong>private key</strong>, <strong>JSON</strong>, or <strong>recovery phrase</strong>), you can bring it into <strong>SwiftEx</strong>.<br>
-                      <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1755954058/importwallet_rszh3l.webp" alt="Import an Existing Wallet">
+                      <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770300232/image_14_a76i79.webp" alt="Import an Existing Wallet">
                     </li>
                   </ol>
                   Choose the option that fits your current needs.<br>
@@ -86,7 +86,11 @@ export const categories: Category[] = [
                   <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958490/jg0p04zfjxufrfwoz1hm_q8eqop.avif" alt="Step 5: Enable Biometric Security">
                 </li>
               </ol>
-              <p>Once this <strong>setup</strong> is complete, you’re ready to start exploring the <strong>SwiftEx ecosystem</strong> whether it's managing <strong>wallets</strong>, <strong>trading</strong>, or <strong>swapping assets</strong>.</p>
+<p>
+  Once this <strong>setup</strong> is complete, you’re ready to start exploring the
+  <strong> SwiftEx ecosystem</strong> — whether it's managing <strong>wallets</strong>,
+  <strong> bridging</strong>, or <strong>swapping assets</strong>.
+</p>
             `,
             keywords: ['account', 'create', 'setup', 'swiftex', 'onboarding'],
             relatedArticles: [
@@ -121,7 +125,7 @@ export const categories: Category[] = [
                 <li>
                   <strong>Go to Wallet Tab</strong><br>
                   Go to the <strong>Wallet tab</strong> and tap ‘<strong>Create Wallet</strong>’.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1752066055/createwallet1_xbeh44.avif" alt="Step 1: Create Wallet">
+                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770301231/1000136724_lwdu3h.webp" alt="Step 1: Create Wallet">
                 </li>
                 <li>
                   <strong>Name Your Wallet</strong><br>
@@ -171,7 +175,7 @@ export const categories: Category[] = [
                 <li>
                   <strong>Navigate to the Wallet Tab</strong><br>
                   Open the <strong>SwiftEx app</strong>. Tap the ‘<strong>Wallet</strong>’ icon from the bottom navigation. Select the ‘<strong>Import Wallet</strong>’ option. After this, select one of the listed supported <strong>wallet types</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1752068253/importwallet1_itcayq.avif" alt="Step 1: Navigate to Import">
+                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770300037/1000136720_xcrueg.webp" alt="Step 1: Navigate to Import">
                 </li>
                 <li>
                   <strong>Name Your Wallet</strong><br>
@@ -230,7 +234,7 @@ export const categories: Category[] = [
             modifiedDate: 'Fri, 20 Jun 2025 at 11:27 AM',
             content: `
               <p>Managing multiple <strong>wallets</strong>? No problem. Use the ‘<strong>Choose Wallet</strong>’ option from the <strong>Wallet tab</strong> to quickly switch between your imported and newly created <strong>wallets</strong>. <strong>SwiftEx</strong> supports <strong>multi-wallet management</strong> so you can keep your <strong>assets</strong> organized across <strong>networks</strong>.</p>
-              <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1752068773/switchwallet_a9ma4p.webp" alt="Switch Between Wallets">
+              <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770300233/image_15_jn8ztw.webp" alt="Switch Between Wallets">
             `,
             keywords: ['wallet', 'switch', 'multichain', 'swiftex'],
             relatedArticles: [
@@ -262,29 +266,29 @@ export const categories: Category[] = [
               'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958594/qmlyjl5r2wmg1jlby0vz_lcbkiz.avif',
             modifiedDate: 'Fri, 20 Jun 2025 at 11:27 AM',
             content: `
-              <p>The <strong>SwiftEx home screen</strong> is designed to offer streamlined access to the app’s most essential <strong>features</strong>, all from a single, convenient location. This allows you to manage your <strong>crypto activities</strong> efficiently whether you're a beginner or an experienced <strong>trader</strong>.</p>
-              <h3>What You Can Access from the Home Screen</h3>
-              <p>At the top of the screen, you'll find quick links to the following actions:</p>
-              <ul>
-                <li>
-                  <strong>Receive</strong>: Accept <strong>cryptocurrencies</strong> into your <strong>wallet</strong> using your <strong>public address</strong> or <strong>QR code</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958592/ixqftxzf3bfwo9zvvdau_pvqszd.avif" alt="Step 1: Receive">
-                </li>
-                <li>
-                  <strong>Send</strong>: Transfer <strong>tokens</strong> securely to any other <strong>wallet address</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958596/swiuggz7hmfi0zrmoldt_a082bs.avif" alt="Step 2: Send">
-                </li>
-                <li>
-                  <strong>Swap</strong>: Instantly exchange one <strong>cryptocurrency</strong> for another at the best available rate.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958593/r12t0oflofmlgkqjt2qv_p6ybwb.avif" alt="Step 3: Swap">
-                </li>
-                <li>
-                  <strong>Buy</strong>: Purchase <strong>crypto</strong> using <strong>fiat</strong> through integrated providers such as <strong>card payments</strong> or <strong>bank transfers</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958595/zubgkqpxzzljcwe5bnj0_jpi5l1.avif" alt="Step 4: Buy">
-                </li>
-              </ul>
-              <p>Each of these options is clearly displayed for easy <strong>navigation</strong>, ensuring that even complex <strong>transactions</strong> feel intuitive. Whether you’re sending funds to a friend or making a <strong>swap</strong> for trading purposes, everything starts from the <strong>home screen</strong>.</p>
-            `,
+            <p>The <strong>SwiftEx home screen</strong> is designed to offer streamlined access to the app’s most essential <strong>features</strong>, all from a single, convenient location. This allows you to manage your <strong>digital assets</strong> efficiently whether you're a beginner or an experienced user.</p>
+            <h3>What You Can Access from the Home Screen</h3>
+            <p>At the top of the screen, you'll find quick links to the following actions:</p>
+            <ul>
+              <li>
+                <strong>Send</strong>: Transfer <strong>tokens</strong> securely to any other <strong>wallet address</strong>.<br>
+                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770277869/send1_twncf0.webp" alt="Step 1: Send">
+              </li>
+                  <li>
+                <strong>Receive</strong>: Accept <strong>cryptocurrencies</strong> into your <strong>wallet</strong> using your <strong>public address</strong> or <strong>QR code</strong>.<br>
+                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770277872/recive1_cz0hwo.webp" alt="Step 2: Receive">
+              </li>
+              <li>
+                <strong>Swap</strong>: Instantly exchange one <strong>cryptocurrency</strong> for another using supported liquidity routes.<br>
+                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770278571/image_3_urixv8.webp" alt="Step 3: Swap">
+              </li>
+              <li>
+                <strong>Buy</strong>: Purchase <strong>crypto</strong> using <strong>fiat</strong> through <strong>licensed and trusted third-party providers</strong>, supporting options such as <strong>card payments</strong> and <strong>bank transfers</strong>.<br>
+                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770278570/image_1_uohhib.webp" alt="Step 4: Buy">
+              </li>
+            </ul>
+            <p>Each of these options is clearly displayed for easy <strong>navigation</strong>, ensuring that even complex <strong>asset operations</strong> feel intuitive. Whether you’re transferring funds, performing a <strong>swap</strong>, or purchasing crypto via a trusted partner, everything starts from the <strong>home screen</strong>.</p>
+          `,
             keywords: ['home screen', 'navigation', 'swiftex', 'crypto'],
             relatedArticles: [
               'send-crypto',
@@ -322,17 +326,16 @@ export const categories: Category[] = [
                 <li>
                   <strong>Tap the ‘Send’ Button</strong><br>
                   Open the <strong>SwiftEx app</strong>. Go to the <strong>Send section</strong> on the home.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958519/rx6bxbte54f6smlnttjn_jnihfm.avif" alt="Step 1: Tap Send">
+                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770279005/1000136588_r413rg.webp" alt="Step 1: Tap Send">
                 </li>
                 <li>
                   <strong>Choose the Blockchain Network</strong><br>
                   If the token supports multiple <strong>networks</strong> (e.g. <strong>ETH</strong>, <strong>BNB</strong>, <strong>XLM</strong>), you’ll see a <strong>network selection</strong> prompt. Choose the correct <strong>blockchain network</strong>. Tip: If you're unsure, ask the recipient which <strong>network</strong> they support. Sending to the wrong <strong>network</strong> may result in lost <strong>funds</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958522/yuwm0ftvbbzcl0leafpd_rupfah.avif" alt="Step 2: Choose Network">
+                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770278897/1000136593_q7kz5t.webp" alt="Step 2: Choose Network">
                 </li>
                 <li>
                   <strong>Enter Recipient Details</strong><br>
                   Paste or scan the recipient’s <strong>wallet address</strong> using the <strong>QR code scanner</strong>. If required, enter the <strong>memo</strong>/<strong>tag</strong>/<strong>destination tag</strong> for tokens like <strong>XLM</strong>, <strong>XRP</strong>, or <strong>ATOM</strong>. Important: Double-check the <strong>wallet address</strong> and <strong>memo/tag</strong> (if needed). Incorrect information can result in permanent loss of <strong>funds</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958522/qpi8axfokokbn1hvmel8_chigpu.avif" alt="Step 3: Enter Details">
                 </li>
                 <li>
                   <strong>Enter the Amount and Review Fees</strong><br>
@@ -341,7 +344,7 @@ export const categories: Category[] = [
                   • Estimated <strong>arrival time</strong>.<br>
                   • A warning if your remaining balance falls below required limits.<br>
                   The total you send and the amount the recipient receives are clearly shown, so there are no surprises.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958526/gjmetrgsj9enblz4xjmj_ddghsd.avif" alt="Step 4: Enter Amount">
+                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770278899/1000136595_1_avdvsz.webp" alt="Step 4: Enter Amount">
                 </li>
                 <li>
                   <strong>Confirm and Authenticate</strong><br>
@@ -352,7 +355,6 @@ export const categories: Category[] = [
                   • <strong>Selected network</strong><br>
                   • <strong>Network fee</strong><br>
                   Tap ‘<strong>Confirm & Send</strong>’.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958520/rturpcp5oxcsr667oqla_iwrw8t.avif" alt="Step 5: Confirm Send">
                 </li>
               </ol>
               <h3>Security Reminders</h3>
@@ -396,12 +398,12 @@ export const categories: Category[] = [
                 <li>
                   <strong>Tap the ‘Receive’ Button</strong><br>
                   Open the <strong>SwiftEx app</strong>. Go to the <strong>Receive section</strong> on the home.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958524/transection7_gkxpub.avif" alt="Step 1: Tap Receive">
+                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770279005/1000136589_zacnfq.webp" alt="Step 1: Tap Receive">
                 </li>
                 <li>
                   <strong>Choose the Blockchain Network</strong><br>
                   If the asset is supported on multiple <strong>chains</strong>, you will be prompted to select the correct <strong>blockchain network</strong> (<strong>ETH</strong>, <strong>BNB</strong>, <strong>XLM</strong>). Make sure to use the same <strong>network</strong> the sender is using. Sending to the wrong <strong>network</strong> can permanently destroy your <strong>funds</strong>. Always confirm with the sender beforehand.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958523/transction8_j6ifrh.avif" alt="Step 2: Choose Network">
+                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770278900/1000136600_o09wr6.webp" alt="Step 2: Choose Network">
                 </li>
                 <li>
                   <strong>Copy or Share Your Wallet Address</strong><br>
@@ -410,7 +412,7 @@ export const categories: Category[] = [
                   • Share the <strong>address</strong> via messaging or email.<br>
                   • Let the sender scan your <strong>QR code</strong>.<br>
                   <strong>QR codes</strong> make it easier and safer to receive <strong>funds</strong> without copy-paste mistakes.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958518/transction9_x8ig6x.avif" alt="Step 3: Share Address">
+                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770278901/1000136598_o4ow3d.webp" alt="Step 3: Share Address">
                 </li>
                 <li>
                   <strong>(If Required) Provide Memo/Tag</strong><br>
@@ -445,11 +447,11 @@ export const categories: Category[] = [
     ],
   },
   {
-    id: 'Swapping',
-    name: 'Swapping and Bridging Assets',
+    id: 'swapping',
+    name: 'Swapping Assets',
     path: '/swapping',
     description:
-      'Explore <strong>trading features</strong> in <strong>SwiftEx</strong>, including <strong>swapping</strong>, <strong>spot trading</strong>, and <strong>large order trading</strong>.',
+      'Explore <strong>asset swapping features</strong> in <strong>SwiftEx</strong>, including fast <strong>token swaps</strong> and seamless <strong>asset conversion</strong>.',
     subtopics: [
       {
         id: 'swapping-assets',
@@ -462,224 +464,180 @@ export const categories: Category[] = [
               'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958525/efcwwfkhibrrlembh0ij_c9bmrq.avif',
             modifiedDate: 'Fri, 20 Jun 2025 at 11:27 AM',
             content: `
-              <p><strong>SwiftEx</strong> makes it easy to exchange one <strong>cryptocurrency</strong> for another directly within the app whether you’re a complete beginner or a seasoned <strong>trader</strong>. The <strong>Swap</strong> feature is designed for users who want a quick, <strong>secure</strong>, and seamless <strong>asset exchange</strong> experience without diving deep into technical <strong>trading tools</strong>. Think of it as the easiest way to convert your <strong>crypto</strong> at the best available rate — in just one tap.</p>
-              <h3>How do Swaps Work in SwiftEx?</h3>
-              <p><strong>SwiftEx</strong> uses <strong>smart routing</strong> and <strong>decentralized liquidity protocols</strong> to ensure your <strong>assets</strong> are exchanged using the most optimal market path. When you initiate a <strong>swap</strong>, <strong>SwiftEx</strong> looks for the best available <strong>trade path</strong> whether it's a direct <strong>swap</strong> (e.g. <strong>ETH</strong> → <strong>USDC</strong>) or a <strong>multi-hop trade</strong> (e.g. <strong>ETH</strong> → <strong>SOL</strong> → <strong>USDC</strong>) — to get you the best <strong>price</strong> with minimal <strong>slippage</strong>. <strong>Swaps</strong> in <strong>SwiftEx</strong> are powered by <strong>secure</strong>, <strong>decentralized exchanges</strong> and <strong>liquidity aggregators</strong>.</p>
-              <h3>What You Need to Know Before Swapping</h3>
-              <ul>
-                <li><strong>Slippage Tolerance</strong>: <strong>Swaps</strong> are designed to be accurate, but market <strong>prices</strong> can move quickly. If the <strong>price</strong> changes by more than your set <strong>slippage tolerance</strong> (default is usually 1%), the <strong>swap</strong> won’t go through to protect your <strong>funds</strong>.</li>
-                <li><strong>Liquidity Warning</strong>: Swapping <strong>tokens</strong> with low market <strong>liquidity</strong> may result in significant losses or failed <strong>transactions</strong>. Always check the final <strong>quote</strong> before approving a <strong>swap</strong>.</li>
-                <li><strong>Minimum Token Balance</strong>: Certain <strong>blockchains</strong> (like <strong>Stellar</strong> or <strong>Solana</strong>) require a <strong>minimum reserve</strong> to hold a new <strong>asset</strong>. For example, <strong>Stellar</strong> requires 0.5–1 <strong>XLM</strong> (approx) to open a new <strong>trustline</strong> (hold a new <strong>asset</strong>).</li>
-                <li><strong>Network Fees</strong>: A small <strong>fee</strong> is included in your <strong>swap quote</strong> to cover <strong>network</strong> and <strong>protocol costs</strong>. This <strong>fee</strong> may vary depending on the <strong>asset</strong> you are buying and <strong>network congestion</strong>.</li>
-              </ul>
-              <h3>How to Swap Assets in SwiftEx</h3>
-              <ol>
-                <li>
-                  <strong>Open the Swap Feature</strong><br>
-                  Launch the <strong>SwiftEx app</strong>. Tap the ‘<strong>Swap</strong>’ button on the <strong>home screen</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958544/fq0oj4bvhlqoh0iuozju_cdj2dg.avif" alt="Step 1: Open Swap">
-                </li>
-                <li>
-                  <strong>Choose the Preferred Token Pair to Swap</strong><br>
-                  In the ‘<strong>You Pay</strong>’ field, select the <strong>token</strong> you want to sell. In the ‘<strong>You Receive</strong>’ field, select the <strong>token</strong> you want to buy. Enter either the amount you want to pay or the amount you want to <strong>swap</strong>. <strong>SwiftEx</strong> will automatically calculate the matching value based on live <strong>market data</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958546/pbi0ldrnyjaohfgpevig_u5gmhj.avif" alt="Step 2: Choose Token Pair">
-                </li>
-                <li>
-                  <strong>Review and Confirm the Swap</strong><br>
-                  Check the <strong>exchange rate</strong>, <strong>network fee</strong>, and estimated time for the <strong>swap</strong>. Make sure the <strong>tokens</strong> and <strong>amounts</strong> are correct — once confirmed, the <strong>transaction</strong> cannot be reversed. Tap the ‘<strong>Swap</strong>’ button to proceed.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958547/grnv4g95e1zriz7gleqo_j6zyjh.avif" alt="Step 3: Confirm Swap">
-                </li>
-              </ol>
-              <h3>Important Notes & Tips</h3>
-              <p>If the <strong>swap</strong> fails, try adjusting the <strong>swap amount</strong>, selecting a different <strong>token pair</strong>, or increasing your <strong>slippage tolerance</strong>. Some <strong>tokens</strong> require additional <strong>approval transactions</strong> or <strong>gas fees</strong>. <strong>SwiftEx</strong> will guide you if that’s the case. If you’re adding a <strong>token</strong> you don’t already hold in your <strong>wallet</strong> (on <strong>networks</strong> like <strong>Stellar</strong>), make sure you have the <strong>minimum base reserve</strong> (like 0.5–1 <strong>XLM</strong>).</p>
-              <h3>Swap Fees on SwiftEx</h3>
-              <p><strong>SwiftEx</strong> includes a transparent <strong>fee model</strong> directly within the <strong>swap rate</strong>. The <strong>fees</strong> vary based on:</p>
-              <table>
-                <tr><th>Asset Type</th><th>Swap Fee</th></tr>
-                <tr><td><strong>Scam-reported tokens</strong></td><td>Up to 15%</td></tr>
-                <tr><td><strong>Unknown / low-verified</strong></td><td>1%</td></tr>
-                <tr><td><strong>Standard (known) assets</strong></td><td>0.75%</td></tr>
-                <tr><td><strong>Curated tokens</strong></td><td>0.3%</td></tr>
-                <tr><td><strong>Featured tokens</strong> (e.g., <strong>USDC</strong>, <strong>XLM</strong>, <strong>ETH</strong>)</td><td>0.2%</td></tr>
-              </table>
-              <p><strong>SwiftEx</strong> does not charge any extra <strong>fee</strong> on top of this — it’s included in your quoted <strong>swap rate</strong>. Still have questions about <strong>swapping</strong>? Check the <strong>Help Center</strong> or contact <strong>SwiftEx Support</strong> directly in the app.</p>
-            `,
-            keywords: ['swap', 'trade', 'crypto', 'fees', 'swiftex'],
-            relatedArticles: ['instant-trade', 'large-order-trade', 'usdc-import'],
+<p><strong>SwiftEx</strong> makes it easy to Swap one <strong>digital asset</strong> into another directly within the app. The <strong>Swap</strong> feature is built for users who want a fast, <strong>secure</strong>, and simple way to <strong>exchange assets</strong> without complex interfaces.</p>
+
+<h3>How Swaps Work in SwiftEx</h3>
+<p><strong>SwiftEx</strong> uses <strong>smart routing</strong> and integrated <strong>decentralized liquidity protocols</strong> to find the most efficient conversion path. When you initiate a <strong>swap</strong>, the system evaluates available routes — including direct and multi-hop paths — to deliver the best available <strong>rate</strong> with minimal <strong>slippage</strong>.</p>
+
+<h3>Important Things to Know</h3>
+<ul>
+  <li><strong>Slippage Protection</strong>: If market rates change beyond your allowed tolerance, the swap is automatically cancelled to protect your funds.</li>
+  <li><strong>Liquidity Considerations</strong>: Low-liquidity assets may result in higher price impact or failed swaps.</li>
+  <li><strong>Network Requirements</strong>: Some networks (such as <strong>Stellar</strong>) require a minimum balance to hold new assets (for example, ~0.5–1 <strong>XLM</strong> for a new trustline).</li>
+  <li><strong>Network Fees</strong>: Fees are included directly in the quoted swap rate and vary by network and asset.</li>
+</ul>
+
+<h3>How to Swap Assets</h3>
+<ol>
+  <li>
+    <strong>Open Swap</strong><br>
+    Open the <strong>SwiftEx app</strong> and tap the <strong>Swap</strong> option on the home screen.
+                      <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770279767/1000136590_ghxar0.webp" alt="Step 1: Tap Swap">
+  </li>
+  <li>
+  <strong>Select Network & Assets</strong><br>
+  First choose the network, then select the asset you want to swap and the asset you’ll receive. Enter the amount to see the estimated output in <strong>SwiftEx</strong>.
+  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770280255/image_4_givu69.webp" alt="Step 3: Select network and assets">
+</li>
+
+  <li>
+    <strong>Review & Confirm</strong><br>
+    Review the conversion rate, estimated fees, and final amount. Confirm to proceed with the swap.
+                      <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770279767/1000136642_txtnx9.webp" alt="Step 3: confirmSwap">
+  </li>
+</ol>
+
+<h3>Swap Fees</h3>
+<p><strong>SwiftEx</strong> applies a transparent fee model that is included in the displayed rate:</p>
+<table>
+  <tr><th>Asset Category</th><th>Fee</th></tr>
+  <tr><td>Scam-reported assets</td><td>Up to 15%</td></tr>
+  <tr><td>Low-verification assets</td><td>1%</td></tr>
+  <tr><td>Standard assets</td><td>0.75%</td></tr>
+  <tr><td>Curated assets</td><td>0.3%</td></tr>
+  <tr><td>Featured assets (USDC, XLM, ETH)</td><td>0.2%</td></tr>
+</table>
+
+<p>No additional fees are charged beyond what is shown in the quote.</p>
+          `,
+            keywords: ['swap', 'asset conversion', 'crypto', 'fees', 'swiftex'],
+            relatedArticles: ['instant-swap', 'advanced-swap', 'usdc-import'],
             path: '/swapping-assets',
           },
         ],
       },
-      {
-        id: 'Bridging-asset',
-        name: 'Bridging Asset on Trade Wallet',
-        articles: [
-          {
-            id: 'bridging-asset',
-            title: 'Bridging Asset on Trade Wallet',
-            modifiedDate: 'Fri, 20 Jun 2025 at 11:27 AM',
-            content: `
-              <p><strong>SwiftEx</strong> offers a smooth <strong>trading experience</strong>, enabling you to exchange your <strong>crypto assets</strong> with just a few taps. Whether you're swapping <strong>stablecoins</strong> or trading across <strong>chains</strong>, it's quick, <strong>secure</strong>, and intuitive.</p>
-              <p><strong>Note:</strong> Before you begin, please ensure your <strong>Trade Wallet</strong> is activated to access <strong>trading functionality</strong>.</p>
-              <ol>
-                <li>
-                  <strong>Activate the Trade Wallet</strong><br>
-                  To begin <strong>trading</strong> on <strong>SwiftEx</strong>: Go to the <strong>home tab</strong>. Select the <strong>asset</strong> you’d like to trade. Tap ‘<strong>Trade</strong>’. Follow the prompts to activate your <strong>Trade Wallet</strong>, if it hasn’t been enabled already. Activation is a one-time process and ensures your <strong>wallet</strong> is ready to handle real-time <strong>trading transactions</strong> securely.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958545/kqepxagwpnjhimimqimj_tpru1q.avif" alt="Step 1: Activate Trade Wallet">
-                </li>
-                <li>
-                  <strong>Initiate a Trade</strong><br>
-                  From the selected <strong>token</strong> screen, tap the ‘<strong>Trade</strong>’ button. Choose the <strong>token</strong> you want to receive in exchange. Enter the amount of the <strong>token</strong> you'd like to trade. <strong>SwiftEx</strong> will automatically fetch the best market routes and <strong>prices</strong> from supported <strong>liquidity providers</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958548/ikwwaafdo3axphrxiph4_tgo3qx.avif" alt="Step 2: Initiate Trade">
-                </li>
-                <li>
-                  <strong>Review Quotes</strong><br>
-                  After entering the <strong>trade amount</strong>, you’ll be presented with real-time <strong>quotes</strong> sourced from multiple <strong>decentralized</strong> and <strong>cross-chain liquidity providers</strong>. <strong>Quotes</strong> are displayed in order of <strong>value</strong> and <strong>speed</strong> to help you make the most efficient decision. Always double-check the <strong>exchange rate</strong> and estimated <strong>fees</strong> before proceeding.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958549/itzuuxbit2mzalc2udzp_qw0xav.avif" alt="Step 3: Review Quotes">
-                </li>
-                <li>
-                  <strong>Approve the Trade</strong><br>
-                  Once satisfied with the <strong>quote</strong>, tap the ‘<strong>Approve</strong>’ button to confirm the <strong>trade</strong>. You may be asked to confirm the <strong>transaction</strong> via <strong>PIN</strong>, <strong>biometric ID</strong>, or an additional <strong>approval method</strong> depending on your <strong>wallet security settings</strong>. All <strong>transactions</strong> are secured <strong>on-chain</strong> and visible via <strong>blockchain explorers</strong> after execution.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958550/jsngkqv0ciunzfz7iini_xp4ath.avif" alt="Step 4: Approve Trade">
-                </li>
-                <li>
-                  <strong>Get Confirmation</strong><br>
-                  Once your <strong>trade</strong> is executed, you’ll receive an in-app <strong>confirmation</strong> and <strong>push notification</strong>. You can view the updated <strong>balance</strong> in your <strong>Home tab</strong> and check the <strong>transaction history</strong> under the ‘<strong>Activity</strong>’ section.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958551/hxqj06l2twr7ii40mnfs_cxta58.avif" alt="Step 5: Get Confirmation">
-                </li>
-              </ol>
-            `,
-            keywords: ['trade', 'spot trading', 'crypto', 'trade wallet', 'swiftex'],
-            relatedArticles: ['swapping-assets', 'large-order-trade', 'usdc-import'],
-            path: '/bridging-asset',
-          },
-        ],
-      },
     ],
   },
+
   {
-    id: 'spottrading',
-    name: 'How to Do Spot Trading Via SwiftEx',
-    path: '/spot-trading',
+    id: 'asset-conversion',
+    name: 'How to Swap Assets via SwiftEx S-DEX',
+    path: '/asset-conversion',
     description:
-      'Explore <strong>trading features</strong> in <strong>SwiftEx</strong>, including <strong>swapping</strong>, <strong>spot trading</strong>, and <strong>large order trading</strong>.',
+      'Explore <strong>asset conversion features</strong> in <strong>SwiftEx S-DEX</strong>, including <strong>instant swaps</strong> and <strong>advanced swap options</strong>.',
     subtopics: [
       {
-        id: 'instant-trading',
-        name: 'Instant Trading',
+        id: 'instant-swap',
+        name: 'Instant Swap',
         articles: [
           {
-            id: 'instant-trade',
-            title: 'How to Place a Instant Trade',
+            id: 'instant-swap',
+            title: 'How to Perform an Instant Swap',
             modifiedDate: 'Fri, 20 Jun 2025 at 11:27 AM',
             content: `
-              <p>The <strong>Instant Trade</strong> feature on <strong>SwiftEx</strong> allows you to quickly swap between supported <strong>token pairs</strong> with real-time <strong>market execution</strong>. It’s ideal for users who want fast conversions without navigating complex <strong>order books</strong> or <strong>charts</strong>.</p>
-              <h3><strong>Note:</strong> This feature requires <strong>Trade Wallet</strong> activation before use.</h3>
-              <p>Follow these simple steps to quickly swap one <strong>cryptocurrency</strong> for another using the <strong>Instant Trade</strong> feature:</p>
-              <h3>Step 1: Navigate to Instant Trade</h3>
-              <p>From the default <strong>Wallet screen</strong>, tap on the <strong>‘Exchange’ tab</strong> in the bottom navigation menu.<br>
-              On the <strong>Exchange screen</strong>, select the <strong>‘Trade’ option</strong>, and then choose <strong>‘Instant Trade’</strong>.<br>
-              <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1755954335/instanttrade_y9yjml.webp" alt="Step 1: Access Instant Trade"></p>
-              <h3>Step 2: Select Your Trading Pair</h3>
-              <p>Within the <strong>Instant Trade</strong> interface:<br>
-              • Choose the <strong>cryptocurrency</strong> you wish to <strong>sell</strong> (e.g., <strong>BTC</strong>, <strong>ETH</strong>).<br>
-              • Choose the <strong>cryptocurrency</strong> you wish to <strong>buy</strong> (e.g., <strong>USDT</strong>, <strong>USDC</strong>).<br>
-              You can initiate <strong>trades</strong> between any supported <strong>crypto pairs</strong>, subject to the available <strong>liquidity</strong> in the <strong>network</strong>.<br>
-              <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1752071039/instanttrade2_elu6ei.avif" alt="Step 2: Select Trading Pair"></p>
-              <h3>Step 3: Enter Transaction Amount</h3>
-              <p>Enter the amount of the <strong>cryptocurrency</strong> you intend to <strong>sell</strong> or the amount of the <strong>cryptocurrency</strong> you wish to <strong>buy</strong>.<br>
-              The system will automatically calculate the corresponding equivalent value for the other <strong>cryptocurrency</strong>, based on real-time <strong>market rates</strong>.<br>
-              <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1752071039/instanttrade3_mfk1m9.avif" alt="Step 3: Enter Amount"></p>
-              <h3>Step 4: Review Your Trade Details</h3>
-              <p>Before confirming, carefully review all the <strong>trade information</strong> presented:<br>
-              • <strong>Exchange Rate</strong>: The current conversion rate between your selected <strong>tokens</strong>.<br>
-              • <strong>Slippage Tolerance</strong>: The maximum percentage change in <strong>price</strong> you are willing to accept during execution.<br>
-              • <strong>Estimated Network Fee</strong>: The approximate cost for processing the <strong>transaction</strong> on the <strong>blockchain</strong>.<br>
-              • <strong>Minimum Received</strong>: The minimum amount of the <strong>buy</strong> <strong>token</strong> you are expected to receive.<br>
-              It's crucial to ensure that the <strong>exchange rate</strong> and <strong>network fees</strong> meet your expectations before proceeding with the <strong>swap</strong>.<br>
-              <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1752071040/instanttrade4_oj0ue9.avif" alt="Step 4: Review Trade Details"></p>
-              <h3>Step 5: Confirm Your Instant Swap</h3>
-              <p>Once you have verified all details and are satisfied, tap <strong>‘Swap Token’</strong> to finalize and initiate your <strong>trade</strong>.<br>
-              Your <strong>instant swap</strong> will be executed at the best available <strong>market price</strong>, drawing real-time <strong>quotes</strong> from our integrated <strong>liquidity providers</strong>.<br>
-              After a successful <strong>transaction</strong>, you can check the full details in your <strong>Transaction History</strong>.<br>
-              <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1752071041/instanttrade5_vkrcw3.avif" alt="Step 5: Confirm Swap"></p>
-            `,
+            <p>The <strong>Instant Swap</strong> feature on <strong>SwiftEx S-DEX</strong> allows you to quickly convert between supported <strong>digital assets</strong> using real-time <strong>price quotes</strong>. It is designed for users who want fast and simple <strong>asset conversion</strong> without complex interfaces.</p>
+            <h3><strong>Note:</strong> This feature requires <strong>Stellar Wallet</strong> activation before use.</h3>
+            <p>Follow these steps to convert one <strong>cryptocurrency</strong> into another using <strong>Instant Swap</strong>:</p>
+
+            <h3>Step 1: Navigate to Instant Swap</h3>
+            <p>From the default <strong>Wallet screen</strong>, locate and tap the <strong>'S-DEX'</strong> tab. Once inside the <strong>S-DEX screen</strong>, you'll see various asset management options. Select <strong>'Swap Assets'</strong> to access the conversion features, then choose <strong>'Instant Swap'</strong> for quick asset conversions with real-time pricing.<br>
+            <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770283118/image_6_rtowy2.webp" alt="Step 1: Access Instant Swap"></p>
+
+            <h3>Step 2: Select Asset Pair</h3>
+            <p>
+            You'll now need to specify which assets you want to convert. First, choose the <strong>asset</strong> you want to convert from - this will be deducted from your wallet. Next, select the <strong>asset</strong> you want to receive after the conversion is complete. The available assets depend on your wallet balances, supported networks, and available <strong>liquidity routes</strong> within the S-DEX system. Make sure you have sufficient balance of the source asset before proceeding.<br>
+            <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770283118/1000136650_kn5wvn.webp" alt="Step 2: Select Asset Pair"></p>
+
+            <h3>Step 3: Enter Amount</h3>
+            <p>Enter the precise amount of the source asset you want to convert. You can  type the amount manually  As you enter the amount, the system will automatically calculate and display the estimated output amount you'll receive based on current <strong>conversion rates</strong>. This calculation happens in real-time, so the estimated output may adjust slightly as market conditions change.<br>
+            <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770283118/1000136651_i8hurp.webp" alt="Step 3: Enter Amount"></p>
+
+            <h3>Step 4: Review Conversion Details</h3>
+            <p>
+            Before proceeding, carefully review all the important details of your conversion:
+            <br><br>
+            • <strong>Conversion Rate:</strong> The current rate at which your assets will be converted. This rate is fetched in real-time from integrated liquidity partners.<br><br>
+            • <strong>Estimated Network Fee:</strong> The blockchain network fee required to process this conversion transaction. This fee goes to the network validators, not to SwiftEx.<br><br>
+            • <strong>Minimum Received:</strong> The guaranteed minimum amount you'll receive, accounting for potential minor rate fluctuations during processing. This protects you from unexpected price changes.<br><br>
+            Take your time to verify all these details are acceptable before moving forward. If any values seem incorrect or unexpected, you can go back and adjust your inputs.
+            </p>
+
+            <h3>Step 5: Confirm Swap</h3>
+            <p>Once you've reviewed and confirmed all the details are correct, tap the <strong>'Confirm Swap'</strong> button to execute the conversion. The system will process your request immediately using real-time quotes from integrated <strong>liquidity partners</strong>. The conversion typically completes within a few moments, depending on network conditions. You can track the status and result of your conversion in your <strong>Transaction History</strong>, where you'll see a detailed record including the amounts converted, rates applied, and timestamp.<br>
+            <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770283141/1000136652_wablwj.webp" alt="Step 5: Confirm Swap"></p>
+          `,
             keywords: [
-              'instant trade',
-              'quick swap',
-              'crypto exchange',
-              'swiftex trade',
-              'cryptocurrency swap',
-              'trading pairs',
+              'instant swap',
+              'asset conversion',
+              'crypto swap',
+              'swiftex sdex',
+              'token conversion',
             ],
-            relatedArticles: ['large-order-trade', 'swapping-assets', 'usdc-import'],
-            path: '/instant-trade',
+            relatedArticles: ['advanced-swap', 'swapping-assets', 'usdc-import'],
+            path: '/instant-swap',
           },
         ],
       },
       {
-        id: 'large-order-trading',
-        name: 'Large Order Trading',
+        id: 'advanced-swap',
+        name: 'Advanced Swap',
         articles: [
           {
-            id: 'large-order-trade',
-            title: 'How to Place a Large Order Trade',
+            id: 'advanced-swap',
+            title: 'How to Create an Advanced Swap',
             modifiedDate: 'Fri, 20 Jun 2025 at 11:27 AM',
             content: `
-              <p>The <strong>Large Order Trade</strong> feature is designed for users who want greater control over their <strong>trades</strong>. It allows you to place custom <strong>buy</strong> or <strong>sell</strong> offers for high-volume <strong>transactions</strong> at your desired <strong>price</strong>, making it ideal for strategic <strong>trading decisions</strong>.</p>
-              <h3><strong>Note:</strong> This feature requires <strong>Trade Wallet</strong> activation before use.</h3>
-              <p>Follow the steps below to place a custom <strong>trade offer</strong> using the <strong>Large Order Trade</strong> option:</p>
-              <h3>How to Place a Large Order Trade</h3>
-              <ol>
-                <li>
-                  <strong>Navigate to Large Order Trade</strong><br>
-                  From the default <strong>Wallet screen</strong>, tap on the <strong>‘Exchange’ tab</strong> in the bottom navigation menu.<br>
-                  On the <strong>Exchange screen</strong>, select the <strong>‘Trade’ option</strong>, and then choose <strong>‘Large Order Trade’</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1755954336/largeorder_i51jpd.webp" alt="Step 1: Navigate to Large Order Trade">
-                </li>
-                <li>
-                  <strong>Choose Trading Pair and Order Type</strong><br>
-                  Select the <strong>cryptocurrency pair</strong> you wish to trade (e.g., <strong>ETH</strong>/<strong>USDC</strong>). Then, specify whether you want to place a <strong>Buy</strong> or <strong>Sell</strong> order.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1752071546/largeordertrade2_cynlsn.avif" alt="Step 2: Choose Trading Pair">
-                </li>
-                <li>
-                  <strong>Set Custom Price and Amount</strong><br>
-                  Enter the exact amount of the <strong>asset</strong> you intend to <strong>buy</strong> or <strong>sell</strong>.<br>
-                  Next, define your desired <strong>price</strong> at which you want the <strong>trade</strong> to execute. This flexibility allows you to precisely target specific <strong>market conditions</strong> that align with your <strong>trading strategy</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1752071509/largeorder4_ndhezo.avif" alt="Step 3: Set Price">
-                </li>
-                <li>
-                  <strong>Create Your Offer</strong><br>
-                  Tap <strong>‘Create Offer’</strong> to submit your custom <strong>trade</strong>. Your <strong>offer</strong> will be promptly listed in the <strong>order book</strong> and will remain active until it is fully filled, modified, or you manually cancel it.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1752071512/largeorder5_gyogzd.avif" alt="Step 4: Create Offer">
-                </li>
-              </ol>
-              <h3>Managing Your Offers</h3>
-              <p>You can easily view, edit, or delete your active <strong>trade offers</strong> at any time by visiting the <strong>‘Offers’ section</strong> within the app. This provides you with complete control over your ongoing <strong>large orders</strong>, eliminating the need to repeatedly resubmit <strong>trades</strong>.</p>
-              <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1752071555/largeorder6_urjr7o.avif" alt="Manage Offers">
-            `,
+      <p>The <strong>Advanced Swap</strong> feature allows users to create custom swap requests with specific terms. You can define your preferred <strong>conversion rate</strong> and <strong>amount</strong>, giving you greater control over how and when your assets are converted. This is particularly useful when you want to set a target rate and wait for market conditions to meet your requirements.</p>
+      <h3><strong>Note:</strong> This feature requires <strong>Stellar Wallet</strong> activation before use.</h3>
+
+      <h3>How to Create an Advanced Swap</h3>
+      <ol>
+        <li>
+          <strong>Navigate to Advanced Swap</strong><br>
+          From your SwiftEx home screen, open the <strong>S-DEX</strong> tab to access Stellar-based features. Within the S-DEX interface, select <strong>Swap Assets</strong> to view available conversion options. Choose <strong>Advanced Swap</strong> to access the custom swap creation interface where you can set your own terms and conditions for asset conversion.<br>
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770283446/image_7_cqzope.webp" alt="Step 1: Navigate to Advanced Swap">
+        </li>
+        <li>
+          <strong>Select Asset Pair</strong><br>
+          Choose the specific assets you wish to convert between. Select your source asset (what you're offering) and your destination asset (what you want to receive). The system will display your available balance for the source asset and show you the current market rate as a reference point. Make sure both assets are supported and that you have sufficient balance to create the swap request.<br>
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770283369/1000136654_any00g.webp" alt="Step 2: Select Asset Pair">
+        </li>
+        <li>
+          <strong>Set Swap Terms</strong><br>
+          Now define the specific terms for your swap request. Enter the exact amount of the source asset you want to convert. Then, set your preferred conversion rate - this is the rate at which you're willing to convert your assets. You can set this rate above or below the current market rate depending on your strategy. The system will calculate and show you the expected output amount based on your chosen rate. Consider setting realistic rates that are more likely to be fulfilled.<br>
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770283368/1000136655_fwipfg.webp" alt="Step 3: Set Terms">
+        </li>
+        <li>
+          <strong>Create Advanced Swap</strong><br>you manually complete or cancel 
+          After reviewing your swap terms one final time, tap the <strong>'Execute'</strong> button to create your swap request. Your request will be added to the <strong>swap pool</strong> where it remains active until one of three things happens: it gets matched with a compatible request, it, or it expires (if you set an expiration time). Your assets will be temporarily held while the request is active, ensuring they're available when a match is found.
+        </li>
+      </ol>
+
+      <h3>Managing Your Swaps</h3>
+      <p>You can easily monitor and manage all your active <strong>advanced swaps</strong> from the <strong>Advance Swap History</strong> section. This section shows the current status of each swap request, including details like creation time, rates, amounts, and matching progress. From here, you can view detailed information, modify certain parameters, or cancel any active swap request at any time before it's been fulfilled. Cancelled swaps will immediately return the held assets back to your available balance.</p>
+    `,
             keywords: [
-              'large order',
-              'trade',
+              'advanced swap',
+              'asset swap',
               'crypto',
-              'order book',
-              'swiftex',
-              'high-volume trading',
-              'custom price',
+              'swap pool',
+              'swiftex sdex',
             ],
-            relatedArticles: ['swapping-assets', 'instant-trade', 'usdc-import'],
-            path: '/large-order-trade',
+            relatedArticles: ['instant-swap', 'swapping-assets', 'usdc-import'],
+            path: '/advanced-swap',
           },
         ],
-      },
+      }
+
     ],
   },
+
   {
     id: 'asset-management',
     name: 'Asset Management',
     path: '/asset-management',
     description:
-      'Manage your <strong>crypto assets</strong>, including adding <strong>custom tokens</strong>, importing <strong>USDC</strong>, and handling <strong>exchange wallets</strong> in <strong>SwiftEx</strong>.',
+      'Manage your <strong>digital assets</strong> in SwiftEx, including adding <strong>custom tokens</strong>, adding <strong>USDC</strong> to Stellar, using <strong>USDC</strong> from Stellar, and managing your <strong>internal wallets</strong> across supported networks.',
     subtopics: [
       {
         id: 'custom-tokens',
@@ -690,225 +648,249 @@ export const categories: Category[] = [
             title: 'Adding Custom Tokens in SwiftEx',
             modifiedDate: 'Fri, 20 Jun 2025 at 11:27 AM',
             content: `
-              <p><strong>SwiftEx</strong> allows you to add any <strong>custom token</strong> that may not already be listed by default. This feature is especially helpful when managing newer or less common <strong>tokens</strong> within supported <strong>networks</strong> like <strong>Ethereum</strong> or <strong>Binance Smart Chain</strong>. If you’re holding <strong>tokens</strong> from a new project or using <strong>custom contracts</strong>, this feature ensures you can still view and manage them securely from within the app.</p>
-              <h3>What are Custom Tokens?</h3>
-              <p><strong>Custom tokens</strong> are digital <strong>assets</strong> that are not pre-listed in the <strong>SwiftEx app</strong> but can be added manually by providing their <strong>contract address</strong>. These <strong>tokens</strong> operate on <strong>blockchain networks</strong> such as <strong>Ethereum</strong> (<strong>ERC-20</strong>), <strong>Binance Smart Chain</strong> (<strong>BEP-20</strong>), and others supported by <strong>SwiftEx</strong>.</p>
-              <h3>How to Add a Custom Token</h3>
-              <ol>
-                <li>
-                  <strong>Go to the Assets Section</strong><br>
-                  Open the <strong>SwiftEx app</strong>. Tap on the ‘<strong>Assets</strong>’ tab from the bottom menu.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958610/cgeqcceghezx3uxjeyee_hjo8vh.avif" alt="Step 1: Go to Assets">
-                </li>
-                <li>
-                  <strong>Select the Blockchain Network</strong><br>
-                  Choose the <strong>crypto chain</strong> where your <strong>custom token</strong> exists (e.g., <strong>Ethereum</strong>, <strong>BNB Smart Chain</strong>). This ensures that your <strong>token</strong> is registered on the correct <strong>blockchain</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958622/bnjh0cdc0ngca1bpluxk_hmrg3o.avif" alt="Step 2: Select Network">
-                </li>
-                <li>
-                  <strong>Enter the Token Contract Address</strong><br>
-                  Tap ‘<strong>Add Asset</strong>’. Paste the full <strong>contract address</strong> of the <strong>token</strong> you'd like to add. The <strong>contract address</strong> is a unique identifier for the <strong>token</strong> and can typically be found on trusted sources like <strong>CoinGecko</strong>, <strong>CoinMarketCap</strong>, or the project’s official website.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958632/mwvu9qfpzkltln2mevgo_yks9kr.avif" alt="Step 3: Enter Address">
-                </li>
-                <li>
-                  <strong>Confirm & Add</strong><br>
-                  Once the <strong>contract address</strong> is verified, <strong>SwiftEx</strong> will auto-fill details like <strong>token name</strong>, <strong>symbol</strong>, and <strong>decimals</strong>. Tap ‘<strong>Add Asset</strong>’ to complete the process.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958627/zw5tep0m1a1ebvzag82b_wigwat.avif" alt="Step 4: Confirm Add">
-                </li>
-                <li>
-                  <strong>View Your Token</strong><br>
-                  Your <strong>custom token</strong> will now appear in your <strong>Assets section</strong>. You can now <strong>receive</strong>, <strong>send</strong>, or <strong>trade</strong> the <strong>asset</strong> like any other listed <strong>token</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958614/lwzgzz33y7bdg5rza2ly_ghcclv.avif" alt="Step 5: View Token">
-                </li>
-              </ol>
-              <h3>Security Tip</h3>
-              <p>When adding <strong>custom tokens</strong>, always verify the authenticity of the <strong>contract address</strong> to avoid adding <strong>scam</strong> or <strong>fraudulent assets</strong>. You can cross-check <strong>token details</strong> via trusted <strong>blockchain explorers</strong> like <strong>Etherscan</strong> or <strong>BscScan</strong>.</p>
-            `,
-            keywords: ['custom tokens', 'assets', 'contract address', 'blockchain', 'swiftex'],
-            relatedArticles: [
-              'usdc-import',
-              'swapping-assets',
-              'send-crypto',
-              'receive-crypto',
-            ],
+          <p>
+          <strong>SwiftEx</strong> allows you to add <strong>custom tokens</strong>
+          that are not listed by default. This helps you view and manage
+          additional <strong>assets</strong> across supported
+          <strong>blockchain networks</strong>.
+          </p>
+
+          <h3>What Are Custom Tokens?</h3>
+          <p>
+          Custom tokens are digital assets added manually using a verified
+          <strong>contract address</strong>. These tokens are displayed
+          within your internal wallet for tracking and transfers.
+          </p>
+
+          <h3>Supported Networks</h3>
+          <p>
+          <strong>Ethereum</strong> and <strong>BNB Smart Chain</strong>
+          </p>
+
+          <h3>How to Add a Custom Token</h3>
+          <ol>
+            <li>
+              <strong>Switch tab Asset to Add Assets</strong><br>
+              Open the SwiftEx app from your home screen. Once inside, locate and tap on the <strong>Assets</strong> tab. From there, you'll see an option to <strong>Add Assets</strong> - tap on it to proceed to the token addition screen.
+            </li>
+            <li>
+              <strong>Select Network</strong><br>
+              You'll be presented with a list of supported blockchain networks. Choose the specific blockchain network where your custom token exists - either <strong>Ethereum</strong> or <strong>BNB Smart Chain</strong>. Make sure you select the correct network as tokens exist on specific chains and cannot be found on others.
+              <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770288365/1000136656_cekdpl.webp" alt="Step 2: addcustom tokens">
+            </li>
+            <li>
+              <strong>Enter Contract Address</strong><br>
+              In the provided input field, carefully paste the <strong>contract address</strong> of your custom token. This is a unique identifier (usually starting with "0x") that represents the token on the blockchain. You can copy this address from the token's official website, CoinGecko, CoinMarketCap, or your trusted source. Double-check the address to ensure accuracy.
+              <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770288366/1000136657_h1pbgl.webp" alt="Step 3: addcustom tokens">
+            </li>
+            <li>
+              <strong>Confirm & Add</strong><br>
+              Once you enter the contract address, SwiftEx will automatically fetch and display the token details including its <strong>name</strong>, <strong>symbol</strong>, and <strong>decimal places</strong>. Review these details carefully to ensure they match the token you want to add. If everything looks correct, tap the <strong>Add</strong> or <strong>Confirm</strong> button to complete the process.
+            </li>
+            <li>
+              <strong>View Asset</strong><br>
+              Your newly added custom token will now appear in your asset list on the main Assets screen. You can view its balance, current value, and perform actions like <strong>sending</strong> or <strong>receiving</strong> this token. The token will remain visible in your wallet until you choose to remove it.
+            </li>
+          </ol>
+
+          <h3>Security Tip</h3>
+          <p>
+          Always verify contract addresses from official sources
+          before adding a custom token. Never add tokens from untrusted sources or suspicious messages, as scammers often create fake tokens with similar names to legitimate ones.
+          </p>
+        `,
             path: '/add-custom-tokens',
           },
         ],
       },
+
       {
-        id: 'usdc-import',
-        name: 'USDC Import',
+        id: 'add-usdc',
+        name: 'Add USDC',
         articles: [
           {
-            id: 'usdc-import',
-            title: 'USDC Import & Asset Management in SwiftEx',
+            id: 'add-usdc',
+            title: 'Add USDC to Stellar Wallet',
             modifiedDate: 'Fri, 20 Jun 2025 at 11:27 AM',
             content: `
-              <p><strong>SwiftEx</strong> allows seamless management of your <strong>USDC holdings</strong> and other <strong>assets</strong> directly through the app’s <strong>Exchange interface</strong>. Whether you’re preparing to <strong>trade</strong>, <strong>swap</strong>, or hold, importing <strong>USDC</strong> to your <strong>Trade Wallet</strong> is fast and efficient. Please note: This feature requires <strong>Trade Wallet</strong> activation before use.</p>
-              <h3>What Is USDC Import?</h3>
-              <p><strong>USDC</strong> (<strong>USD Coin</strong>) is one of the most commonly used <strong>stablecoins</strong> in <strong>crypto trading</strong>. <strong>SwiftEx</strong> enables you to import <strong>USDC</strong> from your <strong>wallet</strong> to your <strong>Trade Wallet</strong> so it can be used for <strong>spot trades</strong>, <strong>swaps</strong>, or <strong>large-order executions</strong> directly on the platform.</p>
-              <h3>How to Import USDC</h3>
-              <ol>
-                <li>
-                  <strong>Go to the Exchange Tab</strong><br>
-                  Open the <strong>SwiftEx App</strong>. Tap on the ‘<strong>Exchange</strong>’ tab from the bottom navigation bar.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958625/m4g9f1oxwprkalu5apv8_vt8knb.avif" alt="Step 1: Go to Exchange">
-                </li>
-                <li>
-                  <strong>Tap on Import USDC</strong><br>
-                  Look for the ‘<strong>Import USDC</strong>’ button on the screen. Tap it to begin the <strong>import process</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1755954341/importusdc_qtu8ze.webp" alt="Step 2: Import USDC">
-                </li>
-                <li>
-                  <strong>Select Your Network and Asset</strong><br>
-                  Choose the <strong>blockchain network</strong> where your <strong>USDC</strong> is currently held (e.g., <strong>Ethereum</strong>, <strong>BSC</strong>, <strong>Polygon</strong>). Confirm the correct <strong>asset type</strong> (<strong>USDC</strong>).<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958616/awf27rbpj3gbp7w6htth_r5cndm.avif" alt="Step 3: Select Network">
-                </li>
-                <li>
-                  <strong>Enter Amount to Import</strong><br>
-                  Specify the amount of <strong>USDC</strong> you’d like to transfer into your <strong>Trade Wallet</strong>. Ensure you have enough <strong>gas/native token</strong> in your sending <strong>wallet</strong> to cover the <strong>transaction fee</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958611/ychjciicpb595xtgwepp_sjbeya.avif" alt="Step 4: Enter Amount">
-                </li>
-                <li>
-                  <strong>Review the Quote</strong><br>
-                  <strong>SwiftEx</strong> will fetch real-time <strong>quotes</strong> from available providers to give you the best possible <strong>rate</strong> and <strong>execution path</strong>. Carefully check the <strong>exchange rate</strong> and expected final <strong>balance</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958633/bba3nkwb3zrxcy5jvlq4_ovuoxd.avif" alt="Step 5: Review Quote">
-                </li>
-                <li>
-                  <strong>Confirm the Import</strong><br>
-                  Once satisfied, tap ‘<strong>Confirm</strong>’ to finalize the <strong>transaction</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958634/tpoaktsey96oybtwyxrb_xl03xi.avif" alt="Step 6: Confirm Import">
-                </li>
-                <li>
-                  <strong>USDC Received in Trade Wallet</strong><br>
-                  After <strong>confirmation</strong>, your imported <strong>USDC</strong> will reflect in your <strong>Trade Wallet</strong> under the ‘<strong>Assets</strong>’ section. It’s now available for <strong>trading</strong>, <strong>swapping</strong>, or <strong>transferring</strong>.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958623/bkfmbakpp97u9nqclgpw_embak6.avif" alt="Step 7: USDC Received">
-                </li>
-              </ol>
-            `,
-            keywords: ['usdc', 'import', 'trade wallet', 'stablecoin', 'swiftex'],
-            relatedArticles: ['swapping-assets', 'instant-trade', 'large-order-trade'],
-            path: '/usdc-import',
+      <p>
+      <strong>Add USDC</strong> allows you to bring supported
+      stable assets from your <strong>wallets on other networks</strong>
+      into your <strong>active Stellar wallet</strong>
+      within the SwiftEx app.
+      </p>
+
+      <p>
+      Assets selected from
+      <strong>Ethereum</strong> or
+      <strong>BNB Smart Chain</strong>
+      are <strong>bridged internally</strong> and
+      made available as
+      <strong>USDC on your active Stellar wallet</strong>.
+      </p>
+
+      <h3>Default Stellar Asset</h3>
+      <p>
+      On the Stellar network,
+      <strong>USDC is used by default</strong>.
+      This ensures a consistent experience
+      when moving assets between Stellar
+      and other networks.
+      </p>
+
+      <h3>Supported Networks</h3>
+      <p>
+      Source networks:
+      <strong>Ethereum</strong>,
+      <strong>BNB Smart Chain</strong><br>
+      Destination network:
+      <strong>Stellar (USDC)</strong>
+      </p>
+
+      <h3>How to Add USDC</h3>
+      <ol>
+        <li>
+          <strong>Open S-DEX</strong><br>
+          From your SwiftEx home screen, locate and tap on the <strong>S-DEX</strong> icon or menu option. This will take you to the Stellar-specific features section where you can manage your Stellar assets and perform cross-chain operations.
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770289166/1000136636_avczbj.webp" alt="Step 1: Add-USDC">
+        </li>
+        <li>
+          <strong>Select Add USDC</strong><br>
+          Once inside the S-DEX section, you'll see various options for managing your Stellar assets. Look for and tap on the <strong>Add USDC</strong> button or card. This initiates the process of bringing stablecoins from your wallets on other networks into your Stellar wallet.
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770289476/1000136638_ndqtpj.webp" alt="Step 2: Add-USDC">
+        </li>
+        <li>
+          <strong>Select Source Network</strong><br>
+          You'll be presented with a list of supported source networks. Choose either <strong>Ethereum</strong> or <strong>BNB Smart Chain</strong> depending on where your stablecoins currently reside. The app will display your available balance on the selected network to help you decide.
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770289025/1000136660_sqizks.webp" alt="Step 3: Add-USDC">
+        </li>
+        <li>
+          <strong>Select Asset</strong><br>
+          From the available stablecoins on your chosen network, select either <strong>USDC</strong> or <strong>USDT</strong>. Enter the amount you wish to transfer to your Stellar wallet. The app will show your current balance and may suggest a recommended amount based on available funds and minimum requirements.
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770289025/1000136661_vdaly8.webp" alt="Step 4: Add-USDC">
+        </li>
+        <li>
+          <strong>Select Fee Option</strong><br>
+          Choose how you'd like to pay for the transaction fee. You can either pay with the <strong>native token</strong> of the source network (ETH for Ethereum, BNB for BNB Smart Chain) or use <strong>asset-based fees</strong> where a small portion of the stablecoin you're transferring is used to cover the cost. Review the estimated fee amount before proceeding.
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770289024/1000136663_uhcoho.webp" alt="Step 5: Add-USDC">
+        </li>
+        <li>
+          <strong>Confirm Destination</strong><br>
+          Review the transaction summary showing the amount being transferred and the destination. Your selected stablecoins will be automatically converted and made available as <strong>USDC on your active Stellar wallet</strong>. Verify that your Stellar wallet address is correct and that you understand the conversion that will take place.
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770289025/1000136662_za15ew.webp" alt="Step 6: Add-USDC">
+        </li>
+        <li>
+          <strong>Confirm</strong><br>
+          After reviewing all transaction details including the amount, fees, and destination, tap the <strong>Confirm</strong> button to execute the transfer. The process may take a few moments to complete. Once finished, your USDC will appear in your Stellar wallet and you'll receive a confirmation notification.
+        </li>
+      </ol>
+
+      <h3>Note</h3>
+      <p>
+      Asset movement happens only between
+      your internal wallets within the SwiftEx app.
+      SwiftEx does not provide
+      exchange or trading services - this is purely an internal asset management feature to help you organize and access your funds across different blockchain networks.
+      </p>
+    `,
+            path: '/add-usdc',
           },
         ],
       },
+
       {
-        id: 'exchange-wallet',
-        name: 'Exchange Wallet',
+        id: 'cross-chain-transfers',
+        name: 'Cross-chain Transfers',
         articles: [
           {
-            id: 'exchange-wallet',
-            title: 'Send & Receive from Exchange Wallet in SwiftEx',
+            id: 'cross-chain-transfers',
+            title: 'Cross-chain Crypto Transfers',
             modifiedDate: 'Fri, 20 Jun 2025 at 11:27 AM',
             content: `
-              <p>Once your Trade Wallet is activated on SwiftEx, you can send and receive assets directly from the Exchange Wallet with ease. This enables seamless on-chain transfers for supported tokens, helping you manage your portfolio efficiently.</p>
-              <h3>Sending Crypto from Trade Wallet</h3>
-              <p>If you’d like to send tokens directly from your Exchange Wallet, follow the steps below:</p>
-              <ol>
-                <li>
-                  <strong>Go to the Assets Section</strong><br>
-                  Open the SwiftEx App. Tap on the ‘Exchange’ tab at the bottom. Navigate to the ‘Assets’ section.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1755954340/assets_sb1nc3.webp" alt="Step 1: Go to Assets">
-                </li>
-                <li>
-                  <strong>Choose the Token</strong><br>
-                  Select the specific crypto asset you wish to send from your Trade Wallet (e.g., USDC, ETH, XLM).<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958616/sgnjogy584r8go2y612n_yfwjvq.avif" alt="Step 2: Choose Token">
-                </li>
-                <li>
-                  <strong>Enter Transaction Details</strong><br>
-                  Input the recipient’s wallet address carefully. Enter the amount you wish to send.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958613/s8r1vnt1lqqx2nobyikr_hzchmr.avif" alt="Step 3: Enter Details">
-                </li>
-                <li>
-                  <strong>Confirm and Send</strong><br>
-                  Tap the ‘Send’ button. Review the summary of your transaction. Tap ‘Confirm’ to authorize the transfer. Double-check the wallet address before sending. Crypto transactions are irreversible once processed.<br>
-                </li>
-              </ol>
-              <h3>Receiving Crypto into Trade Wallet</h3>
-              <p>Want to receive crypto directly into your SwiftEx Exchange Wallet? Here’s how:</p>
-              <ol>
-                <li>
-                  <strong>Go to the Receive Section</strong><br>
-                  Tap on the ‘Assets’ tab under Exchange.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958621/uk7ktlbicdsahriu0ka1_fnbaq8.avif" alt="Step 1: Go to Assets">
-                </li>
-                <li>
-                  <strong>Select the Token</strong><br>
-                  Choose the token you’d like to receive (e.g., USDT, USDC, ETH). Tap ‘Receive’ on the top menu. You will be shown a QR code and a wallet address specific to that token.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958616/sgnjogy584r8go2y612n_yfwjvq.avif" alt="Step 2: Select Token">
-                </li>
-                <li>
-                  <strong>Share Your Address</strong><br>
-                  Copy the address or share the QR code with the sender. Wait for the transaction to be confirmed on-chain. Ensure the sender uses the correct blockchain network and token version when transferring.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1752073164/recive_nervyw.avif" alt="Step 3: Share Address">
-                </li>
-              </ol>
-              <h3>Security Reminder</h3>
-              <p>Receiving and sending assets from your Trade Wallet requires network-specific wallet addresses. Always confirm the network compatibility before initiating transactions.</p>
-            `,
-            keywords: ['exchange wallet', 'send', 'receive', 'crypto', 'swiftex'],
-            relatedArticles: [
-              'usdc-import',
-              'send-crypto',
-              'receive-crypto',
-              'add-custom-tokens',
-            ],
-            path: '/exchange-wallet',
-          },
-        ],
-      },
-      {
-        id: 'add-new-assets',
-        name: 'Add New Assets',
-        articles: [
-          {
-            id: 'add-new-assets',
-            title: 'Adding New Assets to Your Trade Wallet in SwiftEx',
-            modifiedDate: 'Fri, 20 Jun 2025 at 11:27 AM',
-            content: `
-              <p>SwiftEx allows you to expand your portfolio by adding more crypto tokens to your Trade Wallet. Whether it's a popular token or a custom one with a contract address, the process is quick and secure. Please note: This feature requires Trade Wallet activation before use.</p>
-              <h3>What Is the 'Add Asset' Feature?</h3>
-              <p>The Add Asset functionality enables you to manually include supported or custom tokens in your wallet, making them visible and available for trade, swap, or transfer. This is useful for tokens not pre-listed in your default wallet view.</p>
-              <h3>How to Add a New Asset</h3>
-              <ol>
-                <li>
-                  <strong>Navigate to the Assets Section</strong><br>
-                  Open the SwiftEx App. Tap on the ‘Exchange’ tab at the bottom. Go to the ‘Assets’ section.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1755954340/assets_sb1nc3.webp" alt="Step 1: Go to Assets">
-                </li>
-                <li>
-                  <strong>Tap ‘Add Asset’</strong><br>
-                  On the Assets screen, locate and tap on ‘Add Asset’ at the top or bottom of the list.<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958608/pwrpxt8ltab2daxvac9j_r9ylpg.avif" alt="Step 2: Tap Add Asset">
-                </li>
-                <li>
-                  <strong>Search or Add Manually</strong><br>
-                  Browse through the list of available tokens supported on your selected chain. Ensure the contract address is accurate and corresponds to the correct blockchain (e.g., Ethereum, BSC, Polygon).<br>
-                  <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958619/etkbrdjbixedp2xayvjc_kts2st.avif" alt="Step 3: Search or Add">
-                </li>
-                <li>
-                  <strong>Confirm and Add</strong><br>
-                  Tap ‘Add’ to complete the process. The token will now appear under your Assets section in the Exchange Wallet.<br>
-                </li>
-              </ol>
-              <h3>Security Tip</h3>
-              <p>When adding custom tokens, always verify the authenticity of the contract address to avoid adding scam or fraudulent assets. You can cross-check token details via trusted blockchain explorers like Etherscan or BscScan.</p>
-            `,
-            keywords: ['add asset', 'custom tokens', 'trade wallet', 'blockchain', 'swiftex'],
-            relatedArticles: ['add-custom-tokens', 'usdc-import', 'swapping-assets'],
-            path: '/add-new-assets',
+      <p>
+      <strong>Cross-chain transfers</strong> allow you to move
+      <strong>USDC</strong> from your
+      <strong>active Stellar wallet</strong>
+      to your <strong>internal wallets on other networks</strong>
+      within the SwiftEx app.
+      </p>
+
+      <p>
+      During this process,
+      <strong>USDC on Stellar</strong>
+      is <strong>bridged internally</strong>
+      and represented as
+      <strong>USDC or USDT</strong>
+      on the selected destination network.
+      </p>
+
+      <h3>Supported Networks</h3>
+      <p>
+      Source network:
+      <strong>Stellar (USDC)</strong><br>
+      Destination networks:
+      <strong>Ethereum</strong>,
+      <strong>BNB Smart Chain</strong>
+      </p>
+
+      <h3>How to Transfer</h3>
+      <ol>
+        <li>
+          <strong>Open S-DEX</strong><br>
+          Launch the SwiftEx app and navigate to the <strong>S-DEX</strong> section from your home screen. This is your gateway to managing Stellar-based assets and performing cross-chain transfers between your wallets.
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770289166/1000136636_avczbj.webp" alt="Step 1: Cross-chain Transfer">
+        </li>
+        <li>
+          <strong>Select Cross-chain Transfer</strong><br>
+          Within the S-DEX interface, locate and tap on the <strong>Cross-chain Transfer</strong> option. This feature allows you to transfer your Stellar-based USDC to other supported networks. Make sure you have sufficient USDC balance in your Stellar wallet before proceeding.
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770289843/1000136639_h3zmrt.webp" alt="Step 2: Cross-chain Transfer">
+        </li>
+        <li>
+          <strong>Select Destination Network</strong><br>
+          Choose where you want to send your USDC - either <strong>Ethereum</strong> or <strong>BNB Smart Chain</strong>. Consider factors like transaction fees and your intended use case when selecting the destination network. The app will display relevant information about each network to help you decide.
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770290862/1000136665_rurxyk.webp" alt="Step 3: Cross-chain Transfer">
+        </li>
+        <li>
+          <strong>Select Asset</strong><br>
+          Choose the format you want your asset to take on the destination network - either <strong>USDC</strong> or <strong>USDT</strong>. Enter the amount you wish to transfer from your Stellar wallet. The app will show your available Stellar USDC balance and may indicate minimum and maximum transfer limits.
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770290862/1000136666_gaufdr.webp" alt="Step 4: Cross-chain Transfer">
+        </li>
+        <li>
+          <strong>Confirm Wallet</strong><br>
+          Review the destination wallet details carefully. Your assets will be transferred to your <strong>internal wallet</strong> on the selected network within SwiftEx - not to any external address. Verify that the displayed wallet address matches your intended destination wallet within the app.
+        </li>
+        <li>
+          <strong>Select Fee Option</strong><br>
+          Choose your preferred method for paying transaction fees. You can either pay with <strong>Stellar's native token (XLM)</strong> or use a portion of your USDC to cover the fees. Compare the fee amounts for each option and select the one that works best for you. The estimated total cost will be displayed clearly.
+          <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770290864/1000136669_binqhf.webp" alt="Step 5: Cross-chain Transfer">
+        </li>
+        <li>
+          <strong>Confirm</strong><br>
+          Review all transaction details one final time including the amount, destination network, asset type, and fees. Once you're satisfied that everything is correct, tap the <strong>Confirm</strong> button to initiate the transfer. The bridging process will begin and you'll receive a notification once your assets are successfully available on the destination network.
+        </li>
+      </ol>
+
+      <h3>Important</h3>
+      <p>
+      Manual address entry and
+      third-party transfers are not supported with this feature.
+      All asset movement is handled
+      between your internal wallets within SwiftEx only. This ensures security and prevents accidental transfers to incorrect addresses. If you need to send assets to external wallets, please use the standard Send feature instead.
+      </p>
+    `,
+            path: '/cross-chain-transfers',
           },
         ],
       },
     ],
   },
+
   {
-    id: 'on-off-ramp',
-    name: 'On/Off Ramp',
-    path: '/on-off-ramp',
+    id: 'fiat-access',
+    name: 'Fiat Access',
+    path: '/fiat-access',
     description:
-      'Learn how to <strong>buy</strong> and <strong>sell cryptocurrencies</strong> using fiat currency in the <strong>SwiftEx App</strong>, complete <strong>KYC verification</strong>, and view <strong>transaction history</strong> securely.',
+      'Learn how to <strong>acquire</strong> and <strong>convert cryptocurrencies</strong> using fiat currency in the <strong>SwiftEx App</strong>, complete <strong>KYC verification</strong>, and view <strong>transaction history</strong> securely.',
     subtopics: [
       {
         id: 'buy-crypto',
@@ -916,52 +898,52 @@ export const categories: Category[] = [
         articles: [
           {
             id: 'buy-crypto',
-            title: 'Buy/On-Ramping Assets',
+            title: 'Acquiring Crypto with Fiat',
             modifiedDate: 'Mon, 01 Sep 2025 at 10:36 AM',
             content: `
-            <p><strong>SwiftEx</strong> enables users to purchase <strong>cryptocurrencies</strong> using fiat currency through its <strong>On/Off Ramp</strong> feature. This guide walks you through the process, ensuring a seamless and secure experience.</p>
+            <p><strong>SwiftEx</strong> enables users to acquire <strong>cryptocurrencies</strong> using fiat currency through its <strong>Fiat Access</strong> feature. This guide walks you through the process, ensuring a seamless and secure experience.</p>
             <h3>Prerequisites</h3>
-            <p>For transactions above a certain amount (e.g., $50, varies by region; check <strong>Alchemy Pay</strong> documentation), <strong>KYC verification</strong> is required.</p>
-            <h3>How to Buy Crypto with On-Ramp</h3>
+            <p>For transactions above a certain amount (e.g., $50, varies by region; check your selected payment provider's documentation), <strong>KYC verification</strong> is required.</p>
+            <h3>How to Acquire Crypto with Fiat</h3>
             <ol>
               <li>
-                <strong>Access the On/Off Ramp Section</strong><br>
-                Open the <strong>SwiftEx App</strong>. Navigate to the <strong>Exchange</strong> tab and select the <strong>On/Off Ramp</strong> section.<br>
-                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756207138/onofframpselection_v3o9fi.webp" alt="Step 1: Access On/Off Ramp Section">
+                <strong>Access the Fiat Access Section</strong><br>
+                Open the <strong>SwiftEx App</strong> from your home screen. Locate and tap on the <strong>SDEX</strong> option to access Stellar-based features. Within the SDEX section, you'll find the <strong>Fiat Access</strong> option - tap on it to proceed to the fiat conversion interface.<br>
+                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770295970/image_10_xpsecl.webp" alt="Step 1: Access Fiat Access Section">
               </li>
               <li>
-                <strong>Choose a Provider</strong><br>
-                Select a trusted provider (e.g., <strong>Alchemy Pay</strong>) to handle fiat-to-crypto conversion securely.<br>
-                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756207136/provider_kpbtmc.avif" alt="Step 2: Choose Provider">
+                <strong>Choose a Payment Provider</strong><br>
+                You'll be presented with a list of trusted payment providers that facilitate fiat-to-crypto conversions. Select your preferred provider (e.g., <strong>Alchemy Pay</strong> or other available options) to handle the transaction securely. Each provider may have different supported regions, payment methods, and fee structures, so choose the one that best suits your needs.<br>
+                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770294680/1000136706_uyundv.webp" alt="Step 2: Choose Payment Provider">
               </li>
               <li>
                 <strong>Select Currencies and Payment Method</strong><br>
                 <ul> 
-                 <li> <strong>Buy</strong> tab is selected by default.</li>
-                  <li>Choose your fiat currency (e.g., USD, INR, or other region-specific fiat currencies supported by the provider).</li>
-                  <li>Select the cryptocurrency to buy (e.g., <strong>Bitcoin</strong>, <strong>Ethereum</strong>).</li>
-                  <li>Pick a payment method based on your region (e.g., Credit/Debit Card, Bank Transfer, UPI, or other local payment options; check with the provider for available methods).</li>
+                 <li>The <strong>Buy</strong> tab is selected by default on the fiat screen.</li>
+                  <li>Choose your fiat currency from the dropdown menu (e.g., USD, INR, EUR, or other region-specific fiat currencies supported by your selected provider).</li>
+                  <li>Select the cryptocurrency you want to acquire (e.g., <strong>Bitcoin</strong>, <strong>Ethereum</strong>, <strong>USDC</strong>, or other supported digital assets).</li>
+                  <li>Pick a payment method based on your region and availability. Options may include Credit/Debit Card, Bank Transfer, UPI, or other local payment methods. Check with your selected provider for the complete list of available payment options in your area.</li>
                 </ul>
-                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756703923/buyslectfiatandcoin_y3nl8q.webp" alt="Step 3: Select Currencies and Payment Method">
+                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770295932/image_11_zglt1i.webp" alt="Step 3: Select Currencies and Payment Method">
               </li>
               <li>
                 <strong>Enter Transaction Details</strong><br>
-                Input the fiat amount you want to spend. The equivalent crypto amount is calculated based on real-time rates. Review the summary (rates, fees, estimated delivery time).<br>
-                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756207134/Enteramount_xtspqr.avif" alt="Step 4: Enter Transaction Details">
+                Input the fiat amount you want to spend in the designated field. The system will automatically calculate and display the equivalent cryptocurrency amount you'll receive based on real-time conversion rates. Carefully review the transaction summary which includes the current conversion rate, any applicable processing fees, and the estimated delivery time for your crypto to arrive in your wallet. Make sure all details are accurate before proceeding.<br>
+                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770296151/FiatBuy_unyi6n.webp" alt="Step 4: Enter Transaction Details">
               </li>
               <li>
                 <strong>Complete Your Purchase</strong><br>
-                Tap <strong>Buy Now</strong>. If the transaction exceeds the no-KYC limit (e.g., $50, varies by region), complete <strong>KYC</strong> (see KYC Verification section). Enter payment details, review the final summary, and tap <strong>Confirm</strong>. Crypto will be credited to your wallet.<br>
+                Once you've reviewed all details, tap the <strong>Buy Now</strong> button. If your transaction amount exceeds the no-KYC limit set by the provider (e.g., $50, varies by region and provider), you'll be prompted to complete <strong>KYC verification</strong> (refer to the KYC Verification section for detailed steps). After KYC (if required), enter your payment details as requested by the provider. Review the final transaction summary one more time, then tap <strong>Confirm</strong> to execute the purchase. Your cryptocurrency will be credited to your SwiftEx wallet once the transaction is processed successfully.<br>
                 <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756207326/buycryptoalchmeypay_q5tm9f.webp" alt="Step 5: Complete Purchase">
               </li>
             </ol>
             <h3>Post-Purchase</h3>
-            <p>After a successful transaction, view details in the <strong>Settings</strong> section under <strong>Transaction History</strong>.</p>
-            <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756704217/reciveEth_ip84m2.webp" alt="Step 6: Transction History">
+            <p>After a successful transaction, you can view basic transaction details by tapping the <strong>Transaction History</strong> icon located in the top right corner of your home screen. For comprehensive blockchain details, you can view your transaction on block explorers like <strong>Etherscan</strong>, <strong>BscScan</strong>, or <strong>Stellar.org</strong>.<br>
+            <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756704217/reciveEth_ip84m2.webp" alt="Post-Purchase: Transaction History"></p>
             <h3>Security Note</h3>
-            <p>All transactions are processed securely by trusted providers, with data encrypted and compliant with global standards (e.g., <strong>GDPR</strong>, <strong>CCPA</strong>).</p>
+            <p>All transactions are processed securely by trusted payment providers. Your payment information and personal data are encrypted and handled in compliance with global data protection standards including <strong>GDPR</strong> and <strong>CCPA</strong>. SwiftEx does not directly store your payment card details or sensitive personal information.</p>
           `,
-            keywords: ['buy crypto', 'fiat currency', 'on-ramp', 'swiftex', 'wallet'],
+            keywords: ['buy crypto', 'fiat currency', 'fiat access', 'swiftex', 'wallet'],
             relatedArticles: ['sell-crypto-fiat', 'kyc-verification', 'transaction-history'],
             path: '/buy-crypto-fiat',
           },
@@ -973,57 +955,56 @@ export const categories: Category[] = [
         articles: [
           {
             id: 'sell-crypto',
-            title: 'Sell/Off-Ramping Assets',
+            title: 'Converting Crypto to Fiat',
             modifiedDate: 'Mon, 01 Sep 2025 at 10:36 AM',
             content: `
-            <p><strong>SwiftEx</strong> allows users to sell <strong>cryptocurrencies</strong> for fiat currency through its <strong>On/Off Ramp</strong> feature, with funds credited to your chosen payout method. This guide covers the process, including special steps for selling <strong>Ethereum (ETH)</strong>.</p>
+            <p><strong>SwiftEx</strong> allows users to convert <strong>cryptocurrencies</strong> into fiat currency through its <strong>Fiat Access</strong> feature, with funds credited to your chosen payout method. This guide covers the complete process, including special steps for converting <strong>Ethereum (ETH)</strong>.</p>
             <h3>Prerequisites</h3>
-            <p><strong>KYC verification</strong> is mandatory for all sell transactions, regardless of amount.</p>
-            <h3>How to Sell Crypto with Off-Ramp</h3>
+            <p><strong>KYC verification</strong> is mandatory for all crypto-to-fiat conversion transactions, regardless of the amount. This is a regulatory requirement enforced by payment providers.</p>
+            <h3>How to Convert Crypto to Fiat</h3>
             <ol>
               <li>
-                <strong>Access the On/Off Ramp Section</strong><br>
-                Open the <strong>SwiftEx App</strong> and navigate to the <strong>On/Off Ramp</strong> section via the <strong>Exchange</strong> tab.<br>
-                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756207138/onofframpselection_v3o9fi.webp" alt="Step 1: Access On/Off Ramp Section">
+                <strong>Access the Fiat Access Section</strong><br>
+                Open the <strong>SwiftEx App</strong> and navigate to <strong>SDEX</strong> from your home screen. Within the SDEX section, select the <strong>Fiat Access</strong> option. This will take you to the fiat conversion interface where you can manage your crypto-to-fiat transactions.<br>
+                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770295970/image_10_xpsecl.webp" alt="Step 1: Access Fiat Access Section">
               </li>
               <li>
-                <strong>Choose a Provider</strong><br>
-                Select a trusted provider (e.g., <strong>Alchemy Pay</strong>) for crypto-to-fiat conversion.<br>
-                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756207136/provider_kpbtmc.avif" alt="Step 2: Choose Provider">
+                <strong>Choose a Payment Provider</strong><br>
+                Select a trusted payment provider from the available options (e.g., <strong>Alchemy Pay</strong> or other supported providers) to facilitate your crypto-to-fiat conversion. Different providers may offer different payout methods, processing times, and fee structures based on your region, so choose accordingly.<br>
               </li>
               <li>
                 <strong>Select Currencies and Payout Method</strong><br>
                 <ul> 
-                 <li>Switch to the <strong>Sell</strong> tab. </li>
-                  <li>Choose the cryptocurrency to sell (e.g., <strong>Bitcoin</strong>, <strong>Ethereum</strong>).</li>
-                  <li>Select the fiat currency to receive (e.g., USD, INR, or other region-specific fiat currencies supported by the provider).</li>
-                  <li>Choose a payout method based on your region (e.g., Bank Transfer, UPI, or other local payment options; check with the provider for available methods).</li>
+                 <li>Switch to the <strong>Sell</strong> tab on the fiat screen to access the conversion interface.</li>
+                  <li>Choose the cryptocurrency you want to convert from your wallet (e.g., <strong>Bitcoin</strong>, <strong>Ethereum</strong>, <strong>USDC</strong>, or other supported digital assets).</li>
+                  <li>Select the fiat currency you want to receive (e.g., USD, INR, EUR, or other region-specific fiat currencies supported by your selected provider).</li>
+                  <li>Choose your preferred payout method based on your region and the provider's available options. This may include Bank Transfer, UPI, or other local payout methods. Verify with your selected provider which payout methods are available in your area.</li>
                 </ul>
-                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756704399/sellcryptofiat_pywaqo.webp" alt="Step 3: Select Currencies and Payout Method">
+                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770295932/image_11_zglt1i.webp" alt="Step 3: Select Currencies and Payout Method">
               </li>
               <li>
                 <strong>Enter Transaction Details</strong><br>
-                Enter the crypto amount to sell. The equivalent fiat amount is auto-calculated using real-time rates. Review the summary (rates, fees, estimated delivery time).<br>
-                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756704842/sellamount_dqqtgu.avif" alt="Step 4: Enter Transaction Details">
+                Enter the amount of cryptocurrency you want to convert in the designated input field. The system will automatically calculate and display the equivalent fiat amount you'll receive using real-time conversion rates. Review the comprehensive transaction summary including the current conversion rate, any applicable processing or network fees, and the estimated time for the fiat to reach your payout method. Ensure all details are correct before proceeding.<br>
+                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1770296152/FiatSell_mlg6rt.webp" alt="Step 4: Enter Transaction Details">
               </li>
               <li>
-                <strong>Complete Your Sale</strong><br>
-                Tap <strong>Sell Now</strong>. If not already completed, complete <strong>KYC</strong> (see KYC Verification section). Enter payout details, review the final summary, and tap <strong>Confirm</strong> to initiate the sale.<br>
-                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756705628/sell_o0wepv.webp" alt="Step 5: Complete Sale">
+                <strong>Complete Your Conversion</strong><br>
+                Tap the <strong>Sell Now</strong> button to proceed. If you haven't completed <strong>KYC verification</strong> yet, you'll be prompted to do so at this stage (refer to the KYC Verification section for detailed guidance). After KYC completion, enter your payout account details carefully as this is where your fiat funds will be sent. Review the final transaction summary thoroughly, including all amounts and fees, then tap <strong>Confirm</strong> to initiate the conversion process.<br>
+                <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756705628/sell_o0wepv.webp" alt="Step 5: Complete Conversion">
               </li>
               <li>
                 <strong>Send ETH (if applicable)</strong><br>
-                If selling <strong>Ethereum (ETH)</strong>, you’ll receive an ETH address to transfer your ETH. Go to the <strong>Send</strong> section in the <strong>SwiftEx App</strong>, select the ETH chain, add the provided ETH address, enter the ETH amount, and confirm the transfer. Fiat will be credited upon successful transfer.<br>
+                If you're converting <strong>Ethereum (ETH)</strong>, you'll receive a specific ETH deposit address from the payment provider. To complete the transaction, navigate to the <strong>Send</strong> section within the <strong>SwiftEx App</strong>. Select the Ethereum network, carefully enter or paste the provided ETH address (double-check for accuracy), input the exact ETH amount shown in your conversion request, and confirm the transfer. Your fiat funds will be credited to your payout method once the ETH transfer is successfully confirmed on the blockchain.<br>
                 <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756705694/ethsale_p7mvvp.webp" alt="Step 6: Send ETH">
               </li>
             </ol>
-            <h3>Post-Sale</h3>
-            <p>After a successful sale, view details in the <strong>Settings</strong> section under <strong>Transaction History</strong>.</p>
-                            <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756705827/sellcrypto_ynqrg9.avif" alt="Step 7: history">
+            <h3>Post-Conversion</h3>
+            <p>After your conversion is successfully completed, you can view basic transaction details by tapping the <strong>Transaction History</strong> icon located in the top right corner of your home screen. For comprehensive blockchain details, you can view your transaction on block explorers like <strong>Etherscan</strong>, <strong>BscScan</strong>, or <strong>Stellar.org</strong>.<br>
+            <img src="https://res.cloudinary.com/dz1xabyjf/image/upload/v1756705827/sellcrypto_ynqrg9.avif" alt="Post-Conversion: Transaction History"></p>
             <h3>Security Note</h3>
-            <p>All transactions are processed securely by trusted providers, with data encrypted and compliant with global standards (e.g., <strong>GDPR</strong>, <strong>CCPA</strong>).</p>
+            <p>All conversion transactions are processed securely through trusted payment providers. Your banking information and personal data are encrypted and handled in strict compliance with global data protection standards including <strong>GDPR</strong> and <strong>CCPA</strong>. SwiftEx does not directly store your banking details or sensitive personal information.</p>
           `,
-            keywords: ['sell crypto', 'fiat currency', 'off-ramp', 'swiftex', 'wallet'],
+            keywords: ['sell crypto', 'fiat currency', 'fiat access', 'swiftex', 'wallet'],
             relatedArticles: ['buy-crypto-fiat', 'kyc-verification', 'transaction-history'],
             path: '/sell-crypto-fiat',
           },
@@ -1038,40 +1019,45 @@ export const categories: Category[] = [
             title: 'Completing KYC Verification on SwiftEx',
             modifiedDate: 'Mon, 01 Sep 2025 at 10:36 AM',
             content: `
-            <p><strong>KYC (Know Your Customer)</strong> verification is required for certain buy transactions (above a certain amount, e.g., $50, varies by region) and all sell transactions in the <strong>SwiftEx App</strong>. This process ensures compliance and security, managed by trusted third-party providers like <strong>Alchemy Pay</strong>.</p>
+            <p><strong>KYC (Know Your Customer)</strong> verification is a regulatory requirement for certain fiat acquisition transactions (above a threshold amount, e.g., $50, which varies by region and provider) and all crypto-to-fiat conversion transactions in the <strong>SwiftEx App</strong>. This verification process ensures compliance with financial regulations and enhances security, and is managed by trusted third-party payment providers.</p>
             <h3>Why KYC is Needed</h3>
-            <p>KYC ensures:<br>
-            - Protection against fraud and money laundering.<br>
-            - Compliance with local and international regulations.<br>
-            - Security for your account and transactions.</p>
-            <p><strong>SwiftEx</strong> does not directly store user data; all KYC data is managed securely by third-party providers, encrypted and compliant with global standards (e.g., <strong>GDPR</strong>, <strong>CCPA</strong>).</p>
+            <p>KYC verification serves multiple important purposes:<br>
+            - <strong>Fraud Prevention:</strong> Protects your account and the platform against fraudulent activities and identity theft.<br>
+            - <strong>Regulatory Compliance:</strong> Ensures adherence to local and international anti-money laundering (AML) and counter-terrorism financing (CTF) regulations.<br>
+            - <strong>Account Security:</strong> Adds an additional layer of security to protect your account and transactions from unauthorized access.<br>
+            - <strong>Transaction Limits:</strong> Allows you to access higher transaction limits and full platform functionality.</p>
+            <p><strong>Important:</strong> SwiftEx does not directly collect, process, or store your KYC data. All verification information is securely managed by third-party payment providers who are specialized in identity verification. Your data is encrypted and handled in compliance with global privacy standards including <strong>GDPR</strong> and <strong>CCPA</strong>.</p>
             <h3>Required Documents</h3>
-            <p>- <strong>Photo ID</strong>: Valid passport, national ID, or driver’s license.<br>
-            - <strong>Proof of Address</strong>: Recent utility bill, bank statement, or government-issued residency document (e.g., Aadhaar in India or equivalent).<br>
-            - <strong>Live Selfie/Video</strong>: A selfie or short video holding your ID to verify identity.</p>
-            <h3>KYC Process</h3>
+            <p>You'll need to provide the following documents during the KYC process:<br><br>
+            - <strong>Government-Issued Photo ID:</strong> A valid and current passport, national identity card, or driver's license. The document must be unexpired and show your photo, full name, date of birth, and ID number clearly.<br><br>
+            - <strong>Proof of Address:</strong> A recent document (typically issued within the last 3 months) such as a utility bill, bank statement, or government-issued residency document. In some regions, specific documents like Aadhaar (India) or equivalent national residence cards are accepted. The document must clearly show your full name and current residential address.<br><br>
+            - <strong>Live Selfie or Video Verification:</strong> A real-time selfie or short video clip where you hold your ID document next to your face. This biometric verification step confirms that you are the actual person shown in the ID document and helps prevent identity fraud.</p>
+            <h3>KYC Verification Process</h3>
             <ol>
               <li>
-                <strong>Start Verification</strong><br>
-                During a buy (if above the no-KYC limit) or sell transaction, you’ll be prompted to complete KYC via the third-party provider’s interface in the <strong>SwiftEx App</strong>.<br>
+                <strong>Initiate Verification</strong><br>
+                During a fiat acquisition transaction (if your amount exceeds the no-KYC threshold) or any crypto-to-fiat conversion transaction, you'll be automatically prompted to complete KYC verification. The process takes place within a secure interface provided by the third-party payment provider, embedded seamlessly in the <strong>SwiftEx App</strong>. You'll be guided through each step with clear instructions.<br>
               </li>
               <li>
-                <strong>Upload Documents</strong><br>
-                Submit clear, legible images of required documents as guided by the provider.<br>
+                <strong>Upload Required Documents</strong><br>
+                Follow the on-screen prompts to capture or upload clear, high-quality images of your required documents. Make sure all text is legible, there's no glare or shadows, and all four corners of the document are visible in the image. The verification system will automatically check the image quality and may ask you to retake photos if they don't meet the required standards.<br>
               </li>
               <li>
-                <strong>Complete Selfie Check</strong><br>
-                Follow prompts to take a live selfie or video with your ID.<br>
+                <strong>Complete Biometric Verification</strong><br>
+                Follow the step-by-step instructions to complete the live selfie or video verification. You may be asked to turn your head, blink, or perform simple actions to confirm you're a real person. Hold your ID document clearly next to your face as instructed. This step typically takes less than a minute to complete.<br>
               </li>
               <li>
-                <strong>Await Approval</strong><br>
-                Documents are reviewed by the third-party provider within 24-48 hours. You’ll be notified via app or email.<br>
+                <strong>Submit and Await Review</strong><br>
+                After submitting all required information, your documents will be reviewed by the payment provider's verification team. The review process typically takes between 24 to 48 hours, though it may be faster during non-peak times. You'll receive a notification through the app and/or via email once your verification status is updated. You can check your verification status at any time in the app.<br>
               </li>
             </ol>
-            <h3>Notes</h3>
-            <p>- KYC is a one-time process unless additional checks are needed (e.g., regulatory updates).<br>
-            - For buy transactions, small amounts (e.g., up to $50) may not require KYC; check <strong>Alchemy Pay</strong> for current limits.<br>
-            - Contact support via the <strong>SwiftEx App</strong> or email for issues.</p>
+            <h3>Important Notes</h3>
+            <p>
+            - <strong>One-Time Process:</strong> KYC verification is typically a one-time requirement. Once approved, you won't need to repeat it unless regulatory updates, account security concerns, or provider policy changes necessitate re-verification.<br><br>
+            - <strong>Transaction Thresholds:</strong> For fiat acquisition transactions, amounts below a certain threshold (e.g., up to $50, varies by region and provider) may not require KYC. Check your selected payment provider's current limits and requirements for accurate information.<br><br>
+            - <strong>Verification Issues:</strong> If your documents are rejected or you encounter any issues during the verification process, you'll receive specific feedback on what needs to be corrected. Common issues include poor image quality, expired documents, or mismatched information.<br><br>
+            - <strong>Support:</strong> For assistance with KYC verification or any related questions, contact support through the <strong>SwiftEx App</strong>'s support section or via email. The support team can guide you through the process and help resolve any verification issues.
+            </p>
           `,
             keywords: ['kyc', 'verification', 'swiftex', 'compliance', 'security'],
             relatedArticles: ['buy-crypto-fiat', 'sell-crypto-fiat', 'transaction-history'],
@@ -1088,22 +1074,27 @@ export const categories: Category[] = [
             title: 'Viewing Transaction History on SwiftEx',
             modifiedDate: 'Mon, 01 Sep 2025 at 10:36 AM',
             content: `
-            <p>After completing a buy or sell transaction in the <strong>SwiftEx App</strong>, you can view all transaction details, including dates, amounts, currencies, and status.</p>
-            <h3>How to View Transaction History</h3>
+            <p>After completing any fiat acquisition or crypto conversion transaction in the <strong>SwiftEx App</strong>, you can view basic transaction details directly in the app.</p>
+            <h3>How to Access Transaction History</h3>
             <ol>
               <li>
-                <strong>Navigate to Settings</strong><br>
-                Open the <strong>SwiftEx App</strong> and go to the <strong>Settings</strong> section.<br>
+                <strong>Navigate to Transaction History</strong><br>
+                Open the <strong>SwiftEx App</strong> from your device. On the home screen, look for the <strong>Transaction History</strong> icon located in the top right corner and tap on it to view your transaction records.<br>
               </li>
               <li>
-                <strong>Select Transaction History</strong><br>
-                Tap <strong>Transaction History</strong> to view a complete list of your transactions.<br>
+                <strong>Review Your Transactions</strong><br>
+                You'll see a list of your fiat-related transactions with basic details. Tap on any transaction to view more information.<br>
               </li>
             </ol>
+            <h3>View Detailed Blockchain Information</h3>
+            <p>For comprehensive transaction details including block confirmations, gas fees, and complete blockchain data, you can view your transactions on block explorers:<br>
+            - <strong>Etherscan</strong> for Ethereum transactions<br>
+            - <strong>BscScan</strong> for BNB Smart Chain transactions<br>
+            - <strong>Stellar.org</strong> for Stellar network transactions</p>
             <h3>Contact Support</h3>
-            <p>For help with viewing transaction history or any issues, reach out via the <strong>SwiftEx App</strong> or email support.</p>
+            <p>If you have questions about a specific transaction, please reach out to our support team through the <strong>SwiftEx App</strong> or via email. Have your transaction ID ready for faster assistance.</p>
           `,
-            keywords: ['transaction history', 'swiftex', 'settings', 'transactions'],
+            keywords: ['transaction history', 'swiftex', 'transactions'],
             relatedArticles: ['buy-crypto-fiat', 'sell-crypto-fiat', 'kyc-verification'],
             path: '/transaction-history',
           },

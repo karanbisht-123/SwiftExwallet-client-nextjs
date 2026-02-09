@@ -37,11 +37,6 @@ export const DynamicMobileSplit = dynamic(
   }
 );
 
-export const DynamicCashOut = dynamic(() => import('@/components/server/CashOutSteps'), {
-  loading: () => <LoadingSkeleton height="400px" />,
-  ssr: true,
-});
-
 export const DynamicPrivateSecure = dynamic(() => import('@/components/server/PrivateSecure'), {
   loading: () => <LoadingSkeleton height="300px" />,
   ssr: true,

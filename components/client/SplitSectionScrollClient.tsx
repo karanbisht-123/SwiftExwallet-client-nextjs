@@ -82,9 +82,8 @@ export default function SplitSectionScrollClient({ sections }: SplitSectionScrol
             }}
           >
             <div
-              className={`phone-image-container ${
-                index % 2 === 0 ? 'md:order-1 text-black' : 'md:order-2 text-white'
-              } relative w-full lg:w-1/2 h-full flex justify-center items-center`}
+              className={`phone-image-container ${index % 2 === 0 ? 'md:order-1 text-black' : 'md:order-2 text-white'
+                } relative w-full lg:w-1/2 h-full flex justify-center items-center`}
             >
               <div className="relative z-10 w-full h-full flex justify-center items-center">
                 <img
@@ -99,9 +98,8 @@ export default function SplitSectionScrollClient({ sections }: SplitSectionScrol
               </div>
             </div>
             <div
-              className={`text-content ${
-                index % 2 === 0 ? 'md:order-2 text-slate-800' : 'md:order-1 text-white'
-              } lg:w-1/2 p-2 lg:p-8 relative max-h-[400px] z-10`}
+              className={`text-content ${index % 2 === 0 ? 'md:order-2 text-slate-800' : 'md:order-1 text-white'
+                } lg:w-1/2 p-2 lg:p-8 relative max-h-[400px] z-10`}
             >
               <h3 className="font-medium text-5xl  text-center lg:text-start leading-tight">
                 {section.title}

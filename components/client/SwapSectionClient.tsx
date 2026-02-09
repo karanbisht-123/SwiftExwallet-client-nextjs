@@ -3,6 +3,14 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { ArrowDownUp } from 'lucide-react';
 import { SwapPair } from '../server/SwapSection';
 
+const NETWORK_FEE_CONFIG: Record<string, { fee: number; label: string }> = {
+  ETH_USDT: { fee: 0.005, label: 'Ethereum Network' },
+  BNB_USDC: { fee: 0.001, label: 'BNB Smart Chain' },
+  USDC_BNB: { fee: 0.001, label: 'BNB Smart Chain' },
+};
+
+const DEFAULT_FEE = { fee: 0.002, label: 'Network' };
+
 interface SwapData {
   spendIconUrl: string;
   spendCurrency: string;
@@ -13,6 +21,9 @@ interface SwapData {
   receiveAmount: number;
   receiveColor: string;
   rate: number;
+  networkFee: number;
+  networkFeePercent: number;
+  networkFeeLabel: string;
 }
 
 interface SwapSectionClientProps {
@@ -21,22 +32,41 @@ interface SwapSectionClientProps {
   fallbackRates: Record<string, number>;
 }
 
+function getNetworkFeeConfig(spendCurrency: string, receiveCurrency: string) {
+  const key = `${spendCurrency}_${receiveCurrency}`;
+  return NETWORK_FEE_CONFIG[key] || DEFAULT_FEE;
+}
+
+function calcFee(spendAmount: number, feePercent: number): number {
+  return parseFloat((spendAmount * feePercent).toFixed(6));
+}
+
+function calcReceiveAmount(spendAmount: number, rate: number, feePercent: number): number {
+  const effectiveSpend = spendAmount - spendAmount * feePercent;
+  return parseFloat((effectiveSpend * rate).toFixed(6));
+}
+
 export function SwapSectionClient({ swapPairs, coinLogos, fallbackRates }: SwapSectionClientProps) {
   const [swapData, setSwapData] = useState<SwapData[]>(
-    swapPairs.map(pair => ({
-      spendIconUrl: coinLogos[pair.spendCurrency],
-      spendCurrency: pair.spendCurrency,
-      spendAmount: 1,
-      spendColor: pair.spendColor,
-      receiveIconUrl: coinLogos[pair.receiveCurrency],
-      receiveCurrency: pair.receiveCurrency,
-      receiveAmount: pair.initialRate,
-      receiveColor: pair.receiveColor,
-      rate: pair.initialRate,
-    }))
+    swapPairs.map(pair => {
+      const feeConfig = getNetworkFeeConfig(pair.spendCurrency, pair.receiveCurrency);
+      return {
+        spendIconUrl: coinLogos[pair.spendCurrency],
+        spendCurrency: pair.spendCurrency,
+        spendAmount: 1,
+        spendColor: pair.spendColor,
+        receiveIconUrl: coinLogos[pair.receiveCurrency],
+        receiveCurrency: pair.receiveCurrency,
+        receiveAmount: calcReceiveAmount(1, pair.initialRate, feeConfig.fee),
+        receiveColor: pair.receiveColor,
+        rate: pair.initialRate,
+        networkFee: calcFee(1, feeConfig.fee),
+        networkFeePercent: feeConfig.fee,
+        networkFeeLabel: feeConfig.label,
+      };
+    })
   );
 
-  // Fetch prices from CoinGecko
   const fetchPrices = useCallback(async () => {
     try {
       const response = await fetch(
@@ -59,7 +89,8 @@ export function SwapSectionClient({ swapPairs, coinLogos, fallbackRates }: SwapS
           return {
             ...swap,
             rate: newRate,
-            receiveAmount: parseFloat((swap.spendAmount * newRate).toFixed(6)),
+            networkFee: calcFee(swap.spendAmount, swap.networkFeePercent),
+            receiveAmount: calcReceiveAmount(swap.spendAmount, newRate, swap.networkFeePercent),
           };
         })
       );
@@ -72,7 +103,8 @@ export function SwapSectionClient({ swapPairs, coinLogos, fallbackRates }: SwapS
           return {
             ...swap,
             rate: fallbackRate,
-            receiveAmount: parseFloat((swap.spendAmount * fallbackRate).toFixed(6)),
+            networkFee: calcFee(swap.spendAmount, swap.networkFeePercent),
+            receiveAmount: calcReceiveAmount(swap.spendAmount, fallbackRate, swap.networkFeePercent),
           };
         })
       );
@@ -89,10 +121,12 @@ export function SwapSectionClient({ swapPairs, coinLogos, fallbackRates }: SwapS
     const sanitizedAmount = Math.max(0, newAmount);
     setSwapData(prevSwapData => {
       const updatedData = [...prevSwapData];
-      updatedData[index].spendAmount = sanitizedAmount;
-      updatedData[index].receiveAmount = parseFloat(
-        (sanitizedAmount * updatedData[index].rate).toFixed(6)
-      );
+      updatedData[index] = {
+        ...updatedData[index],
+        spendAmount: sanitizedAmount,
+        networkFee: calcFee(sanitizedAmount, updatedData[index].networkFeePercent),
+        receiveAmount: calcReceiveAmount(sanitizedAmount, updatedData[index].rate, updatedData[index].networkFeePercent),
+      };
       return updatedData;
     });
   };
@@ -144,8 +178,25 @@ export function SwapSectionClient({ swapPairs, coinLogos, fallbackRates }: SwapS
                   <div className="font-thin text-lg">{swap.receiveAmount.toFixed(6)}</div>
                 </div>
               </div>
-              <div className="mt-2 text-xs text-gray-500 text-right">
-                Rate: 1 {swap.spendCurrency} = {swap.rate.toFixed(6)} {swap.receiveCurrency}
+
+              <div className="mt-4 pt-4 border-t border-gray-100">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-xs text-gray-500">Network Fee</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs text-gray-600 font-medium">
+                      {swap.networkFee.toFixed(6)} {swap.spendCurrency}
+                    </span>
+                    <span className="text-xs bg-gray-100 text-gray-500 rounded-full px-2 py-0.5">
+                      {(swap.networkFeePercent * 100).toFixed(1)}%
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between mt-1.5">
+                  <span className="text-xs text-gray-400">Network</span>
+                  <span className="text-xs text-gray-600 font-medium">{swap.networkFeeLabel}</span>
+                </div>
               </div>
             </div>
           ))}

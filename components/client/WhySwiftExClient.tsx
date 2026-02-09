@@ -18,48 +18,50 @@ interface Feature {
 
 const features: Feature[] = [
   {
-    id: 'secure-trading',
+    id: 'secure-assets',
     icon: <Shield />,
-    title: 'Secure Trading',
-    text: 'Secure and controlled trading experience with a non-custodial wallet.',
+    title: 'Secure Asset Management',
+    text: 'Secure and controlled crypto asset management using a non-custodial wallet.',
     image:
-      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1754989195/securetrade_bv62i0_kbqwwu.svg',
+      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770203761/wallet4-Photoroom_xnk0ef.webp',
   },
   {
     id: 'full-control',
     icon: <Key />,
     title: 'Full Control',
-    text: 'Full control over your private keys.',
+    text: 'You retain full ownership and control of your private keys at all times.',
     image:
-      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1754989193/fullcontroal_jnqdgu_fgepbp.svg',
+      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770203761/wallet2-Photoroom_hhnnhk.webp',
   },
+
   {
     id: 'user-friendly',
     icon: <Users />,
     title: 'User Friendly',
-    text: 'User-friendly interface for seamless onboarding.',
+    text: 'Clean and intuitive interface designed for seamless onboarding.',
     image:
-      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1754989185/userfrindaly_niejoz_ecz7op.svg',
+      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770301741/9061-03-iphone-16-mockupdsds-Photoroom_1_ltwlsa.webp',
   },
+
   {
-    id: 'intuitive-trading',
+    id: 'Easy-Token-Swaps',
     icon: <ArrowLeftRight />,
-    title: 'Intuitive Trading',
-    text: 'Intuitive trading experience with effortless exchanges.',
+    title: 'Easy Token Swaps',
+    text: 'Swap supported digital assets across blockchain networks.',
     image:
-      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1754989183/inatiuve_c40fot_xma5ja.svg',
+      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770203761/wallet3-Photoroom_wq38h7.webp',
   },
   {
-    id: 'zero-fees',
+    id: 'No-Platform-Fees',
     icon: <Percent />,
-    title: 'Zero Fees',
-    text: '0% platform fee on all trades made through the SwiftEx App.',
+    title: 'No Platform Fees',
+    text: 'No platform fees for using core wallet and asset management features.',
     image:
-      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1754989194/zeerofee_ek8hse_g0za3q.svg',
+      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770203761/wallet1-Photoroom_heg5nl.webp',
   },
 ];
 
-const MOBILE_HERO_IMAGE = '/walletimage/2kNONbfAA0HTvopooWmIEIALoQB.svg';
+const MOBILE_HERO_IMAGE = '/walletimage/whyswiftEx.webp';
 
 export default function WhySwiftExClient() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -126,13 +128,11 @@ export default function WhySwiftExClient() {
 
     return () => {
       animationRef.current?.revert();
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, [isMobile]);
 
   return (
     <>
-      {/* Mobile Version */}
       <div className="w-full bg-linear-to-b from-gray-50 to-gray-100 py-4 lg:py-8 block lg:hidden">
         <div className="max-w-7xl mx-auto px-4 h-auto">
           <h2 className="text-3xl font-semibold pb-4 text-center not-[]:text-slate-800">
@@ -170,7 +170,6 @@ export default function WhySwiftExClient() {
         </div>
       </div>
 
-      {/* Desktop Version */}
       <div ref={containerRef} className="relative h-screen overflow-hidden hidden lg:block">
         <div className="max-w-7xl mx-auto px-4 h-full flex flex-col justify-center rounded-2xl bg-gray-100">
           <h2 className="text-5xl font-semibold mb-8 text-center text-slate-800">
@@ -208,11 +207,10 @@ export default function WhySwiftExClient() {
                 <div
                   key={feature.id}
                   id={feature.id}
-                  className={`p-4 rounded-xl cursor-pointer transition-all duration-75 ${
-                    activeFeature === index
-                      ? 'bg-white border-l-4 border-[#020E46]'
-                      : 'bg-gray-50 hover:bg-gray-100 border-l-4 border-gray-50'
-                  }`}
+                  className={`p-4 rounded-xl cursor-pointer transition-all duration-75 ${activeFeature === index
+                    ? 'bg-white border-l-4 border-[#020E46]'
+                    : 'bg-gray-50 hover:bg-gray-100 border-l-4 border-gray-50'
+                    }`}
                   onClick={() => {
                     const target = document.getElementById(feature.id);
                     if (target) {
@@ -225,11 +223,10 @@ export default function WhySwiftExClient() {
                 >
                   <div className="flex items-center gap-4">
                     <div
-                      className={`p-3 rounded-xl ${
-                        activeFeature === index
-                          ? 'bg-[#020E46] text-white'
-                          : 'bg-gray-200 text-gray-600'
-                      }`}
+                      className={`p-3 rounded-xl ${activeFeature === index
+                        ? 'bg-[#020E46] text-white'
+                        : 'bg-gray-200 text-gray-600'
+                        }`}
                     >
                       {feature.icon}
                     </div>

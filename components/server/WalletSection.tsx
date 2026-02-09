@@ -11,57 +11,51 @@ export interface SecurityCardData {
 
 export const securityCards: SecurityCardData[] = [
   {
-    title: 'Easy Account Setup',
+    title: 'Easy Wallet Setup',
     description:
-      'Create and manage your account with ease, thanks to our user-friendly onboarding process.',
+      'Set up your wallet in minutes or securely import an existing wallet using a simple and intuitive onboarding process.',
     gradient: 'bg-gradient-to-r from-[#F4F4F7] to-[#F4F4F7]',
     textColor: 'text-black',
-    imageSrc: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958333/wallet1_bhbrvz.avif',
+    imageSrc:
+      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770120981/walletscren-left_iqx6xe.webp',
     imageHeight: '350px',
   },
   {
-    title: 'Multi-Currency Support',
+    title: 'Manage Multiple Assets',
     description:
-      'Easily manage a diverse portfolio of digital assets, including cryptocurrencies and stablecoins, all in one place.',
+      'Organize and access a wide range of digital assets, including stablecoins and cryptocurrencies, across supported networks all in one place.',
     gradient: 'bg-gradient-to-r from-[#020E46] to-[#020E46]',
     textColor: 'text-white',
-    imageSrc: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958333/wallet2_h7zlfm.avif',
+    imageSrc:
+      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770121210/market_4.16.04_PM-left_gslmmo.webp',
     imageHeight: '350px',
   },
   {
-    title: 'Passkey protected',
-    description:
-      'No more complicated passwords or 12-word secret phrases to manage. SWIFT reduces the risk of lost funds by using biometric-protected passkeys to create, secure, and recover your wallet.',
+    title: 'Fast & Reliable Transactions',
+    description: 'Send and receive digital assets quickly and securely across supported networks.',
     gradient: 'bg-gradient-to-r from-[#F4F4F7] to-[#F4F4F7]',
     textColor: 'text-black',
-    imageSrc: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958333/wallet3_fpwrgd.avif',
-    imageHeight: '350px',
+    imageSrc:
+      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770127218/ki9of9j1mu4imttfwawf_udnydm.webp',
+    imageHeight: '400px',
+  },
+  {
+    title: 'Asset Overview',
+    description:
+      'View all your supported assets in one place, with up-to-date information across networks.',
+    gradient: 'bg-gradient-to-r from-[#020E46] to-[#020E46]',
+    textColor: 'text-white',
+    imageSrc: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770188054/market-left_p4roph.webp',
+    imageHeight: '400px',
   },
   {
     title: 'User-Friendly Interface',
     description:
-      'Enjoy a clean and intuitive design that simplifies the process of sending, receiving, and managing your assets.',
-    gradient: 'bg-gradient-to-r from-[#020E46] to-[#020E46]',
-    textColor: 'text-white',
-    imageSrc: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958334/wallet4_zcyldy.avif',
-    imageHeight: '400px',
-  },
-  {
-    title: 'Instant Transactions',
-    description:
-      'Experience fast and reliable transactions with minimal fees, leveraging the power of the Stellar network.',
+      'Enjoy a clean and intuitive interface designed to make viewing, managing, and organizing digital assets simple and seamless.',
     gradient: 'bg-gradient-to-r from-[#F4F4F7] to-[#F4F4F7]',
     textColor: 'text-black',
-    imageSrc: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958334/wallet5_o9roks.avif',
-    imageHeight: '400px',
-  },
-  {
-    title: 'Real-Time Price Tracking',
-    description:
-      'Stay updated with live market prices and trends to make informed decisions about your investments.',
-    gradient: 'bg-gradient-to-r from-[#020E46] to-[#020E46]',
-    textColor: 'text-white',
-    imageSrc: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958334/wallet6_xqvea7.avif',
+    imageSrc:
+      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770117148/apphome-left_jko6mi.webp',
     imageHeight: '400px',
   },
 ];

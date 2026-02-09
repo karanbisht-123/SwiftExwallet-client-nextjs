@@ -52,31 +52,29 @@ export function PaymentSectionClient({ paymentMethods, feeInfo }: PaymentSection
   const feeIcons = [<PiggyBank size={48} />, <Percent size={48} />];
 
   return (
-    <div className="container max-w-7xl mx-auto bg-[#020E46] py-12 lg:py-16 px-4 min-h-screen flex items-center justify-center xl:rounded-3xl shadow-2xl">
-      <div className="max-w-7xl mx-auto">
+    <div className="container max-w-7xl mx-auto bg-[#020E46] py-12 lg:py-4 px-4 min-h-screen flex items-center justify-center xl:rounded-3xl shadow-2xl">
+      <div>
         <h2 className="lg:text-5xl text-4xl font-medium mb-12 text-center text-white leading-tight">
-          A Convenient Way to <br />
-          <span className="text-blue-200 font-medium">Buy Cryptocurrency</span>
+          Securely Buy & Sell Crypto <br />
+          <span className="text-blue-200 font-medium">Through Licensed Partners</span>
         </h2>
 
         {/* Toggle Section */}
         <div className="flex justify-center mb-12">
           <div className="bg-blue-900 rounded-full p-1 flex w-full max-w-md">
             <button
-              className={`w-1/2 px-6 py-3 rounded-full text-lg font-thin ${
-                activeTab === 'payment' ? 'bg-white text-blue-900' : 'text-white'
-              } transition-all duration-300`}
+              className={`w-1/2 px-6 py-3 rounded-full text-lg font-thin ${activeTab === 'payment' ? 'bg-white text-blue-900' : 'text-white'
+                } transition-all duration-300`}
               onClick={() => setActiveTab('payment')}
             >
-              Payment Methods
+              Payment Options
             </button>
             <button
-              className={`w-1/2 px-6 py-3 rounded-full text-lg font-thin ${
-                activeTab === 'fees' ? 'bg-white text-blue-900' : 'text-white'
-              } transition-all duration-300`}
+              className={`w-1/2 px-6 py-3 rounded-full text-lg font-thin ${activeTab === 'fees' ? 'bg-white text-blue-900' : 'text-white'
+                } transition-all duration-300`}
               onClick={() => setActiveTab('fees')}
             >
-              Fees
+              Platform Highlights
             </button>
           </div>
         </div>

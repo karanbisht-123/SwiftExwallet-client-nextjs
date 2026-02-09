@@ -5,71 +5,72 @@ import {
   DynamicFeatures,
   DynamicSplitSection,
   DynamicMobileSplit,
-  DynamicCashOut,
   DynamicPrivateSecure,
   DynamicBanner,
 } from '@/lib/loading-components';
 
 const sectionsData = [
   {
-    title: 'Import Wallets or Add Crypto Assets',
+    title: 'Import Wallets or Add Digital Assets',
     content:
-      'Import your existing wallet or add new crypto assets to SwiftEx. Our platform supports a wide range of cryptocurrencies, so you can manage all your digital assets easily.',
-    image: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958282/walletimport_kswgpx.avif',
+      'Import your existing wallet or add supported digital assets to SwiftEx. Manage everything from one place with a simple and secure experience.',
+    image:
+      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770184066/walletselcation_sqg063.webp',
     gradient: 'linear-gradient(135deg, #F4F4F7 0%, #F4F4F7 100%)',
     blobColors: ['blue-300', 'indigo-400', 'purple-300', 'violet-400'],
     link: '/swiftex-wallet',
-    linkText: 'Get Started',
+    linkText: 'Know More',
   },
   {
-    title: 'Send, Receive, and Swap Assets Across Multi-chain Wallets',
+    title: 'Send and Receive Assets Across Supported Networks',
     content:
-      'SwiftEx allows you to send, receive, and swap cryptocurrencies across blockchains seamlessly and securely, ensuring fast and reliable transactions.',
-    image: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958280/reciveasset_fvtpqa.avif',
+      'SwiftEx lets you send and receive digital assets across supported networks with a smooth, reliable, and easy-to-use interface.',
+    image: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770182916/send-recive_bpb85m.webp',
     gradient: 'linear-gradient(135deg, #020E46 0%, #020E46 100%)',
     blobColors: ['green-300', 'teal-400', 'cyan-300', 'blue-400'],
     link: '/swiftex-wallet',
-    linkText: 'Send Assets',
+    linkText: 'Know More',
   },
   {
-    title: 'Bridge your Assets',
+    title: 'Move Assets Between Supported Networks',
     content:
-      'Easily bridge your assets across different blockchain networks. SwiftEx enables smooth and secure transfers, allowing you to maximize the utility and accessibility of your digital assets.',
-    image: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958279/briage_sgmwh9.avif',
+      'Move your digital assets between supported networks with ease. SwiftEx helps you keep your assets accessible wherever you need them.',
+    image:
+      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770185199/depositusdc_1_yub2jd.webp',
     gradient: 'linear-gradient(135deg, #F4F4F7 0%, #F4F4F7 100%)',
     blobColors: ['purple-400', 'indigo-500', 'blue-400', 'cyan-500'],
-    link: '/fiat-exchange',
-    linkText: 'Bridge Now',
+    link: '/swiftex-wallet#buy-sell',
+    linkText: 'Know More',
   },
   {
-    title: 'Trade your Assets Via Stellar DEX',
+    title: 'Advanced Swaps via Stellar SDEX',
     content:
-      'Trade your digital assets effortlessly through Stellar DEX. Enjoy a decentralized, secure, and transparent trading experience with real-time data and low fees.',
-    image: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958280/trade_bcs41h.avif',
+      "Access on-chain swaps through Stellar's built-in decentralized exchange (SDEX) with typically low network fees.",
+    image:
+      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770187174/sdex-Photoroom_ddotlf.webp',
     gradient: 'linear-gradient(135deg, #020E46 0%, #020E46 100%)',
     blobColors: ['blue-400', 'cyan-500', 'teal-400', 'blue-600'],
-    link: '/fiat-exchange',
-    linkText: 'Start Trading',
+    link: '/swiftex-wallet#buy-sell',
+    linkText: 'Know More',
   },
   {
-    title: 'Going On & Off Ramp',
+    title: 'Fiat Access via Licensed Partners',
     content:
-      'Anchors on the Stellar network act as bridges between traditional banking systems and the blockchain, enabling users to deposit and withdraw assets seamlessly.',
-    image: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958279/onofframp_d82stj.avif',
+      'Licensed providers connect traditional banking systems with supported networks, enabling fiat access under their own terms.',
+    image:
+      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770187686/fiat-Photoroom_zfvfry.webp',
     gradient: 'linear-gradient(135deg, #F4F4F7 0%, #F4F4F7 100%)',
     blobColors: ['yellow-300', 'orange-300', 'red-200', 'amber-400'],
-    link: '/fiat-exchange',
-    linkText: 'View Options',
+    link: '/swiftex-wallet#payment-services',
+    linkText: 'Know More',
   },
 ];
 
-// export const metadata = generateSectionMetadata(sectionsData);
 export default function Home() {
   return (
     <>
       <div className="lg:space-y-16">
         <NewWallet />
-        <DynamicOneTapTrade />
         <DynamicWhySwiftEx />
         <DynamicFeatures />
 
@@ -81,7 +82,6 @@ export default function Home() {
           <DynamicMobileSplit sections={sectionsData} />
         </div>
 
-        <DynamicCashOut />
         <DynamicPrivateSecure />
         <DynamicBanner />
       </div>

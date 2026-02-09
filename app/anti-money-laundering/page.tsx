@@ -1,202 +1,115 @@
 const SwiftAmlPolicy = () => {
   return (
     <>
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="bg-[#020E46] text-white p-6 mt-16 rounded-xl">
-          <h1 className="text-3xl font-bold mb-2">SwiftEx AML Policy</h1>
-          <p className="text-md">Last Updated: June 10, 2025</p>
+      <div className="max-w-7xl mx-auto lg:px-4">
+        <div className="bg-[#020E46] text-white p-4 lg:p-8 lg:mt-20 mt-16 rounded-xl mx-3 lg:mx-2 xl:mx-0">
+          <h1 className="lg:text-4xl text-2xl font-semibold mb-2">SwiftEx Wallet</h1>
+          <h1 className="lg:text-4xl text-2xl font-semibold mb-2">AML & Compliance Statement</h1>
+          <p className="mb-8 mt-4 text-lg">Effective Date: 30 January 2026</p>
         </div>
 
-        <div className="py-4 space-y-6">
-          <p className="mb-12 mt-12 text-xl font-semibold">
-            SwiftEx (“SwiftEx”, “We”, “Our”) is dedicated to identifying, mitigating, and preventing
-            money laundering, terrorism financing, and other illicit financial activities. Our
-            internal procedures align with applicable Costa Rican regulations and recognized
-            international standards.
+        <div className="mx-4 lg:mx-2 xl:mx-0">
+          <p className="mb-6 mt-12 text-xl font-semibold">
+            This AML & Compliance Statement applies to the SwiftEx Wallet application (“SwiftEx”), operated by 3-102-938072 SOCIEDAD DE RESPONSABILIDAD LIMITADA, a company incorporated in Costa Rica.
           </p>
 
-          <div className="bg-yellow-100 border-l-4 border-yellow-400 p-4 text-black rounded-md">
-            <p className="text-md font-medium">
-              <strong>KYC Disclaimer:</strong>
-              SwiftEx relies on licensed third-party on/off-ramp providers for all crypto-fiat
-              conversions. All KYC data is collected and managed directly by these regulated
-              providers, not by SwiftEx.
-            </p>
+          <div className="py-3">
+            <h2 className="text-xl font-bold mb-2 text-[#020E46]">1. Purpose</h2>
+            <div className="text-md">
+              SwiftEx Wallet is committed to preventing misuse of its software in connection with money laundering, terrorist financing, fraud, sanctions evasion, or other illicit activities. This statement outlines SwiftEx’s compliance approach in alignment with its non-custodial software model.
+            </div>
           </div>
 
-          <div>
-            <h2 className="text-lg font-bold text-[#020E46]">1. Key Terminology</h2>
-            <ul className="list-disc pl-5 text-md">
-              <li>
-                <strong>Beneficial Owner:</strong> An individual with 25% or more ownership or
-                control in a legal entity.
-              </li>
-              <li>
-                <strong>Identification Documents:</strong> Valid government-issued identification
-                and proof of address.
-              </li>
-              <li>
-                <strong>Sanction Lists:</strong> Official watchlists issued by OFAC, the United
-                Nations, the EU, and Costa Rica’s UIF.
-              </li>
-              <li>
-                <strong>Suspicious Transactions:</strong> Activities lacking clear economic
-                rationale or exhibiting patterns associated with fraud or evasion.
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-lg font-bold text-[#020E46]">2. Policy Scope and Integration</h2>
-            <p className="text-md">
-              This AML Policy forms an integral part of SwiftEx’s Terms and Conditions. By accessing
-              or using our platform, users acknowledge and agree to comply with the standards
-              outlined herein.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-lg font-bold text-[#020E46]">3. Policy Revisions</h2>
-            <p className="text-md">
-              SwiftEx reserves the right to amend this Policy at any time. Updated versions become
-              effective immediately upon publication on our platform.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-lg font-bold text-[#020E46]">4. User Responsibilities</h2>
-            <ul className="list-disc pl-5 text-md">
-              <li>Refrain from using SwiftEx for unlawful or prohibited purposes.</li>
-              <li>
-                Submit truthful and verifiable information during onboarding via our licensed
-                third-party on/off-ramp verification partners.
-              </li>
-              <li>
-                Notify verification providers of any changes in your residential address promptly.
-              </li>
-              <li>
-                Corporate users must disclose beneficial ownership structures to the relevant KYC
-                providers.
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-lg font-bold text-[#020E46]">5. Policy Purpose</h2>
-            <p className="text-md">
-              This Policy is designed to establish effective internal controls to detect and deter
-              illegal financial activity, support risk management, and preserve platform integrity.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-lg font-bold text-[#020E46]">6. Customer Due Diligence (CDD)</h2>
-            <p className="text-md">
-              Users may be required to complete verification steps including:
-              <ul className="list-disc pl-5">
-                <li>Submitting valid government-issued documents</li>
-                <li>Providing clarification for potential matches on sanction lists</li>
-                <li>Verifying banking details for fiat-related activity</li>
+          <div className="py-3">
+            <h2 className="text-xl font-bold mb-2 text-[#020E46]">2. Business Model</h2>
+            <div className="text-md">
+              SwiftEx Wallet is a non-custodial wallet interface.
+              <ul className="list-disc pl-5 mt-1 leading-tight space-y-1">
+                <li>SwiftEx does not hold, custody, transmit, or control user funds.</li>
+                <li>Users retain sole control of their private keys and digital assets.</li>
+                <li>SwiftEx provides software tools that allow users to interact directly with blockchain networks.</li>
               </ul>
-              Non-compliance may result in restricted access or account closure.
-            </p>
+              Because SwiftEx does not act as a financial intermediary, its regulatory profile differs from custodial exchanges, brokers, or payment processors.
+            </div>
           </div>
 
-          <div>
-            <h2 className="text-lg font-bold text-[#020E46]">7. Risk Assessment</h2>
-            <p className="text-md">
-              SwiftEx assigns users a risk level (Low, Medium, High) based on:
-              <ul className="list-disc pl-5">
-                <li>Document completeness and authenticity</li>
-                <li>Business activities and geographic location</li>
-                <li>Historical and behavioral financial patterns</li>
-                <li>Global risk advisories and red flags</li>
+          <div className="py-3">
+            <h2 className="text-xl font-bold mb-2 text-[#020E46]">3. Reliance on Licensed Partners</h2>
+            <div className="text-md">
+              For features involving conversion between digital assets and fiat currency, SwiftEx integrates licensed third-party providers.
+              <br />
+              These partners are responsible for:
+              <ul className="list-disc pl-5 mt-1 leading-tight space-y-1">
+                <li>Customer identity verification (KYC/CDD)</li>
+                <li>Transaction monitoring</li>
+                <li>Sanctions screening</li>
+                <li>Regulatory reporting obligations</li>
               </ul>
-              High-risk profiles may be subject to heightened oversight or account limitations.
-            </p>
+              SwiftEx does not independently conduct KYC, monitor transactions, or file regulatory reports.
+            </div>
           </div>
 
-          <div>
-            <h2 className="text-lg font-bold text-[#020E46]">8. Identity Verification Process</h2>
-            <p className="text-md">
-              All identity verification is managed by licensed on/off-ramp partners regulated under
-              applicable laws. Required documentation includes:
-              <ul className="list-disc pl-5">
-                <li>
-                  <strong>Individuals:</strong> Government-issued photo ID, recent photograph, and
-                  proof of address.
-                </li>
-                <li>
-                  <strong>Businesses:</strong> Certificate of incorporation, board resolution, ID of
-                  authorized signatory, and documents evidencing beneficial ownership.
-                </li>
+          <div className="py-3">
+            <h2 className="text-xl font-bold mb-2 text-[#020E46]">4. Prohibited Use</h2>
+            <div className="text-md">
+              Users may not use SwiftEx Wallet for activities involving:
+              <ul className="list-disc pl-5 mt-1 leading-tight space-y-1">
+                <li>Money laundering</li>
+                <li>Terrorist financing</li>
+                <li>Sanctions evasion</li>
+                <li>Fraud or scams</li>
+                <li>Illegal goods or services</li>
+                <li>Circumventing geographic restrictions</li>
               </ul>
-              SwiftEx does not directly access or store any KYC data.
-            </p>
+              SwiftEx reserves the right to restrict access to its application interface in cases of suspected abuse.
+            </div>
           </div>
 
-          <div>
-            <h2 className="text-lg font-bold text-[#020E46]">9. Transaction Monitoring</h2>
-            <p className="text-md">
-              SwiftEx implements dynamic monitoring mechanisms to detect suspicious or high-risk
-              activity, such as:
-              <ul className="list-disc pl-5">
-                <li>Transactions exceeding $10,000 USD</li>
-                <li>High-risk or cross-border transfers</li>
-                <li>Inconsistent activity versus user profile</li>
+          <div className="py-3">
+            <h2 className="text-xl font-bold mb-2 text-[#020E46]">5. Geographic & Sanctions Considerations</h2>
+            <div className="text-md">
+              SwiftEx may implement technical access controls aligned with applicable sanctions regimes and the compliance requirements of its third-party partners.
+            </div>
+          </div>
+
+          <div className="py-3">
+            <h2 className="text-xl font-bold mb-2 text-[#020E46]">6. Partner Due Diligence</h2>
+            <div className="text-md">
+              Before integrating financial service providers, SwiftEx conducts due diligence including:
+              <ul className="list-disc pl-5 mt-1 leading-tight space-y-1">
+                <li>Verification of regulatory status</li>
+                <li>Review of compliance controls</li>
+                <li>Periodic reassessment of partners</li>
               </ul>
-              Suspicious transactions may be flagged, frozen, or reported to authorities as
-              required.
-            </p>
+            </div>
           </div>
 
-          <div>
-            <h2 className="text-lg font-bold text-[#020E46]">10. Data Retention Practices</h2>
-            <ul className="list-disc pl-5 text-md">
-              <li>
-                KYC-related records may be retained for up to 10 years following account
-                termination, depending on applicable laws.
-              </li>
-              <li>
-                Transaction logs may be kept for a minimum of 10 years for regulatory compliance and
-                audit purposes.
-              </li>
-              <li>
-                Suspicious Activity Reports may be retained for up to 12 years to comply with legal
-                obligations.
-              </li>
-            </ul>
+          <div className="py-3">
+            <h2 className="text-xl font-bold mb-2 text-[#020E46]">7. Compliance Governance</h2>
+            <div className="text-md">
+              SwiftEx maintains internal processes to support responsible operation of its platform, including:
+              <ul className="list-disc pl-5 mt-1 leading-tight space-y-1">
+                <li>Compliance awareness among relevant personnel</li>
+                <li>Review of new integrations for regulatory impact</li>
+                <li>Periodic policy review</li>
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <h2 className="text-lg font-bold text-[#020E46]">
-              11. Regulatory Reporting and Cooperation
-            </h2>
-            <p className="text-md">
-              SwiftEx may share user information with regulatory agencies including UIF Costa Rica,
-              SUGEF, or equivalent global authorities when legally required. Reports and compliance
-              concerns should be sent to:{' '}
-              <a href="mailto:info@swiftexchange.io" className="text-blue-600 underline">
-                info@swiftexchange.io
-              </a>
-              .
-            </p>
+          <div className="py-3">
+            <h2 className="text-xl font-bold mb-2 text-[#020E46]">8. Reporting Concerns</h2>
+            <div className="text-md">
+              Suspected misuse of SwiftEx may be reported to:
+              <br />
+              Email: info@swiftexwallet.com
+            </div>
           </div>
 
-          <div>
-            <h2 className="text-lg font-bold text-[#020E46]">12. Contact Information</h2>
-            <ul className="list-disc pl-5 text-md">
-              <li>
-                Email:{' '}
-                <a href="mailto:info@swiftexchange.io" className="text-blue-600 underline">
-                  info@swiftexchange.io
-                </a>
-              </li>
-              <li>
-                Address: Katchin Tech Pvt. Ltd., A-4, Sector 19, Nanda Enclave, Dwarka, Delhi,
-                110075
-              </li>
-            </ul>
+          <div className="py-3">
+            <h2 className="text-xl font-bold mb-2 text-[#020E46]">9. Policy Review</h2>
+            <div className="text-md">
+              This statement is reviewed periodically and updated as necessary to reflect regulatory developments and changes to the SwiftEx platform.
+            </div>
           </div>
         </div>
       </div>

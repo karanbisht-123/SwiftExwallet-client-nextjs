@@ -42,7 +42,7 @@ const SecurityCard: React.FC<SecurityCardProps> = ({
   imagePosition,
 }) => (
   <motion.div
-    className={`${gradient} ${textColor} p-6 lg:-mt-8 md:p-16 xl:rounded-3xl shadow-lg md:sticky lg:max-h-[540px] overflow-hidden`}
+    className={`${gradient} ${textColor} p-2 md:p-8 lg:-mt-8 lg:p-16 xl:rounded-3xl shadow-lg md:sticky lg:max-h-[600px]  overflow-hidden`}
     initial="offscreen"
     whileInView="onscreen"
     viewport={{ once: true, amount: 0.5 }}
@@ -74,7 +74,7 @@ const SecurityCard: React.FC<SecurityCardProps> = ({
           <img
             src={imageSrc}
             alt={title}
-            className="w-full h-full max-h-[350px] md:max-h-[450px] lg:max-h-[700px] object-contain"
+            className="w-full h-full max-h-[420px] md:max-h-[480px] lg:max-h-[900px] object-contain"
           />
         </div>
       </div>

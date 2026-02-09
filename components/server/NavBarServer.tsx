@@ -66,16 +66,7 @@ const socialLinks: SocialLink[] = [
   },
 ];
 
-const navigationItemsLabels: string[] = [
-  'Home',
-  'SwiftEx Wallet',
-  'Fiat Exchange',
-  'About Us',
-  'White Paper',
-  'Contact Us',
-  'Blog',
-  'Market',
-];
+const navigationItemsLabels: string[] = ['Home', 'SwiftEx Wallet'];
 
 const navigationItems: NavItem[] = navigationItemsLabels.map(label => ({
   label,

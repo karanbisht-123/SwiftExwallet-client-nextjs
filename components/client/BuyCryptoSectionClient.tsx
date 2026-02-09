@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight, ChevronLeft, Check } from 'lucide-react';
-import { Slide, Feature } from '../server/BuyCryptoSection';
+import { Slide, Feature } from '../server/BuySellSection';
 
 interface BuyCryptoSectionClientProps {
   slides: Slide[];
@@ -29,7 +29,6 @@ export function BuyCryptoSectionClient({ slides, features }: BuyCryptoSectionCli
         setActiveIndex(prev => (prev + 1) % slides.length);
       }, 5000);
     }
-
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
@@ -37,7 +36,6 @@ export function BuyCryptoSectionClient({ slides, features }: BuyCryptoSectionCli
 
   const handleDotClick = (index: number): void => {
     setActiveIndex(index);
-    // Reset interval when manually changing slides
     if (intervalRef.current) clearInterval(intervalRef.current);
     if (!isPaused) {
       intervalRef.current = window.setInterval(() => {
@@ -48,7 +46,6 @@ export function BuyCryptoSectionClient({ slides, features }: BuyCryptoSectionCli
 
   const nextSlide = (): void => {
     setActiveIndex(prev => (prev + 1) % slides.length);
-    // Reset interval when manually changing slides
     if (intervalRef.current) clearInterval(intervalRef.current);
     if (!isPaused) {
       intervalRef.current = window.setInterval(() => {
@@ -76,7 +73,6 @@ export function BuyCryptoSectionClient({ slides, features }: BuyCryptoSectionCli
       3: { top: '75%', left: '25%', zIndex: 20, opacity: 0.5, scale: 0.59 },
       4: { top: '30%', left: '25%', zIndex: 30, opacity: 0.7, scale: 0.59 },
     };
-
     return positions[diff];
   };
 
@@ -95,14 +91,11 @@ export function BuyCryptoSectionClient({ slides, features }: BuyCryptoSectionCli
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl sm:text-5xl mb-4 sm:mb-6 text-white leading-tight">
-            Trade Crypto & Assets{' '}
-            <span className="bg-gradient-to-r from-blue-300 to-cyan-200 bg-clip-text text-transparent">
-              Your Way
-            </span>
+            Manage Your Digital Assets With Ease
           </h2>
           <p className="text-lg sm:text-xl text-blue-200 font-light max-w-2xl mx-auto md:mb-12">
-            Access the future of finance with our intuitive platform designed for every trader, from
-            beginners to professionals.
+            Access and organize your digital assets securely and effortlessly, all from one
+            intuitive wallet.
           </p>
         </motion.div>
 
@@ -131,16 +124,9 @@ export function BuyCryptoSectionClient({ slides, features }: BuyCryptoSectionCli
             <motion.div
               key={index}
               className="absolute cursor-pointer w-1/2 sm:w-3/4 md:w-[24%] lg:w-[22%] max-w-xl"
-              style={{
-                x: '-50%',
-                y: '-50%',
-              }}
+              style={{ x: '-50%', y: '-50%' }}
               animate={getImageStyles(index) as any}
-              transition={{
-                type: 'spring',
-                stiffness: 80,
-                damping: 20,
-              }}
+              transition={{ type: 'spring', stiffness: 80, damping: 20 }}
               onClick={() => handleDotClick(index)}
               whileHover={{
                 scale: index === activeIndex ? 1 : getImageStyles(index).scale * 1,
@@ -149,23 +135,23 @@ export function BuyCryptoSectionClient({ slides, features }: BuyCryptoSectionCli
             >
               <div className="relative group">
                 <img src={slide.image} alt={slide.title} className="w-full h-auto" />
-                {index === activeIndex && (
+                {/* {index === activeIndex && (
                   <div className="absolute inset-0 rounded-xl flex items-end justify-center p-6">
                     <div className="text-center bg-blue-600 p-3 py-1 rounded-xl">
                       <h3 className="text-white lg:text-sm text-xs">{slide.title}</h3>
                     </div>
                   </div>
-                )}
+                )} */}
               </div>
             </motion.div>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2  lg:grid-cols-3 lg:gap-4 gap-2">
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className={`bg-gradient-to-br ${feature.gradientColor} backdrop-blur-lg rounded-xl p-6 text-left border border-white/10 hover:border-white/20 transition-all`}
+              className={`bg-gradient-to-br ${feature.gradientColor} backdrop-blur-lg rounded-xl p-3 lg:p-6 text-left border border-white/10 hover:border-white/20 transition-all`}
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{

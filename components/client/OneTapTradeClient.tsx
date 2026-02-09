@@ -43,33 +43,34 @@ const OneTapTradeClient: React.FC = () => {
   const flowItems: FlowItem[] = useMemo(
     () => [
       {
-        name: 'Choose any Multi Chain assets',
+        name: 'Select Supported Stable Assets',
         icon: <Banknote className="h-5 w-5" />,
         color: 'bg-green-600',
         lightColor: 'bg-green-100',
         borderColor: 'border-green-200',
-        description: 'Select any Asset from your wallet',
+        description: 'Choose USDT or USDC',
         detailedMessage:
-          'Choose any Multi Chain assets in your wallet. Our system supports all major Asset for cross-chain transfers.',
+          'Select supported stable assets such as USDT or USDC from Ethereum or BNB Chain within your connected wallet.',
       },
       {
-        name: 'Automated Swap & Bridging to USDC',
+        name: 'Move Assets to Stellar Network',
         icon: <Repeat className="h-5 w-5" />,
         color: 'bg-blue-600',
         lightColor: 'bg-blue-100',
         borderColor: 'border-blue-200',
-        description: 'Cross-chain bridge converts Asset automatically',
+        description: 'Cross-network asset movement',
         detailedMessage:
-          'Our smart cross-chain bridge handles all the complex operations with one simple tap. Your Asset are converted and bridged in a single transaction.',
+          'SwiftEx helps facilitate the movement of selected assets across supported blockchain networks, guiding them to the Stellar network in a simple flow.',
       },
       {
-        name: ' USDC -> Trade on SDEX',
+        name: 'Receive Stellar USDC',
         icon: <Wallet className="h-5 w-5" />,
         color: 'bg-purple-600',
         lightColor: 'bg-purple-100',
         borderColor: 'border-purple-200',
-        description: 'USDC delivered to your wallet',
-        detailedMessage: 'USDC is delivered directly to your Trade Wallet. You are ready to trade!',
+        description: 'Available in your wallet',
+        detailedMessage:
+          'Stellar USDC becomes available in your wallet on the Stellar network, where it can be securely stored, viewed, and managed.',
       },
     ],
     []
@@ -345,11 +346,25 @@ const OneTapTradeClient: React.FC = () => {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className="text-center mb-4"
       >
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 border border-blue-200 text-blue-700 text-xs font-semibold mb-4 relative group cursor-help z-50">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+          </span>
+          Coming very soon: One-Tap Pay 🚀
+          <Info className="w-3 h-3 ml-1" />
+          <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 w-64 p-3 bg-gray-900 text-white text-xs font-medium rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50">
+            <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-900 rotate-45"></div>
+            One-Tap Pay helps you use supported wallet assets to initiate payments or transfers
+            across supported blockchain networks with minimal steps.
+          </div>
+        </div>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 mb-2">
-          1-Tap Bridge & Trade
+          Multi-Chain Stablecoin Bridge
         </h2>
         <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
-          Use the USDT in your wallet to trade any Asset across chains. Fast. Secure. One tap.
+          Seamlessly bridge your USDT and USDC from Ethereum and BNB Chain to Stellar USDC. Fast,
+          secure, and simple.
         </p>
       </motion.div>
 
@@ -726,22 +741,22 @@ const OneTapTradeClient: React.FC = () => {
                     className="p-3 bg-gray-700/50 rounded-lg"
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-300">Provider</span>
+                      <span className="text-gray-300">Selection</span>
                       <motion.span className="font-medium bg-blue-600/30 px-2 py-1 rounded">
-                        Uniswap
+                        USDT (ERC20)
                       </motion.span>
                     </div>
                     <div className="flex justify-between my-1">
-                      <span className="text-gray-300">Rate</span>
-                      <span className="font-medium">1 WETH = 7305605.12 USDT</span>
+                      <span className="text-gray-300">Amount</span>
+                      <span className="font-medium">1,000.00 USDT</span>
                     </div>
                     <div className="flex justify-between my-1">
-                      <span className="text-gray-300">Slippage</span>
-                      <span className="font-medium text-green-400">0.005%</span>
+                      <span className="text-gray-300">Network Fee</span>
+                      <span className="font-medium text-green-400">~$2.50</span>
                     </div>
                     <div className="flex justify-between mt-1">
-                      <span className="text-gray-300">Min Received</span>
-                      <span className="font-medium">7269.07 USDT</span>
+                      <span className="text-gray-300">Input</span>
+                      <span className="font-medium">1,000.00 USDT</span>
                     </div>
                   </motion.div>
 
@@ -752,22 +767,22 @@ const OneTapTradeClient: React.FC = () => {
                     className="p-3 bg-gray-700/50 rounded-lg"
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-300">Provider</span>
+                      <span className="text-gray-300">Bridge</span>
                       <motion.span className="font-medium bg-purple-600/30 px-2 py-1 rounded">
-                        ALLbridge
+                        SwiftEx Bridge
                       </motion.span>
                     </div>
                     <div className="flex justify-between my-1">
                       <span className="text-gray-300">Rate</span>
-                      <span className="font-medium">1 USDT = 0.996 USDC</span>
+                      <span className="font-medium">1 USDT ≈ 1 USDC</span>
                     </div>
                     <div className="flex justify-between my-1">
-                      <span className="text-gray-300">Slippage</span>
-                      <span className="font-medium text-yellow-400">1%</span>
+                      <span className="text-gray-300">Bridge Fee</span>
+                      <span className="font-medium text-yellow-400">0.1%</span>
                     </div>
                     <div className="flex justify-between mt-1">
-                      <span className="text-gray-300">Min Received</span>
-                      <span className="font-medium">7244.89 USDC</span>
+                      <span className="text-gray-300">Est. Received</span>
+                      <span className="font-medium">999.00 USDC</span>
                     </div>
                   </motion.div>
                 </div>
@@ -795,7 +810,7 @@ const OneTapTradeClient: React.FC = () => {
                   </motion.div>
                   Total Received
                 </span>
-                <span className="text-sm md:text-md">≈7244.89 USDC</span>
+                <span className="text-sm md:text-md">≈999.00 USDC</span>
               </motion.div>
             </motion.div>
           </div>

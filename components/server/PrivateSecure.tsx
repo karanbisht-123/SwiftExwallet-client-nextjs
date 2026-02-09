@@ -38,7 +38,7 @@ export default function PrivateSecure() {
           heroContent={{
             title: 'Complete Control Over Your Crypto Assets',
             description:
-              'Your wallet is secure with us, but we do not have access to your private keys or recovery phrase. Only you have that control.',
+              'We do not have access to your private keys or recovery phrase. Only you have that control. ',
             imageSrc: '/images/iPhone/raw.0acff7b3.svg',
             imageAlt: 'security',
           }}

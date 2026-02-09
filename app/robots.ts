@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/admin',
+      disallow: ['/admin', '/privacy-policy', '/terms-of-service', '/anti-money-laundering'],
     },
     sitemap: 'https://swiftexchange.io/sitemap.xml',
   };
