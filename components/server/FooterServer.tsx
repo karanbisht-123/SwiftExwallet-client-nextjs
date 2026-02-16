@@ -42,6 +42,7 @@ const socialIcons = [
         height="40"
         viewBox="0 0 50 50"
         aria-hidden="true"
+        fill="currentColor"
       >
         <path d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"></path>
       </svg>
@@ -63,7 +64,7 @@ const socialIcons = [
     ariaLabel: 'Join SwiftEx community on Discord',
     color: '#5865F2',
     hoverColor: '#4752C4',
-    href: 'https://discord.gg/gCevdzbC',
+    href: 'https://discord.gg/DaDcE32dDm',
   },
 ] as const;
 
@@ -81,7 +82,6 @@ export default function Footer() {
 
       <div className="mx-auto space-y-8 px-4 lg:pt-16 sm:px-6 lg:space-y-16 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 gap-8 xl:grid-cols-3">
-          {/* Logo & Description */}
           <div>
             <Link href="/" aria-label="SwiftEx Home">
               <div className="h-28 w-28">
@@ -110,7 +110,6 @@ export default function Footer() {
             © 2023{currentYear > 2023 ? ` - ${currentYear}` : ''} SwiftEx. All Rights Reserved.
           </p>
 
-          {/* Social Links with proper accessibility */}
           <nav aria-label="Social media links" className="flex space-x-4 mt-8 lg:mt-0">
             {socialIcons.map(({ id, icon, ariaLabel, hoverColor, href, name }) => (
               <Link

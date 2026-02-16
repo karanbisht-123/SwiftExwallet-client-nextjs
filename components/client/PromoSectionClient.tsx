@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styles from '../style/promoSection.module.css';
 import Modal from './Modal';
-import { Info } from 'lucide-react';
-
+// import { Info } from 'lucide-react';
+import Link from 'next/link';
 interface PromoSectionClientProps {
   title: string;
   subtitle: string | null;
@@ -80,13 +80,55 @@ export function PromoSectionClient({
                 <span>Currently on Test Network</span>
               </div> */}
 
-              <button
+              {/* <button
                 type="button"
                 className="text-white mt-2 min-w-60 bg-blue-800 hover:bg-blue-600 focus:outline-none focus:ring-4 font-medium rounded-full px-5 py-5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 text-lg"
                 onClick={handleGetStarted}
               >
                 Download now
-              </button>
+              </button> */}
+
+
+              <div className="flex flex-col gap-4 lg:gap-6 lg:mt-4 mt-2">
+                <div className="flex flex-row items-center justify-center lg:justify-start gap-4">
+                  <Link
+                    href="#"
+                    target="_blank"
+                    className="transition-transform hover:scale-105 active:scale-95 transition-all duration-300"
+                  >
+                    <img
+                      src="/app-store-download.fb5659b5.png"
+                      alt="Download on App Store"
+                      className="h-[60px] w-auto shadow-lg rounded-xl"
+                    />
+                  </Link>
+                  <Link
+                    href="#"
+                    target="_blank"
+                    className="transition-transform hover:scale-105 active:scale-95 transition-all duration-300"
+                  >
+                    <img
+                      src="/google-play-download.1c0e3a31.png"
+                      alt="Get it on Google Play"
+                      className="h-[60px] w-auto shadow-lg rounded-xl"
+                    />
+                  </Link>
+                </div>
+
+                <div className="flex flex-col items-center lg:items-start">
+                  <button
+                    type="button"
+                    onClick={handleGetStarted}
+                    className="text-white/80 hover:text-white transition-colors text-sm font-medium border-b border-dotted border-white/30 hover:border-white pb-0.5 bg-transparent cursor-pointer"
+                  >
+                    Try Beta – Android + iOS
+                  </button>
+                  <p className="text-xs text-white/60 mt-1 lg:mt-2">
+                    Available now on Android (APK) and iOS (TestFlight). <br />
+                    Your feedback helps us build better.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 

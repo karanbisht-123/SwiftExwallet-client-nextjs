@@ -116,7 +116,7 @@ const NewWallet: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="flex flex-col gap-6 mt-8">
+                <div className="flex flex-col lg:gap-6 gap-4 mt-4 lg:mt-8">
                   <div className="flex flex-row items-center justify-center lg:justify-start gap-4">
                     <Link
                       href="#"
@@ -142,14 +142,18 @@ const NewWallet: React.FC = () => {
                     </Link>
                   </div>
 
-                  <div className="flex items-center justify-center lg:justify-start">
+                  <div className="flex flex-col items-center lg:items-start">
                     <button
                       type="button"
                       onClick={handleGetStarted}
-                      className="text-white/70 hover:text-white transition-colors text-sm font-medium border-b border-dotted border-white/30 hover:border-white pb-0.5 bg-transparent cursor-pointer"
+                      className="text-white/80 hover:text-white transition-colors text-sm font-medium border-b border-dotted border-white/30 hover:border-white pb-0.5 bg-transparent cursor-pointer"
                     >
-                      Try Beta Launch
+                      Try Beta – Android + iOS
                     </button>
+                    <p className="text-xs text-white/60 mt-1 lg:mt-2">
+                      Available now on Android (APK) and iOS (TestFlight). <br />
+                      Your feedback helps us build better.
+                    </p>
                   </div>
                 </div>
 
@@ -176,23 +180,23 @@ const NewWallet: React.FC = () => {
                   </div>
                 </div> */}
 
-                <div className="flex items-center justify-center xl:justify-start mt-3">
+                {/* <div className="flex items-center justify-center xl:justify-start mt-3">
                   <button
                     type="button"
                     onClick={handleOpenDemo}
                     className="group text-white/80 hover:text-white flex items-center justify-center gap-2 bg-transparent hover:bg-white/5 focus:outline-none font-medium rounded-full px-4 py-2 text-center text-sm transition-all duration-300"
                     aria-label="View SwiftEx Demo Video"
                   >
-                    {/* <PlayCircle
+                    <PlayCircle
                       size={18}
                       className="text-red-500 group-hover:text-red-400 transition-colors"
                       aria-hidden="true"
-                    /> */}
-                    {/* <span className="underline decoration-dotted underline-offset-4">
+                    />
+                    <span className="underline decoration-dotted underline-offset-4">
                       View Demo
-                    </span> */}
+                    </span>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -247,8 +251,8 @@ const NewWallet: React.FC = () => {
               />
 
               <CardComponent
-                title="Fiat Access via Partners"
-                description="Use licensed third-party providers to convert between crypto and fiat."
+                title="Fiat Access"
+                description="Convert between crypto and fiat via licensed partners."
                 icon={ArrowLeftRight}
                 className="_4"
                 colorClass="iconTrade"

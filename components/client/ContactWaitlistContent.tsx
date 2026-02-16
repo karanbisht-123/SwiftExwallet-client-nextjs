@@ -88,7 +88,6 @@ export function ContactWaitlistContent({ content }: ContactWaitlistContentProps)
         throw new Error(errorData.message || errorData.message || 'Something went wrong');
       }
 
-      // Success
       setSuccess(true);
       setEmail('');
       setFirstName('');
@@ -124,7 +123,6 @@ export function ContactWaitlistContent({ content }: ContactWaitlistContentProps)
       variants={containerVariants}
       className="bg-linear-to-br from-[#020E46] to-[#0A1A5E] xl:rounded-3xl py-8 overflow-hidden"
     >
-      {/* Waitlist Section */}
       <div className="p-4 sm:p-6 lg:p-8">
         <motion.div
           variants={itemVariants}
@@ -193,9 +191,8 @@ export function ContactWaitlistContent({ content }: ContactWaitlistContentProps)
               <button
                 type="submit"
                 disabled={loading}
-                className={`text-white w-full mt-2 min-w-60 bg-blue-800 hover:bg-blue-600 focus:outline-none focus:ring-4 font-medium rounded-full px-5 py-5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 text-lg transition duration-200 ${
-                  loading ? 'opacity-70 cursor-not-allowed' : ''
-                }`}
+                className={`text-white w-full mt-2 min-w-60 bg-blue-800 hover:bg-blue-600 focus:outline-none focus:ring-4 font-medium rounded-full px-5 py-5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 text-lg transition duration-200 ${loading ? 'opacity-70 cursor-not-allowed' : ''
+                  }`}
                 aria-label={loading ? 'Submitting form...' : 'Join the waitlist'}
                 aria-busy={loading}
               >
@@ -253,7 +250,6 @@ export function ContactWaitlistContent({ content }: ContactWaitlistContentProps)
         </motion.div>
       </div>
 
-      {/* Contact Section */}
       <motion.div
         variants={itemVariants}
         className="lg:p-8 lg:py-16 py-8 px-4 border-t border-dashed border-white"
@@ -262,17 +258,15 @@ export function ContactWaitlistContent({ content }: ContactWaitlistContentProps)
           <h2 className="text-3xl lg:text-5xl font-medium text-white mb-6">
             {content.contact.title}
           </h2>
-          <p className="text-lg text-white mb-8 font-thin opacity-80">
+          <p className="text-lg text-white mb-8 font-thin opacity-80 max-w-2xl mx-auto">
             {content.contact.description}{' '}
-            <a href={`mailto:${content.contact.email}`} className="underline">
-              {content.contact.email}
+            <a href={`mailto:${content.contact.email}`} className="underline decoration-dotted underline-offset-4 hover:text-blue-300 transition-colors">
+              Email Now
             </a>
           </p>
           <motion.a
             href={content.contact.buttonLink}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="text-white px-16 mt-2 min-w-60 bg-blue-800 hover:bg-blue-600 focus:outline-none focus:ring-4 font-medium rounded-full  py-5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 text-lg"
+            className="text-white px-16 mt-2 min-w-60 bg-blue-800 hover:bg-blue-600 focus:outline-none focus:ring-4 font-medium rounded-full py-5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 text-lg transition-colors duration-200"
           >
             {content.contact.buttonText}
           </motion.a>

@@ -88,16 +88,14 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
 
   const headerClasses = useMemo(
     () =>
-      `sticky top-0 py-2 z-50 lg:px-4 transition-all duration-300 ${
-        isSticky ? 'bg-white shadow-md text-gray-800' : 'bg-[#020E46] text-white'
+      `sticky top-0 py-2 z-50 lg:px-4 transition-all duration-300 ${isSticky ? 'bg-white shadow-md text-gray-800' : 'bg-[#020E46] text-white'
       }`,
     [isSticky]
   );
 
   const socialLinkClasses = useCallback(
     (isSticky: boolean) =>
-      `text-xl transition-colors duration-300 ${
-        isSticky ? 'text-gray-600 hover:text-blue-600' : 'text-white/80 hover:text-white'
+      `text-xl transition-colors duration-300 ${isSticky ? 'text-gray-600 hover:text-blue-600' : 'text-white/80 hover:text-white'
       }`,
     []
   );
@@ -122,9 +120,8 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
               <Link
                 key={label}
                 href={href}
-                className={`text-md font-regular transition-colors duration-300 hover:text-blue-400 ${
-                  pathname === href ? 'text-blue-400' : ''
-                }`}
+                className={`text-md font-regular transition-colors duration-300 hover:text-blue-400 ${pathname === href ? 'text-blue-400' : ''
+                  }`}
               >
                 {label}
               </Link>
@@ -150,9 +147,8 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
             <div className="w-px h-6 bg-gray-300"></div>
             <Link
               href="/solution"
-              className={`px-4 py-2 text-sm font-medium transition-all duration-300 border rounded-2xl ${
-                isSticky ? 'text-gray-600 hover:text-gray-800' : 'text-white/80 hover:text-white'
-              }`}
+              className={`px-4 py-2 text-sm font-medium transition-all duration-300 border rounded-2xl ${isSticky ? 'text-gray-600 hover:text-gray-800' : 'text-white/80 hover:text-white'
+                }`}
             >
               Knowledge Base
             </Link>
@@ -160,11 +156,10 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
             <Link
               href={hasToken ? '/admin/dashboard' : '#waitlist'}
               onClick={handleJoinNowClick}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                isSticky
+              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${isSticky
                   ? 'bg-[#020E46] text-white hover:bg-blue-700'
                   : 'bg-white text-[#020E46] hover:bg-gray-100'
-              }`}
+                }`}
             >
               {hasToken ? 'Dashboard' : 'Join Now'}
             </Link>
@@ -215,11 +210,10 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
                     key={label}
                     href={href}
                     // Prefetch enabled (prefetch={false})
-                    className={`block py-2.5 px-3 rounded-lg font-medium text-sm transition-all duration-200 ${
-                      pathname === href
+                    className={`block py-2.5 px-3 rounded-lg font-medium text-sm transition-all duration-200 ${pathname === href
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-                    }`}
+                      }`}
                     onClick={closeMenu}
                   >
                     {label}
@@ -237,7 +231,6 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
                     Knowledge Base
                   </Link>
 
-                  {/* Join Now / Dashboard as Link */}
                   <Link
                     href={hasToken ? '/admin/dashboard' : '#waitlist'}
                     onClick={handleJoinNowClick}

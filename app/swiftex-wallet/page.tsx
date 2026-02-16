@@ -15,7 +15,7 @@ const page = () => {
         subtitle="Secure Multichain Wallet"
         description="SwiftEx Wallet is a secure multichain wallet for managing digital assets across supported networks, with access to fiat-related features provided by licensed and regulated partners."
         imageSrc="/images/phonemockup.avif"
-        videoSrc="https://swift-ex-web-app.s3.us-east-2.amazonaws.com/s3-objects/walletIntro.mp4"
+        videoSrc="https://res.cloudinary.com/dz1xabyjf/video/upload/v1770627935/newwalletdemo_tefzar.mp4"
       />
 
       <WalletSection />

@@ -10,8 +10,8 @@ export default function ContactWaitlistSection() {
     },
     contact: {
       title: 'Have more questions?',
-      description: 'SwiftEx support is available 24/7 from within the app! Or contact us at',
-      email: 'info@swiftexchange.io',
+      description: 'SwiftEx support is available 24/7 from within the app for any inquiries.',
+      email: 'info@swiftexwallet.com',
       buttonText: 'Contact us',
       buttonLink: '/contact-us',
     },
