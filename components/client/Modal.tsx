@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, ReactNode, useState } from 'react';
 import { X, Info } from 'lucide-react';
-
+import StoreButton from './StoreButton';
 type NetworkType = 'mainnet' | 'testnet';
 
 interface ModalProps {
@@ -10,7 +10,7 @@ interface ModalProps {
 }
 
 const handleDownloadAPK = (isMainnet: boolean) => {
-  const mainnetUrl = 'https://swift-ex-web-app.s3.us-east-2.amazonaws.com/s3-objects/swiftEx.apk';
+  const mainnetUrl = 'https://swift-ex-web-app.s3.us-east-2.amazonaws.com/SwiftEx+wallet.apk';
   const testnetUrl =
     'https://swift-ex-web-app.s3.us-east-2.amazonaws.com/s3-objects/app-release.apk';
   const apkUrl = isMainnet ? mainnetUrl : testnetUrl;
@@ -78,13 +78,13 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose, children }) => {
   const isMainnet = selectedNetwork === 'mainnet';
   const networkInfo = isMainnet
     ? {
-        name: 'Main Network',
-        description: 'Real cryptocurrency network. Use real funds for actual transactions.',
-      }
+      name: 'Main Network',
+      description: 'Real cryptocurrency network. Use real funds for actual transactions.',
+    }
     : {
-        name: 'Test Network',
-        description: 'For testing purposes only. Use test tokens to experiment with the app.',
-      };
+      name: 'Test Network',
+      description: 'For testing purposes only. Use test tokens to experiment with the app.',
+    };
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/40 bg-opacity-60 backdrop-blur-sm">
@@ -96,6 +96,11 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose, children }) => {
           <h2 className="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
             Download SwiftEx App
           </h2>
+
+          <div className="flex flex-row items-center justify-center my-4 lg:justify-start gap-4">
+            <StoreButton storeType="apple" imageSrc="/app-store-download.fb5659b5.png" />
+            <StoreButton storeType="google" imageSrc="/google-play-download.1c0e3a31.png" />
+          </div>
           <div className="bg-blue- p-3 rounded-xl border border-blue-100 mt-4">
             <div className="flex items-start justify-center gap-2 text-sm">
               <Info className="text-blue-500 mt-0.5 flex-shrink-0" size={16} />
@@ -117,23 +122,20 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose, children }) => {
 
         <div className="flex bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-1 mb-8 shadow-inner relative">
           <div
-            className={`absolute top-1 bottom-1 bg-white rounded-xl shadow-lg transition-all duration-500 ease-in-out ${
-              selectedNetwork === 'testnet' ? 'left-1 right-1/2 mr-0.5' : 'left-1/2 right-1 ml-0.5'
-            }`}
+            className={`absolute top-1 bottom-1 bg-white rounded-xl shadow-lg transition-all duration-500 ease-in-out ${selectedNetwork === 'testnet' ? 'left-1 right-1/2 mr-0.5' : 'left-1/2 right-1 ml-0.5'
+              }`}
           ></div>
           <button
             onClick={() => setSelectedNetwork('testnet')}
-            className={`flex-1 py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-300 ease-in-out relative z-10 ${
-              selectedNetwork === 'testnet' ? 'text-blue-600' : 'text-gray-500 hover:text-gray-700'
-            }`}
+            className={`flex-1 py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-300 ease-in-out relative z-10 ${selectedNetwork === 'testnet' ? 'text-blue-600' : 'text-gray-500 hover:text-gray-700'
+              }`}
           >
             Testnet
           </button>
           <button
             onClick={() => setSelectedNetwork('mainnet')}
-            className={`flex-1 py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-300 ease-in-out relative z-10 ${
-              selectedNetwork === 'mainnet' ? 'text-green-600' : 'text-gray-500 hover:text-gray-700'
-            }`}
+            className={`flex-1 py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-300 ease-in-out relative z-10 ${selectedNetwork === 'mainnet' ? 'text-green-600' : 'text-gray-500 hover:text-gray-700'
+              }`}
           >
             Mainnet
           </button>

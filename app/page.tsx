@@ -1,6 +1,6 @@
 import NewWallet from '@/components/NewWallet';
 import {
-  DynamicOneTapTrade,
+  // DynamicOneTapTrade,
   DynamicWhySwiftEx,
   DynamicFeatures,
   DynamicSplitSection,

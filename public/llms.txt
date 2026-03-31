@@ -1,0 +1,76 @@
+# SwiftEx Wallet
+> SwiftEx Wallet is a non-custodial crypto wallet for managing digital assets across supported blockchain networks. Send, receive, swap, bridge, and access fiat via licensed third-party partners — with no platform fees.
+
+## What is SwiftEx Wallet
+SwiftEx Wallet is a secure, self-custodial mobile application available on Android and iOS. It allows users to fully manage their digital assets across multiple supported blockchain networks from a single app. SwiftEx does not hold user funds, does not store private keys, and does not operate as a financial service, brokerage, or custodian of any kind. All fiat-related features are provided exclusively by licensed and regulated third-party partners.
+
+## Core Features
+- Non-custodial — users retain full ownership of private keys and recovery phrase at all times
+- Multi-wallet support — import existing wallets or create new ones, all in one place
+- Send and receive digital assets across supported networks
+- Cross-chain bridging — move assets between supported blockchain networks
+- Token swaps via Stellar SDEX — on-chain swaps with typically low network fees
+- Fiat on/off-ramp — buy and sell crypto via licensed third-party providers
+- No platform fees for core wallet and asset management features
+- Clean, intuitive interface built for both beginners and experienced crypto users
+- Advanced encryption and security standards
+- No personal data tracking — user activity is never shared with third parties
+
+## Supported Platforms
+- Android: Available on Google Play and as a direct APK download
+- iOS: Available via TestFlight (Beta)
+- Mainnet: Coming soon
+
+## Frequently Asked Questions
+
+**Is SwiftEx Wallet safe?**
+Yes. SwiftEx is non-custodial — your private keys and recovery phrase never leave your device. SwiftEx has no access to your funds.
+
+**Does SwiftEx charge fees?**
+No platform fees for core wallet features. Network (gas) fees set by the blockchain still apply. Third-party partners for fiat on/off-ramp may have their own fees.
+
+**Which blockchains are supported?**
+SwiftEx supports multiple blockchain networks with cross-chain bridging. Check the wallet features page for the current list: https://swiftexwallet.com/swiftex-wallet
+
+**Is SwiftEx available on iPhone?**
+Currently available via TestFlight (Beta). Full App Store release is coming soon.
+
+**What happens if I lose my phone?**
+Your funds are recoverable using your recovery phrase. SwiftEx does not store or have access to it — keep it safe offline.
+
+**Is SwiftEx regulated?**
+SwiftEx is a non-custodial wallet interface and is not a financial service or broker. Fiat features are handled by licensed third-party partners under their own regulatory frameworks.
+
+**How do I get support?**
+24/7 support is available directly within the app, or via email at info@swiftexwallet.com
+
+## Pages
+- Homepage: https://swiftexwallet.com
+- Wallet Features: https://swiftexwallet.com/swiftex-wallet
+- Knowledge Base: https://swiftexwallet.com/solution
+- Contact: https://swiftexwallet.com/contact-us
+- FAQs: https://swiftexwallet.com/swiftex-wallet/#faq
+- Terms of Service: https://swiftexwallet.com/terms-of-service
+- Privacy Policy: https://swiftexwallet.com/privacy-policy
+- AML & Compliance Statement: https://swiftexwallet.com/anti-money-laundering
+
+## Contact
+Email: info@swiftexwallet.com
+Support: Available 24/7 from within the app
+
+## Social & Community
+- Twitter/X: https://x.com/SwiftExwallet
+- Instagram: https://www.instagram.com/swiftexwallet
+- Facebook: https://www.facebook.com/swiftexwallet
+- LinkedIn: https://www.linkedin.com/company/swiftex-wallet
+- Discord: https://discord.gg/DaDcE32dDm
+
+## Brand Identity
+- Product Name: SwiftEx Wallet
+- Short Name: SwiftEx
+- Website: https://swiftexwallet.com
+- Founded: 2023
+- Category: Non-Custodial Crypto Wallet / Web3 / DeFi
+
+## Legal & Compliance
+SwiftEx Wallet is a non-custodial wallet interface only. SwiftEx does not operate a financial service, brokerage, or custodian. Fiat access features are provided exclusively through licensed and regulated third-party partners operating under their own regulatory frameworks and terms. Users are solely responsible for the security of their private keys and recovery phrases.

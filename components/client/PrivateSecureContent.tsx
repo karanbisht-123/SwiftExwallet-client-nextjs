@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Lock, UserCog, Key, LucideIcon } from 'lucide-react';
 import Modal from './Modal';
+import StoreButton from './StoreButton';
 
 const iconMap: Record<string, LucideIcon> = {
   Lock,
@@ -57,6 +58,7 @@ export function PrivateSecureContent({ securityFeatures, heroContent }: PrivateS
                 Get Started
               </button>
             </div>
+
           </div>
           <div className="lg:w-1/3 lg:pr-16">
             <img

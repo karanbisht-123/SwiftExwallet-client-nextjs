@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 import styles from '../style/promoSection.module.css';
 import Modal from './Modal';
 // import { Info } from 'lucide-react';
-import Link from 'next/link';
+import StoreButton from './StoreButton';
 interface PromoSectionClientProps {
   title: string;
   subtitle: string | null;
@@ -91,28 +91,14 @@ export function PromoSectionClient({
 
               <div className="flex flex-col gap-4 lg:gap-6 lg:mt-4 mt-2">
                 <div className="flex flex-row items-center justify-center lg:justify-start gap-4">
-                  <Link
-                    href="#"
-                    target="_blank"
-                    className="transition-transform hover:scale-105 active:scale-95 transition-all duration-300"
-                  >
-                    <img
-                      src="/app-store-download.fb5659b5.png"
-                      alt="Download on App Store"
-                      className="h-[60px] w-auto shadow-lg rounded-xl"
-                    />
-                  </Link>
-                  <Link
-                    href="#"
-                    target="_blank"
-                    className="transition-transform hover:scale-105 active:scale-95 transition-all duration-300"
-                  >
-                    <img
-                      src="/google-play-download.1c0e3a31.png"
-                      alt="Get it on Google Play"
-                      className="h-[60px] w-auto shadow-lg rounded-xl"
-                    />
-                  </Link>
+                  <StoreButton
+                    storeType="apple"
+                    imageSrc="/app-store-download.fb5659b5.png"
+                  />
+                  <StoreButton
+                    storeType="google"
+                    imageSrc="/google-play-download.1c0e3a31.png"
+                  />
                 </div>
 
                 <div className="flex flex-col items-center lg:items-start">

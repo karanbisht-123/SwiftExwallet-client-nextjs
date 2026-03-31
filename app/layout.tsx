@@ -4,7 +4,7 @@ import './globals.css';
 import Footer from '@/components/server/FooterServer';
 import NavBarServer from '@/components/server/NavBarServer';
 import ContactWaitlistSection from '@/components/server/ContactWaitlistSection';
-// import DeferredAnalytics from '@/components/DeferredAnalytics';
+import DeferredAnalytics from '@/components/DeferredAnalytics';
 
 const ubuntu = Ubuntu({
   weight: ['300', '400', '500', '700'],
@@ -16,20 +16,21 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  title: 'SwiftEx | Non-Custodial Crypto Wallet & Fiat Access',
+  title: 'SwiftEx Wallet | Non-Custodial Crypto Wallet',
   description:
-    'The non-custodial wallet for EVM and Stellar chains. Seamlessly swap and use third-party fiat on/off-ramps (via licensed partners) with 0% platform fees. Full control over your keys.',
+    'SwiftEx Wallet is a non-custodial crypto wallet to manage digital assets across supported networks. Swap, bridge, and access fiat with low fees.',
   applicationName: 'SwiftEx',
   keywords: [
-    'assets',
     'SwiftEx',
-    'Non-custodial Wallet',
-    'Fiat Access',
-    'Stellar DeFi',
-    '0% Platform Fee',
-    'Cross-chain Swaps',
-    'Buy Crypto',
-    'Blockchain Payments',
+    'non-custodial wallet',
+    'crypto wallet',
+    'fiat on-ramp',
+    'cross-chain swap',
+    'Stellar wallet',
+    'DeFi wallet',
+    'digital assets',
+    'blockchain wallet',
+    'buy crypto',
   ],
   authors: [{ name: 'SwiftEx Team' }],
   creator: 'SwiftEx Team',
@@ -37,17 +38,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://swiftexchange.io',
-    siteName: 'SwiftEx',
-    title: 'SwiftEx | Non-Custodial Wallet & Fiat Access',
+    url: 'https://swiftexwallet.com',
+    siteName: 'SwiftEx Wallet',
+    title: 'SwiftEx Wallet | Non-Custodial Crypto Wallet',
     description:
-      'Manage assets securely with 0% platform fees. A non-custodial wallet and third-party fiat ramp (via licensed partners) built on the Stellar Blockchain.',
+      'Manage digital assets across supported networks. Swap, bridge, and access fiat with low fees. Non-custodial — your keys, your control.',
     images: [
       {
         url: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958364/exchnagesimpale_fwag0j.avif',
         width: 1200,
         height: 630,
-        alt: 'SwiftEx App Interface',
+        alt: 'SwiftEx Wallet Interface',
       },
     ],
   },
@@ -55,9 +56,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@SwiftExwallet',
     creator: '@SwiftExwallet',
-    title: 'SwiftEx | Non-Custodial Wallet & Fiat Access',
+    title: 'SwiftEx Wallet | Non-Custodial Crypto Wallet',
     description:
-      'Secure crypto management with 0% platform fees. Instant cross-chain swaps and third-party fiat on-ramps (via licensed partners).',
+      'Manage digital assets across supported networks. Swap, bridge, and access fiat with low fees. Non-custodial — your keys, your control.',
     images: [
       'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958364/exchnagesimpale_fwag0j.avif',
     ],
@@ -74,7 +75,59 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://swiftexchange.io',
+    canonical: 'https://swiftexwallet.com',
+  },
+};
+
+//Schema.org Structured Data
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'SwiftEx',
+  alternateName: 'SwiftEx Wallet',
+  url: 'https://swiftexwallet.com',
+  logo: 'https://swiftexwallet.com/images/logo.avif',
+  description:
+    'SwiftEx is a non-custodial crypto wallet to manage digital assets across supported networks. Swap, bridge, and access fiat with low fees.',
+  email: 'info@swiftexwallet.com',
+  foundingDate: '2023',
+  sameAs: [
+    'https://twitter.com/SwiftExwallet',
+    'https://www.instagram.com/swiftexwallet',
+    'https://www.facebook.com/swiftexwallet',
+    'https://www.linkedin.com/company/swiftex-wallet',
+    'https://discord.gg/DaDcE32dDm',
+  ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'SwiftEx Wallet',
+  url: 'https://swiftexwallet.com',
+  description:
+    'Non-custodial crypto wallet for managing digital assets across supported networks.',
+};
+
+const softwareAppSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'SwiftEx Wallet',
+  operatingSystem: 'Android, iOS',
+  applicationCategory: 'FinanceApplication',
+  description:
+    'SwiftEx Wallet is a non-custodial crypto wallet to manage digital assets across supported networks. Swap, bridge, and access fiat with low fees.',
+  url: 'https://swiftexwallet.com',
+  downloadUrl: 'https://play.google.com/store/apps/details?id=org.app.swiftEx.wallet',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  author: {
+    '@type': 'Organization',
+    name: 'SwiftEx',
   },
 };
 
@@ -82,14 +135,31 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://res.cloudinary.com" />
+        <link rel="preconnect" href="https://res.cloudinary.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+        {/* Schema.org Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
+        />
       </head>
       <body className={ubuntu.className} suppressHydrationWarning>
         <NavBarServer />
-        <main className="min-h-screen">{children}</main>
+        <main id="main-content" className="min-h-screen">
+          {children}
+        </main>
         <ContactWaitlistSection />
         <Footer />
-        {/* <DeferredAnalytics /> */}
+        <DeferredAnalytics />
       </body>
     </html>
   );

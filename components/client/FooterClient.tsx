@@ -3,6 +3,7 @@
 import { useState } from 'react';
 // import { motion } from 'framer-motion';
 import Modal from './Modal';
+import StoreButton from './StoreButton';
 
 interface SocialIcon {
   id: number;
@@ -95,9 +96,29 @@ export default function FooterClient() {
             onClick={handleGetStarted}
             className="mt-4 bg-blue-800 hover:bg-blue-600 text-white font-medium rounded-full px-6 py-3 text-lg transition"
           >
-            Download now
+            Download APK
           </button>
+
+          <div className="flex flex-col lg:gap-6 gap-4 mt-4 lg:mt-8">
+            <div className="flex flex-col justify-center lg:justify-start gap-4">
+              <StoreButton
+                storeType="apple"
+
+                imageSrc="/app-store-download.fb5659b5.png"
+              />
+              <StoreButton
+                storeType="google"
+
+                imageSrc="/google-play-download.1c0e3a31.png"
+              />
+            </div>
+
+
+          </div>
         </div>
+
+
+
       </div>
     </>
   );

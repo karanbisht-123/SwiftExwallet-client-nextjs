@@ -4,7 +4,8 @@ import React, { useEffect, useState, lazy, Suspense } from 'react';
 import Image from 'next/image';
 import { Wallet, ArrowLeftRight, Repeat, Send, Info, Smartphone } from 'lucide-react';
 import styles from './style/newWallt.module.css';
-import Link from 'next/link';
+// import Link from 'next/link';
+import StoreButton from './client/StoreButton';
 
 interface CardProps {
   title: string;
@@ -14,7 +15,7 @@ interface CardProps {
   colorClass: string;
 }
 
-const MODAL_DISMISSED_KEY = 'swiftex_demo_modal_dismissed';
+// const MODAL_DISMISSED_KEY = 'swiftex_demo_modal_dismissed';
 
 const Modal = lazy(() => import('./client/Modal'));
 // const DemoModal = lazy(() => import('./client/DemoModal'));
@@ -34,7 +35,10 @@ const CardComponent: React.FC<CardProps> = React.memo(
           </div>
           <div className="md:pl-3 text-start">
             <h2 className="md:text-md text-sm font-medium hidden lg:block">{title}</h2>
-            <p className={`text-sm text-black mt-2 lg:mt-0 ${styles.custmFont}`} style={{ fontSize: '14px' }}>
+            <p
+              className={`text-sm text-black mt-2 lg:mt-0 ${styles.custmFont}`}
+              style={{ fontSize: '14px' }}
+            >
               {description}
             </p>
           </div>
@@ -81,9 +85,9 @@ const NewWallet: React.FC = () => {
     setShowPopup(false);
   };
 
-  const handleOpenDemo = () => {
-    // setShowDemoModal(true);
-  };
+  // const handleOpenDemo = () => {
+  //   // setShowDemoModal(true);
+  // };
 
   // const handleCloseDemo = () => {
   //   setShowDemoModal(false);
@@ -118,28 +122,14 @@ const NewWallet: React.FC = () => {
 
                 <div className="flex flex-col lg:gap-6 gap-4 mt-4 lg:mt-8">
                   <div className="flex flex-row items-center justify-center lg:justify-start gap-4">
-                    <Link
-                      href="#"
-                      target="_blank"
-                      className="transition-transform hover:scale-105 active:scale-95 transition-all duration-300"
-                    >
-                      <img
-                        src="/app-store-download.fb5659b5.png"
-                        alt="Download on App Store"
-                        className="h-[60px] w-auto shadow-lg rounded-xl"
-                      />
-                    </Link>
-                    <Link
-                      href="#"
-                      target="_blank"
-                      className="transition-transform hover:scale-105 active:scale-95 transition-all duration-300"
-                    >
-                      <img
-                        src="/google-play-download.1c0e3a31.png"
-                        alt="Get it on Google Play"
-                        className="h-[60px] w-auto shadow-lg rounded-xl"
-                      />
-                    </Link>
+                    <StoreButton
+                      storeType="apple"
+                      imageSrc="/app-store-download.fb5659b5.png"
+                    />
+                    <StoreButton
+                      storeType="google"
+                      imageSrc="/google-play-download.1c0e3a31.png"
+                    />
                   </div>
 
                   <div className="flex flex-col items-center lg:items-start">
