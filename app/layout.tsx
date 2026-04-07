@@ -16,7 +16,7 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  title: 'SwiftEx Wallet – Secure Digital Assets Across Supported Networks with Easy Access',
+  title: 'SwiftEx – Secure Access to Digital Assets Across Networks',
   description:
     'SwiftEx Wallet is a non-custodial crypto wallet to manage digital assets across supported networks. Swap, bridge, and access fiat with low fees.',
   applicationName: 'SwiftEx',

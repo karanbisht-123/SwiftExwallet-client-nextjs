@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, XCircle, Loader, Users } from 'lucide-react';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://swiftexchange.io/api/v2';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://swiftexwallet.com';
 
 interface ContactWaitlistContentProps {
   content: {
@@ -191,8 +191,9 @@ export function ContactWaitlistContent({ content }: ContactWaitlistContentProps)
               <button
                 type="submit"
                 disabled={loading}
-                className={`text-white w-full mt-2 min-w-60 bg-blue-800 hover:bg-blue-600 focus:outline-none focus:ring-4 font-medium rounded-full px-5 py-5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 text-lg transition duration-200 ${loading ? 'opacity-70 cursor-not-allowed' : ''
-                  }`}
+                className={`text-white w-full mt-2 min-w-60 bg-blue-800 hover:bg-blue-600 focus:outline-none focus:ring-4 font-medium rounded-full px-5 py-5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 text-lg transition duration-200 ${
+                  loading ? 'opacity-70 cursor-not-allowed' : ''
+                }`}
                 aria-label={loading ? 'Submitting form...' : 'Join the waitlist'}
                 aria-busy={loading}
               >
@@ -260,7 +261,10 @@ export function ContactWaitlistContent({ content }: ContactWaitlistContentProps)
           </h2>
           <p className="text-lg text-white mb-8 font-thin opacity-80 max-w-2xl mx-auto">
             {content.contact.description}{' '}
-            <a href={`mailto:${content.contact.email}`} className="underline decoration-dotted underline-offset-4 hover:text-blue-300 transition-colors">
+            <a
+              href={`mailto:${content.contact.email}`}
+              className="underline decoration-dotted underline-offset-4 hover:text-blue-300 transition-colors"
+            >
               Email Now
             </a>
           </p>
