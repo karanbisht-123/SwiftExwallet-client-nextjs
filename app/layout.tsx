@@ -16,7 +16,7 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  title: 'SwiftEx Wallet | Non-Custodial Crypto Wallet',
+  title: 'SwiftEx Wallet – Secure Digital Assets Across Supported Networks with Easy Access',
   description:
     'SwiftEx Wallet is a non-custodial crypto wallet to manage digital assets across supported networks. Swap, bridge, and access fiat with low fees.',
   applicationName: 'SwiftEx',
@@ -106,8 +106,7 @@ const websiteSchema = {
   '@type': 'WebSite',
   name: 'SwiftEx Wallet',
   url: 'https://swiftexwallet.com',
-  description:
-    'Non-custodial crypto wallet for managing digital assets across supported networks.',
+  description: 'Non-custodial crypto wallet for managing digital assets across supported networks.',
 };
 
 const softwareAppSchema = {
