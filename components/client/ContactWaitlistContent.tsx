@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, XCircle, Loader, Users } from 'lucide-react';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://swiftexwallet.com';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://swiftexwallet.com/api/v2';
 
 interface ContactWaitlistContentProps {
   content: {
