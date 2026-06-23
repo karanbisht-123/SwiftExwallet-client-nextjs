@@ -4,7 +4,7 @@ import React, { useEffect, useState, lazy, Suspense } from 'react';
 import Image from 'next/image';
 import { Wallet, ArrowLeftRight, Repeat, Send, Info, Smartphone } from 'lucide-react';
 import styles from './style/newWallt.module.css';
-// import Link from 'next/link';
+import Link from 'next/link';
 import StoreButton from './client/StoreButton';
 
 interface CardProps {
@@ -120,30 +120,50 @@ const NewWallet: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="flex flex-col lg:gap-6 gap-4 mt-4 lg:mt-8">
-                  <div className="flex flex-row items-center justify-center lg:justify-start gap-4">
-                    <StoreButton
-                      storeType="apple"
-                      imageSrc="/app-store-download.fb5659b5.png"
-                    />
-                    <StoreButton
-                      storeType="google"
-                      imageSrc="/google-play-download.1c0e3a31.png"
-                    />
-                  </div>
+                <div className="mt-6 lg:mt-8 mx-auto lg:mx-0 w-full max-w-[360px] md:max-w-[380px]">
+                  <div className="bg-transparent sm:bg-white/[0.02] border-0 sm:border border-white/10 rounded-none sm:rounded-2xl p-0 sm:p-4 relative sm:overflow-hidden group">
+                    <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                      {/* Left: Badges (side-by-side on mobile, stacked on desktop) */}
+                      <div className="flex flex-row sm:flex-col gap-2.5 items-center sm:items-stretch justify-center w-full sm:w-auto">
+                        <StoreButton
+                          storeType="apple"
+                          imageSrc="/app-store-download.fb5659b5.png"
+                        />
+                        <StoreButton
+                          storeType="google"
+                          imageSrc="/google-play-download.1c0e3a31.png"
+                        />
+                      </div>
 
-                  <div className="flex flex-col items-center lg:items-start">
-                    <button
-                      type="button"
-                      onClick={handleGetStarted}
-                      className="text-white/80 hover:text-white transition-colors text-sm font-medium border-b border-dotted border-white/30 hover:border-white pb-0.5 bg-transparent cursor-pointer"
-                    >
-                      Try Beta – Android + iOS
-                    </button>
-                    <p className="text-xs text-white/60 mt-1 lg:mt-2">
-                      Available now on Android (APK) and iOS (TestFlight). <br />
-                      Your feedback helps us build better.
-                    </p>
+                      {/* Divider (horizontal on mobile, vertical on desktop - hidden on mobile) */}
+                      <div className="hidden sm:block w-px h-16 bg-white/10" />
+
+                      {/* Right: QR Code (hidden on mobile, shown on desktop) */}
+                      <div className="hidden sm:flex flex-col items-center gap-1.5 shrink-0">
+                        <Link href="/download" aria-label="Open download page" className="group/qr relative block bg-white p-1 rounded-xl transition-transform duration-300 hover:scale-105">
+                          <Image
+                            src="/qr/swiftex.png"
+                            alt="Scan to download SwiftEx"
+                            width={80}
+                            height={80}
+                            className="rounded-lg block"
+                            priority
+                          />
+                        </Link>
+                        <span className="text-[10px] text-white/50 font-medium tracking-wide">Scan to download</span>
+                      </div>
+                    </div>
+
+                    <div className="bg-white/[0.03] border border-white/10 rounded-xl p-3 mt-4 sm:bg-transparent sm:border-0 sm:p-0 sm:pt-3.5 sm:border-t sm:border-white/5 flex items-center justify-between text-xs">
+                      <span className="text-white/40 font-light">Looking for the APK/TestFlight?</span>
+                      <button
+                        type="button"
+                        onClick={handleGetStarted}
+                        className="text-blue-400 hover:text-blue-300 font-semibold transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-none p-0"
+                      >
+                        Try Beta →
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -208,13 +228,7 @@ const NewWallet: React.FC = () => {
                 quality={85}
               />
 
-              <Image
-                className={styles.backgroundHeader}
-                src="/images/iPhone/backround.svg"
-                alt="Decorative background graphic"
-                width={700}
-                height={700}
-              />
+
 
               <CardComponent
                 title="Send"

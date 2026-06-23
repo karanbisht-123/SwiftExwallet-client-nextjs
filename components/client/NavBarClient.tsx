@@ -27,22 +27,14 @@ interface NavBarClientProps {
 const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLinks }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const [hasToken, setHasToken] = useState(false);
 
   const pathname = usePathname();
   const router = useRouter();
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    setHasToken(!!token);
-  }, []);
-
-  useEffect(() => {
     router.prefetch('/solution');
-    if (hasToken) {
-      router.prefetch('/admin/dashboard');
-    }
-  }, [hasToken, router]);
+    router.prefetch('/download');
+  }, [router]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : 'unset';
@@ -77,13 +69,10 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
 
   const handleJoinNowClick = useCallback(
     (e: React.MouseEvent) => {
-      if (!hasToken) {
-        e.preventDefault();
-        scrollToWaitlist();
-      }
-      closeMenu();
+      e.preventDefault();
+      scrollToWaitlist();
     },
-    [hasToken, scrollToWaitlist, closeMenu]
+    [scrollToWaitlist]
   );
 
   const headerClasses = useMemo(
@@ -131,7 +120,7 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
           <div className="hidden xl:flex items-center space-x-6">
             <div className="flex items-center space-x-3">
               {socialLinks.map(({ id, name, icon, href }) => (
-                <a
+                <Link
                   key={id}
                   href={href}
                   target="_blank"
@@ -140,28 +129,41 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
                   aria-label={name}
                 >
                   {icon}
-                </a>
+                </Link>
               ))}
             </div>
 
             <div className="w-px h-6 bg-gray-300"></div>
             <Link
               href="/solution"
-              className={`px-4 py-2 text-sm font-medium transition-all duration-300 border rounded-2xl ${isSticky ? 'text-gray-600 hover:text-gray-800' : 'text-white/80 hover:text-white'
-                }`}
+              className={`px-4 py-2 text-sm font-medium transition-all duration-300 border rounded-2xl ${
+                isSticky ? 'text-gray-600 hover:text-gray-800 border-gray-300 hover:border-gray-400' : 'text-white/80 hover:text-white border-white/20 hover:border-white/50'
+              }`}
             >
               Knowledge Base
             </Link>
 
             <Link
-              href={hasToken ? '/admin/dashboard' : '#waitlist'}
+              href="#waitlist"
               onClick={handleJoinNowClick}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${isSticky
+              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+                isSticky
                   ? 'bg-[#020E46] text-white hover:bg-blue-700'
                   : 'bg-white text-[#020E46] hover:bg-gray-100'
-                }`}
+              }`}
             >
-              {hasToken ? 'Dashboard' : 'Join Now'}
+              Join Now
+            </Link>
+
+            <Link
+              href="/download"
+              className={`px-5 py-2 text-sm font-semibold transition-all duration-300 rounded-2xl shadow-sm ${
+                isSticky
+                  ? 'bg-blue-600 text-white hover:bg-blue-700'
+                  : 'bg-blue-500 text-white hover:bg-blue-600'
+              }`}
+            >
+              Download
             </Link>
           </div>
 
@@ -232,11 +234,19 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
                   </Link>
 
                   <Link
-                    href={hasToken ? '/admin/dashboard' : '#waitlist'}
+                    href="#waitlist"
                     onClick={handleJoinNowClick}
                     className="w-full block py-3 px-4 bg-[#020E46] text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg text-sm text-center"
                   >
-                    {hasToken ? 'Go to Dashboard' : 'Join Now'}
+                    Join Now
+                  </Link>
+
+                  <Link
+                    href="/download"
+                    onClick={closeMenu}
+                    className="w-full block text-center py-3 px-4 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-200 font-semibold text-sm shadow-md"
+                  >
+                    Download App
                   </Link>
                 </div>
 
@@ -244,7 +254,7 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
                   <p className="text-xs text-gray-500 mb-3 font-medium text-center">Follow Us</p>
                   <div className="flex justify-center space-x-6">
                     {socialLinks.map(({ id, name, icon, href }) => (
-                      <a
+                      <Link
                         key={id}
                         href={href}
                         target="_blank"
@@ -253,7 +263,7 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
                         aria-label={name}
                       >
                         {icon}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>

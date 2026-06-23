@@ -46,3 +46,7 @@ export const DynamicBanner = dynamic(() => import('@/components/server/Banner'),
   loading: () => <LoadingSkeleton height="200px" />,
   ssr: true,
 });
+
+export const DynamicPartnersMarquee = dynamic(() => import('@/components/client/PartnersMarquee'), {
+  loading: () => <LoadingSkeleton height="300px" />,
+});

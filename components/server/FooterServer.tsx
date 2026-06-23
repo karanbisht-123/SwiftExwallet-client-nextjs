@@ -51,7 +51,7 @@ const socialIcons = [
     ariaLabel: 'Follow SwiftEx on X (formerly Twitter)',
     color: '#000000',
     hoverColor: '#1a1a1a',
-    href: 'https://x.com/SwiftExwallet',
+    href: 'https://x.com/SwiftEx_Wallet',
   },
   {
     id: 5,
@@ -98,7 +98,8 @@ export default function Footer() {
             </Link>
 
             <p className="mt-4 max-w-xs text-gray-500">
-              SwiftEx Wallet is a non-custodial wallet interface. SwiftEx does not operate an exchange, brokerage, or financial service.
+              SwiftEx Wallet is a non-custodial wallet interface. SwiftEx does not operate an
+              exchange, brokerage, or financial service.
             </p>
           </div>
 

@@ -56,7 +56,7 @@ const socialIcons = [
     ariaLabel: 'Follow SwiftEx on X (formerly Twitter)',
     color: '#000000',
     hoverColor: '#1a1a1a',
-    href: 'https://x.com/SwiftExwallet',
+    href: 'https://x.com/SwiftEx_Wallet',
   },
 ] as const;
 

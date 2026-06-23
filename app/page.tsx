@@ -7,6 +7,7 @@ import {
   DynamicMobileSplit,
   DynamicPrivateSecure,
   DynamicBanner,
+  DynamicPartnersMarquee,
 } from '@/lib/loading-components';
 
 const sectionsData = [
@@ -68,23 +69,21 @@ const sectionsData = [
 
 export default function Home() {
   return (
-    <>
-      <div className="lg:space-y-16">
-        <NewWallet />
-        <DynamicWhySwiftEx />
-        <DynamicFeatures />
+    <div className="lg:space-y-16">
+      <NewWallet />
+      <DynamicWhySwiftEx />
+      <DynamicFeatures />
 
-        <div className="xl:block hidden">
-          <DynamicSplitSection sections={sectionsData} />
-        </div>
-
-        <div className="xl:hidden block">
-          <DynamicMobileSplit sections={sectionsData} />
-        </div>
-
-        <DynamicPrivateSecure />
-        <DynamicBanner />
+      <div className="xl:block hidden">
+        <DynamicSplitSection sections={sectionsData} />
       </div>
-    </>
+
+      <div className="xl:hidden block">
+        <DynamicMobileSplit sections={sectionsData} />
+      </div>
+      <DynamicPartnersMarquee />
+      <DynamicPrivateSecure />
+      <DynamicBanner />
+    </div>
   );
 }
