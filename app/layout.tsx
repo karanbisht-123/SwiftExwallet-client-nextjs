@@ -3,7 +3,6 @@ import { Ubuntu } from 'next/font/google';
 import './globals.css';
 import Footer from '@/components/server/FooterServer';
 import NavBarServer from '@/components/server/NavBarServer';
-import ContactWaitlistSection from '@/components/server/ContactWaitlistSection';
 import DeferredAnalytics from '@/components/DeferredAnalytics';
 
 const ubuntu = Ubuntu({
@@ -45,7 +44,7 @@ export const metadata: Metadata = {
       'Manage digital assets across supported networks. Swap, bridge, and access fiat with low fees. Non-custodial — your keys, your control.',
     images: [
       {
-        url: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958364/exchnagesimpale_fwag0j.avif',
+        url: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1782200261/logo_g16diq.jpg',
         width: 1200,
         height: 630,
         alt: 'SwiftEx Wallet Interface',
@@ -59,9 +58,7 @@ export const metadata: Metadata = {
     title: 'SwiftEx Wallet | Non-Custodial Crypto Wallet',
     description:
       'Manage digital assets across supported networks. Swap, bridge, and access fiat with low fees. Non-custodial — your keys, your control.',
-    images: [
-      'https://res.cloudinary.com/dz1xabyjf/image/upload/v1751958364/exchnagesimpale_fwag0j.avif',
-    ],
+    images: ['https://res.cloudinary.com/dz1xabyjf/image/upload/v1782200261/logo_g16diq.jpg'],
   },
   robots: {
     index: true,
@@ -87,7 +84,7 @@ const organizationSchema = {
   name: 'SwiftEx',
   alternateName: 'SwiftEx Wallet',
   url: 'https://swiftexwallet.com',
-  logo: 'https://swiftexwallet.com/images/logo.avif',
+  logo: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1782200261/logo_g16diq.jpg',
   description:
     'SwiftEx is a non-custodial crypto wallet to manage digital assets across supported networks. Swap, bridge, and access fiat with low fees.',
   email: 'info@swiftexwallet.com',
@@ -156,7 +153,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main-content" className="min-h-screen">
           {children}
         </main>
-        <ContactWaitlistSection />
         <Footer />
         <DeferredAnalytics />
       </body>

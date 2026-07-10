@@ -9,6 +9,7 @@ import {
   DynamicBanner,
   DynamicPartnersMarquee,
 } from '@/lib/loading-components';
+import ContactWaitlistSection from '@/components/server/ContactWaitlistSection';
 
 const sectionsData = [
   {
@@ -84,6 +85,7 @@ export default function Home() {
       <DynamicPartnersMarquee />
       <DynamicPrivateSecure />
       <DynamicBanner />
+      <ContactWaitlistSection />
     </div>
   );
 }

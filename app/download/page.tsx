@@ -5,7 +5,7 @@ import Link from 'next/link';
 import StoreButton from '../../components/client/StoreButton';
 
 const APP_STORE_URL =
-  process.env.NEXT_PUBLIC_APPLE_STORE_URL?.trim() || 'https://apps.apple.com/app/your-app-id';
+  process.env.NEXT_PUBLIC_APPLE_PLAY_URL?.trim() || 'https://apps.apple.com/app/swiftex-wallet/id6759080930';
 const PLAY_STORE_URL =
   process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL?.trim() ||
   'https://play.google.com/store/apps/details?id=com.swiftex';
@@ -38,6 +38,8 @@ export default function DownloadPage(): JSX.Element {
     setIsHydrated(true);
   }, []);
 
+  console.log(APP_STORE_URL, "------")
+
   if (!isHydrated) {
     return (
       <main className="min-h-screen flex items-center justify-center text-white p-6">
@@ -50,9 +52,9 @@ export default function DownloadPage(): JSX.Element {
 
   return (
     <main className=" text-white  px-4 lg:px-6 pt-6">
-      <section className="w-full py-8 p-4 lg:p-8 md:py-16 rounded-3xl  max-w-7xl mx-auto bg-[#060F38]">
-        <div className=" mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-5">
+      <section className="w-full py-8  md:py-16 rounded-3xl  max-w-7xl mx-auto bg-[#060F38]">
+        <div className=" mx-auto p-4 lg:p-8">
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-5">
             Download
             <br />
             <span className="text-white">SwiftEx</span>

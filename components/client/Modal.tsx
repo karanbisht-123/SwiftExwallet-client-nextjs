@@ -1,7 +1,5 @@
-import React, { useEffect, useRef, ReactNode, useState } from 'react';
+import React, { useEffect, useRef, ReactNode } from 'react';
 import { X, Info } from 'lucide-react';
-import StoreButton from './StoreButton';
-type NetworkType = 'mainnet' | 'testnet';
 
 interface ModalProps {
   isVisible: boolean;
@@ -9,26 +7,17 @@ interface ModalProps {
   children?: ReactNode;
 }
 
-const handleDownloadAPK = (isMainnet: boolean) => {
+const handleDownloadAPK = () => {
   const mainnetUrl = 'https://swift-ex-web-app.s3.us-east-2.amazonaws.com/SwiftEx+wallet.apk';
-  const testnetUrl =
-    'https://swift-ex-web-app.s3.us-east-2.amazonaws.com/s3-objects/app-release.apk';
-  const apkUrl = isMainnet ? mainnetUrl : testnetUrl;
-  window.location.href = apkUrl;
+  window.location.href = mainnetUrl;
 };
 
-const handleRedirectToForm = (isMainnet: boolean) => {
-  const mainnetFormUrl =
-    'https://docs.google.com/forms/d/e/1FAIpQLSeSr5_flmvF16Vw2Q1tcYR2xy-JAVa2y1dOdXT6l7bXwXKyow/viewform?usp=dialog';
-  const testnetFormUrl =
-    'https://docs.google.com/forms/d/e/1FAIpQLSelpYCirc0MDaVp6mKMJKnHP1QOGeoYvlOW6dkrMjasffV_-g/viewform';
-  const formUrl = isMainnet ? mainnetFormUrl : testnetFormUrl;
-  window.open(formUrl, '_blank');
-};
+const appStoreUrl = process.env.NEXT_PUBLIC_APPLE_PLAY_URL?.trim() || 'https://apps.apple.com/';
+const googlePlayUrl =
+  process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL?.trim() || 'https://play.google.com/store';
 
 const Modal: React.FC<ModalProps> = ({ isVisible, onClose, children }) => {
   const modalRef = useRef<HTMLDivElement>(null);
-  const [selectedNetwork, setSelectedNetwork] = useState<NetworkType>('testnet');
 
   useEffect(() => {
     if (isVisible) {
@@ -75,17 +64,6 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose, children }) => {
 
   if (!isVisible) return null;
 
-  const isMainnet = selectedNetwork === 'mainnet';
-  const networkInfo = isMainnet
-    ? {
-      name: 'Main Network',
-      description: 'Real cryptocurrency network. Use real funds for actual transactions.',
-    }
-    : {
-      name: 'Test Network',
-      description: 'For testing purposes only. Use test tokens to experiment with the app.',
-    };
-
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/40 bg-opacity-60 backdrop-blur-sm">
       <div
@@ -93,83 +71,75 @@ const Modal: React.FC<ModalProps> = ({ isVisible, onClose, children }) => {
         className="relative bg-white shadow-2xl p-4 md:p-6 w-full max-w-lg mx-4 rounded-3xl border border-gray-100 max-h-[90vh] overflow-y-auto"
       >
         <div className="text-start mb-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-2 flex items-center gap-2">
-            Download SwiftEx App
-          </h2>
+          <h2 className="text-2xl font-bold text-slate-950 mb-3">Download SwiftEx App</h2>
 
-          <div className="flex flex-row items-center justify-center my-4 lg:justify-start gap-4">
-            <StoreButton storeType="apple" imageSrc="/app-store-download.fb5659b5.png" />
-            <StoreButton storeType="google" imageSrc="/google-play-download.1c0e3a31.png" />
-          </div>
-          <div className="bg-blue- p-3 rounded-xl border border-blue-100 mt-4">
-            <div className="flex items-start justify-center gap-2 text-sm">
-              <Info className="text-blue-500 mt-0.5 flex-shrink-0" size={16} />
-              <span className="text-blue-700 text-left">
-                <span className="font-semibold">{networkInfo.name}</span>
-                {` - ${networkInfo.description}`}
-              </span>
+          <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
+            <div className="flex items-start gap-3 text-sm text-slate-700">
+              <Info className="mt-0.5 shrink-0 text-sky-500" size={18} />
+              <div>
+                <p className="font-semibold text-slate-900">Main Network</p>
+                <p className="mt-1 text-slate-600">
+                  Real cryptocurrency network. Use real funds for actual transactions.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 bg-gray-100 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full p-2 transition-all"
+          className="absolute top-3 right-3 grid h-10 w-10 place-items-center rounded-full bg-slate-100 text-slate-500 shadow-sm transition hover:bg-slate-200 hover:text-slate-700"
           aria-label="Close modal"
         >
           <X size={20} />
         </button>
 
-        <div className="flex bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-1 mb-8 shadow-inner relative">
-          <div
-            className={`absolute top-1 bottom-1 bg-white rounded-xl shadow-lg transition-all duration-500 ease-in-out ${selectedNetwork === 'testnet' ? 'left-1 right-1/2 mr-0.5' : 'left-1/2 right-1 ml-0.5'
-              }`}
-          ></div>
+        <div className="space-y-5 mb-6">
           <button
-            onClick={() => setSelectedNetwork('testnet')}
-            className={`flex-1 py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-300 ease-in-out relative z-10 ${selectedNetwork === 'testnet' ? 'text-blue-600' : 'text-gray-500 hover:text-gray-700'
-              }`}
+            onClick={handleDownloadAPK}
+            className="w-full rounded-[1.75rem] bg-blue-600 px-6 py-4 text-base font-semibold text-white transition hover:bg-blue-700"
           >
-            Testnet
+            Download APK
           </button>
-          <button
-            onClick={() => setSelectedNetwork('mainnet')}
-            className={`flex-1 py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-300 ease-in-out relative z-10 ${selectedNetwork === 'mainnet' ? 'text-green-600' : 'text-gray-500 hover:text-gray-700'
-              }`}
-          >
-            Mainnet
-          </button>
-        </div>
 
-        <div className="space-y-4 mb-6">
-          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-1">
-            <button
-              onClick={() => handleDownloadAPK(isMainnet)}
-              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-4 px-6 rounded-2xl hover:from-blue-600 hover:to-blue-700 transition-all font-semibold text-lg shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+          <div className="flex items-center justify-center gap-3 text-sm font-medium text-slate-500">
+            <span className="h-px flex-1 bg-slate-200"></span>
+            <span>or install from</span>
+            <span className="h-px flex-1 bg-slate-200"></span>
+          </div>
+
+          {/* <p className="text-center text-sm text-slate-600">
+            Choose the store for your device and open SwiftEx directly from the app marketplace.
+          </p> */}
+
+          <div className="grid gap-3 sm:grid-cols-2">
+            <a
+              href={appStoreUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="group flex items-center justify-center rounded-[1.75rem] bg-slate-50 px-4 py-4 transition hover:bg-slate-100"
+              aria-label="Download on the App Store"
             >
-              Download {isMainnet ? 'Mainnet' : 'Testnet'} APK
-            </button>
-          </div>
+              <img
+                src="/app-store-download.fb5659b5.png"
+                alt="Download on the App Store"
+                className="h-16 w-auto object-contain"
+              />
+            </a>
 
-          <div className="flex items-center gap-4">
-            <div className="flex-1 h-px bg-gradient-to-r from-transparent to-gray-200"></div>
-            <span className="text-gray-400 text-sm font-medium">OR</span>
-            <div className="flex-1 h-px bg-gradient-to-l from-transparent to-gray-200"></div>
-          </div>
-
-          <div className="text-center mb-4">
-            <p className="text-gray-600 text-sm">
-              iOS is here! Fill out the form to get TestFlight access.
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-1">
-            <button
-              onClick={() => handleRedirectToForm(isMainnet)}
-              className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white py-4 px-6 rounded-2xl hover:from-green-600 hover:to-green-700 transition-all font-semibold text-lg shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+            <a
+              href={googlePlayUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="group flex items-center justify-center rounded-[1.75rem] bg-slate-50 px-4 py-4 transition hover:bg-slate-100"
+              aria-label="Get it on Google Play"
             >
-              iOS {isMainnet ? 'Mainnet' : 'Testnet'} Access
-            </button>
+              <img
+                src="/google-play-download.1c0e3a31.png"
+                alt="Get it on Google Play"
+                className="h-16 w-auto object-contain"
+              />
+            </a>
           </div>
         </div>
 

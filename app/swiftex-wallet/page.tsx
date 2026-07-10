@@ -3,11 +3,10 @@ import PromoSection from '@/components/server/PromoSection';
 import WalletSection from '@/components/server/WalletSection';
 import SwapSection from '@/components/server/SwapSection';
 import PaymentSection from '@/components/server/PaymentSection';
-import FAQ from '@/components/server/FAQ';
-import { walletFAQs } from '@/components/server/FAQ';
+import FAQ, { walletFAQs } from '@/components/server/FAQ';
 import BuySellSection from '@/components/server/BuySellSection';
 import RampServicesSection from '@/components/server/RampServicesSection';
-
+import ContactWaitlistSection from '@/components/server/ContactWaitlistSection';
 export const metadata: Metadata = {
   title: 'SwiftEx Wallet | Non-Custodial Crypto Wallet',
   description:
@@ -49,6 +48,7 @@ const page = () => {
         <PaymentSection />
       </div>
       <FAQ faqs={walletFAQs} />
+      <ContactWaitlistSection />
     </div>
   );
 };

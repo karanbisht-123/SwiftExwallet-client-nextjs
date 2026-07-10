@@ -13,7 +13,7 @@ export default function ContactWaitlistSection() {
       description: 'SwiftEx support is available 24/7 from within the app for any inquiries.',
       email: 'info@swiftexwallet.com',
       buttonText: 'Contact us',
-      buttonLink: '/contact-us',
+      buttonLink: 'https://discord.gg/DaDcE32dDm',
     },
   };
 

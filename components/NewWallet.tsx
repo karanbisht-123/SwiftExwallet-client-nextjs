@@ -99,8 +99,9 @@ const NewWallet: React.FC = () => {
       <div className="bg-[#020E46] overflow-hidden min-h-[60svh] lg:px-10 lg:pb-20">
         <div className="max-w-7xl mx-auto h-full justify-center items-center flex flex-col xl:flex-row">
           <div
-            className={`flex flex-col gap-8 justify-center xl:w-1/2 px-6 py-8 md:px-10 lg:px-10 ${animateIn ? styles.textEnterAnimation : ''
-              }`}
+            className={`flex flex-col gap-8 justify-center xl:w-1/2 px-6 py-8 md:px-10 lg:px-10 ${
+              animateIn ? styles.textEnterAnimation : ''
+            }`}
           >
             <div className="flex flex-col gap-4">
               <h1 className="text-2xl font-normal md:text-4xl lg:text-5xl text-white text-center lg:text-left">
@@ -113,34 +114,37 @@ const NewWallet: React.FC = () => {
               </p>
 
               <div className="text-center xl:text-start">
-                <div className="flex items-center justify-center xl:justify-start gap-2 text-[#F1F8E8] text-sm opacity-80 mb-4">
-                  <Info className="text-lg text-emerald-400" aria-hidden="true" />
-                  <span className="bg-linear-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent font-medium">
-                    🚀 Beta Launch – Mainnet Available
-                  </span>
-                </div>
+                <div className="mt-3 mb-4 lg:mb-0  mx-auto lg:mx-0 w-full max-w-90 md:max-w-95">
+                  <Link
+                    href="https://app.swiftexchange.io/"
+                    target="_blank"
+                    className="lg:h-16 h-14 flex items-center justify-center gap-2.5 bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold text-base rounded-2xl shadow-xl transition-all duration-300  active:scale-95 border border-white/10 w-full mb-4"
+                    aria-label="Launch SwiftEx Web App"
+                  >
+                    <span>Launch Web App</span>
+                    <ArrowLeftRight size={18} className="opacity-80" />
+                  </Link>
 
-                <div className="mt-6 lg:mt-8 mx-auto lg:mx-0 w-full max-w-[360px] md:max-w-[380px]">
-                  <div className="bg-transparent sm:bg-white/[0.02] border-0 sm:border border-white/10 rounded-none sm:rounded-2xl p-0 sm:p-4 relative sm:overflow-hidden group">
+                  {/* Mobile App Download Box */}
+                  <div className="bg-transparent sm:bg-white/2 border-0 sm:border border-white/10 rounded-none sm:rounded-2xl p-0 sm:p-4 relative sm:overflow-hidden group">
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                      {/* Left: Badges (side-by-side on mobile, stacked on desktop) */}
                       <div className="flex flex-row sm:flex-col gap-2.5 items-center sm:items-stretch justify-center w-full sm:w-auto">
                         <StoreButton
                           storeType="apple"
                           imageSrc="/app-store-download.fb5659b5.png"
+                          height={48}
                         />
                         <StoreButton
                           storeType="google"
                           imageSrc="/google-play-download.1c0e3a31.png"
+                          height={48}
                         />
                       </div>
 
-                      {/* Divider (horizontal on mobile, vertical on desktop - hidden on mobile) */}
-                      <div className="hidden sm:block w-px h-16 bg-white/10" />
+                      <div className="hidden sm:block w-px h-24 bg-white/10" />
 
-                      {/* Right: QR Code (hidden on mobile, shown on desktop) */}
                       <div className="hidden sm:flex flex-col items-center gap-1.5 shrink-0">
-                        <Link href="/download" aria-label="Open download page" className="group/qr relative block bg-white p-1 rounded-xl transition-transform duration-300 hover:scale-105">
+                        <div className="relative block bg-white p-1 rounded-xl">
                           <Image
                             src="/qr/swiftex.png"
                             alt="Scan to download SwiftEx"
@@ -149,20 +153,11 @@ const NewWallet: React.FC = () => {
                             className="rounded-lg block"
                             priority
                           />
-                        </Link>
-                        <span className="text-[10px] text-white/50 font-medium tracking-wide">Scan to download</span>
+                        </div>
+                        <span className="text-[10px] text-white/50 font-medium tracking-wide">
+                          Scan to download
+                        </span>
                       </div>
-                    </div>
-
-                    <div className="bg-white/[0.03] border border-white/10 rounded-xl p-3 mt-4 sm:bg-transparent sm:border-0 sm:p-0 sm:pt-3.5 sm:border-t sm:border-white/5 flex items-center justify-between text-xs">
-                      <span className="text-white/40 font-light">Looking for the APK/TestFlight?</span>
-                      <button
-                        type="button"
-                        onClick={handleGetStarted}
-                        className="text-blue-400 hover:text-blue-300 font-semibold transition-colors flex items-center gap-1 cursor-pointer bg-transparent border-none p-0"
-                      >
-                        Try Beta →
-                      </button>
                     </div>
                   </div>
                 </div>
@@ -212,8 +207,9 @@ const NewWallet: React.FC = () => {
           </div>
 
           <div
-            className={`w-full lg:w-full relative mt-1 lg:mt-12 ${animateIn ? styles.imageEnterAnimation : ''
-              }`}
+            className={`w-full lg:w-full relative mt-1 lg:mt-12 ${
+              animateIn ? styles.imageEnterAnimation : ''
+            }`}
           >
             <div className={`${styles.headerImageWrapper} h-[450px] md:h-[500px] lg:h-[85vh] mb-6`}>
               <Image
@@ -227,8 +223,6 @@ const NewWallet: React.FC = () => {
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 quality={85}
               />
-
-
 
               <CardComponent
                 title="Send"

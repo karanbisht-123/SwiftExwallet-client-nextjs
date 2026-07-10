@@ -62,29 +62,18 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
   const toggleMenu = useCallback(() => setMenuOpen(prev => !prev), []);
   const closeMenu = useCallback(() => setMenuOpen(false), []);
 
-  const scrollToWaitlist = useCallback(() => {
-    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
-    closeMenu();
-  }, [closeMenu]);
-
-  const handleJoinNowClick = useCallback(
-    (e: React.MouseEvent) => {
-      e.preventDefault();
-      scrollToWaitlist();
-    },
-    [scrollToWaitlist]
-  );
-
   const headerClasses = useMemo(
     () =>
-      `sticky top-0 py-2 z-50 lg:px-4 transition-all duration-300 ${isSticky ? 'bg-white shadow-md text-gray-800' : 'bg-[#020E46] text-white'
+      `sticky top-0 py-2 z-50 lg:px-4 transition-all duration-300 ${
+        isSticky ? 'bg-white shadow-md text-gray-800' : 'bg-[#020E46] text-white'
       }`,
     [isSticky]
   );
 
   const socialLinkClasses = useCallback(
     (isSticky: boolean) =>
-      `text-xl transition-colors duration-300 ${isSticky ? 'text-gray-600 hover:text-blue-600' : 'text-white/80 hover:text-white'
+      `text-xl transition-colors duration-300 ${
+        isSticky ? 'text-gray-600 hover:text-blue-600' : 'text-white/80 hover:text-white'
       }`,
     []
   );
@@ -109,8 +98,9 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
               <Link
                 key={label}
                 href={href}
-                className={`text-md font-regular transition-colors duration-300 hover:text-blue-400 ${pathname === href ? 'text-blue-400' : ''
-                  }`}
+                className={`text-md font-regular transition-colors duration-300 hover:text-blue-400 ${
+                  pathname === href ? 'text-blue-400' : ''
+                }`}
               >
                 {label}
               </Link>
@@ -137,22 +127,12 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
             <Link
               href="/solution"
               className={`px-4 py-2 text-sm font-medium transition-all duration-300 border rounded-2xl ${
-                isSticky ? 'text-gray-600 hover:text-gray-800 border-gray-300 hover:border-gray-400' : 'text-white/80 hover:text-white border-white/20 hover:border-white/50'
+                isSticky
+                  ? 'text-gray-600 hover:text-gray-800 border-gray-300 hover:border-gray-400'
+                  : 'text-white/80 hover:text-white border-white/20 hover:border-white/50'
               }`}
             >
               Knowledge Base
-            </Link>
-
-            <Link
-              href="#waitlist"
-              onClick={handleJoinNowClick}
-              className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-                isSticky
-                  ? 'bg-[#020E46] text-white hover:bg-blue-700'
-                  : 'bg-white text-[#020E46] hover:bg-gray-100'
-              }`}
-            >
-              Join Now
             </Link>
 
             <Link
@@ -212,10 +192,11 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
                     key={label}
                     href={href}
                     // Prefetch enabled (prefetch={false})
-                    className={`block py-2.5 px-3 rounded-lg font-medium text-sm transition-all duration-200 ${pathname === href
+                    className={`block py-2.5 px-3 rounded-lg font-medium text-sm transition-all duration-200 ${
+                      pathname === href
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
-                      }`}
+                    }`}
                     onClick={closeMenu}
                   >
                     {label}
@@ -231,14 +212,6 @@ const NavBarClient: React.FC<NavBarClientProps> = ({ navigationItems, socialLink
                     className="w-full block text-center py-3 px-4 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 transition-colors duration-200 font-medium text-sm"
                   >
                     Knowledge Base
-                  </Link>
-
-                  <Link
-                    href="#waitlist"
-                    onClick={handleJoinNowClick}
-                    className="w-full block py-3 px-4 bg-[#020E46] text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg text-sm text-center"
-                  >
-                    Join Now
                   </Link>
 
                   <Link

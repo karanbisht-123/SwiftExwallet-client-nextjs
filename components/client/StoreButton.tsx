@@ -6,20 +6,20 @@ import Link from 'next/link';
 interface StoreButtonProps {
   storeType: 'apple' | 'google';
   imageSrc: string;
+  height?: string | number;
 }
 
 const STORE_URLS = {
-  apple:
-    process.env.NEXT_PUBLIC_APPLE_STORE_URL?.trim() ||
-    process.env.NEXT_PUBLIC_APPLE_PLAY_URL?.trim() ||
-    '',
+  apple: process.env.NEXT_PUBLIC_APPLE_PLAY_URL?.trim() || " ",
   google: process.env.NEXT_PUBLIC_GOOGLE_PLAY_URL?.trim() || '',
 } as const;
 
-const StoreButton: React.FC<StoreButtonProps> = ({ storeType, imageSrc }) => {
+const StoreButton: React.FC<StoreButtonProps> = ({ storeType, imageSrc, height }) => {
   const url = STORE_URLS[storeType];
 
   if (!url) return null;
+
+  const style = height ? { height } : undefined;
 
   return (
     <Link href={url} target="_blank" className="inline-block">
@@ -32,7 +32,8 @@ const StoreButton: React.FC<StoreButtonProps> = ({ storeType, imageSrc }) => {
         <img
           src={imageSrc}
           alt={storeType === 'apple' ? 'Download on App Store' : 'Get it on Google Play'}
-          className="min-h-16 w-auto rounded-xl shadow-lg"
+          className={`${height ? '' : 'min-h-16'} w-auto rounded-xl shadow-lg`}
+          style={style}
         />
       </div>
     </Link>
