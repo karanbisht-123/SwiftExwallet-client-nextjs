@@ -184,7 +184,7 @@ export default function ContactContent() {
 
             <div className="relative z-10 flex flex-col items-center text-center space-y-6 h-full">
               <Link
-                href="https://discord.gg/DaDcE32dDm"
+                href="https://discord.gg/TkZrnv97MV"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-24 h-24 md:w-32 md:h-32 bg-[#5865F2]/10 rounded-3xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 p-6 border border-[#5865F2]/20"
@@ -209,7 +209,7 @@ export default function ContactContent() {
 
               <div className="w-full pt-4 mt-auto">
                 <Link
-                  href="https://discord.gg/DaDcE32dDm"
+                  href="https://discord.gg/TkZrnv97MV"
                   target="_blank"
                   className="w-full py-5 px-6 rounded-xl bg-[#5865F2] hover:bg-[#4752C4] text-white font-medium transition-colors duration-300 flex items-center justify-center gap-2 border border-white/10"
                 >

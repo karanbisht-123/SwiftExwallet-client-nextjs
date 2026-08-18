@@ -64,7 +64,7 @@ const socialIcons = [
     ariaLabel: 'Join SwiftEx community on Discord',
     color: '#5865F2',
     hoverColor: '#4752C4',
-    href: 'https://discord.gg/DaDcE32dDm',
+    href: 'https://discord.gg/TkZrnv97MV',
   },
 ] as const;
 

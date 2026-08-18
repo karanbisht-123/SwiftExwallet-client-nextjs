@@ -26,8 +26,8 @@ const features = [
     iconName: 'LineChart',
   },
   {
-    title: 'No Platform Fees',
-    description: 'SwiftEx does not charge platform fees for core wallet and asset management features.',
+    title: 'Transparent Fees',
+    description: 'SwiftEx offers transparent fees for core wallet and asset management features.',
     iconName: 'PiggyBank',
   },
   {

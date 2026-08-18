@@ -17,7 +17,7 @@ const ubuntu = Ubuntu({
 export const metadata: Metadata = {
   title: 'SwiftEx – Secure Access to Digital Assets Across Networks',
   description:
-    'SwiftEx Wallet is a non-custodial crypto wallet to manage digital assets across supported networks. Swap, bridge, and access fiat with low fees.',
+    'SwiftEx Wallet is a non-custodial crypto wallet to manage digital assets across supported networks. Swap, bridge, and access fiat with transparent fees.',
   applicationName: 'SwiftEx',
   keywords: [
     'SwiftEx',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: 'SwiftEx Wallet',
     title: 'SwiftEx Wallet | Non-Custodial Crypto Wallet',
     description:
-      'Manage digital assets across supported networks. Swap, bridge, and access fiat with low fees. Non-custodial — your keys, your control.',
+      'Manage digital assets across supported networks. Swap, bridge, and access fiat with transparent fees. Non-custodial — your keys, your control.',
     images: [
       {
         url: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1782200261/logo_g16diq.jpg',
@@ -53,11 +53,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@SwiftExwallet',
-    creator: '@SwiftExwallet',
+    site: '@SwiftEx_Wallet',
+    creator: '@SwiftEx_Wallet',
     title: 'SwiftEx Wallet | Non-Custodial Crypto Wallet',
     description:
-      'Manage digital assets across supported networks. Swap, bridge, and access fiat with low fees. Non-custodial — your keys, your control.',
+      'Manage digital assets across supported networks. Swap, bridge, and access fiat with transparent fees. Non-custodial — your keys, your control.',
     images: ['https://res.cloudinary.com/dz1xabyjf/image/upload/v1782200261/logo_g16diq.jpg'],
   },
   robots: {
@@ -86,15 +86,15 @@ const organizationSchema = {
   url: 'https://swiftexwallet.com',
   logo: 'https://res.cloudinary.com/dz1xabyjf/image/upload/v1782200261/logo_g16diq.jpg',
   description:
-    'SwiftEx is a non-custodial crypto wallet to manage digital assets across supported networks. Swap, bridge, and access fiat with low fees.',
+    'SwiftEx is a non-custodial crypto wallet to manage digital assets across supported networks. Swap, bridge, and access fiat with transparent fees.',
   email: 'info@swiftexwallet.com',
   foundingDate: '2023',
   sameAs: [
-    'https://twitter.com/SwiftExwallet',
+    'https://x.com/SwiftEx_Wallet',
     'https://www.instagram.com/swiftexwallet',
     'https://www.facebook.com/swiftexwallet',
     'https://www.linkedin.com/company/swiftex-wallet',
-    'https://discord.gg/DaDcE32dDm',
+    'https://discord.gg/TkZrnv97MV',
   ],
 };
 
@@ -113,18 +113,78 @@ const softwareAppSchema = {
   operatingSystem: 'Android, iOS',
   applicationCategory: 'FinanceApplication',
   description:
-    'SwiftEx Wallet is a non-custodial crypto wallet to manage digital assets across supported networks. Swap, bridge, and access fiat with low fees.',
+    'SwiftEx Wallet is a non-custodial crypto wallet to manage digital assets across supported networks. Swap, bridge, and access fiat with transparent fees.',
   url: 'https://swiftexwallet.com',
-  downloadUrl: 'https://play.google.com/store/apps/details?id=org.app.swiftEx.wallet',
+  downloadUrl: [
+    'https://apps.apple.com/app/swiftex-wallet/id6759080930',
+    'https://play.google.com/store/apps/details?id=org.app.swiftEx.wallet',
+  ],
   offers: {
     '@type': 'Offer',
     price: '0',
     priceCurrency: 'USD',
+    description:
+      'Transparent fees — no hidden platform fees for core wallet and asset management features.',
   },
   author: {
     '@type': 'Organization',
     name: 'SwiftEx',
   },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is SwiftEx Wallet safe?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. SwiftEx is non-custodial — your private keys and recovery phrase never leave your device. SwiftEx has no access to your funds.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does SwiftEx charge fees?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SwiftEx has transparent fees — no hidden platform fees for core wallet features. Network (gas) fees set by the blockchain still apply. Third-party partners for fiat on/off-ramp may have their own fees.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Which blockchains are supported?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SwiftEx supports multiple blockchain networks with cross-chain bridging. See the wallet features page for the current list.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is SwiftEx available on iPhone?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, SwiftEx Wallet is available on the App Store for iPhone.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What happens if I lose my phone?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Your funds are recoverable using your recovery phrase. SwiftEx does not store or have access to it, so keep it safe offline.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is SwiftEx regulated?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'SwiftEx is a non-custodial wallet interface and is not a financial service or broker. Fiat features are handled by licensed third-party partners under their own regulatory frameworks.',
+      },
+    },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -146,6 +206,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
       <body className={ubuntu.className} suppressHydrationWarning>

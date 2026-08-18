@@ -52,10 +52,10 @@ const features: Feature[] = [
       'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770203761/wallet3-Photoroom_wq38h7.webp',
   },
   {
-    id: 'No-Platform-Fees',
+    id: 'Transparent-Fees',
     icon: <Percent />,
-    title: 'No Platform Fees',
-    text: 'No platform fees for using core wallet and asset management features.',
+    title: 'Transparent Fees',
+    text: 'Transparent fees for using core wallet and asset management features.',
     image:
       'https://res.cloudinary.com/dz1xabyjf/image/upload/v1770203761/wallet1-Photoroom_heg5nl.webp',
   },
@@ -84,45 +84,19 @@ export default function WhySwiftExClient() {
     }
 
     animationRef.current = gsap.context(() => {
-      const images = imageContainerRef.current?.children;
-      if (!images) return;
-      gsap.set(images, { opacity: 1, scale: 1 });
-      gsap.set(images[0], { opacity: 1, scale: 1 });
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: 'top 4%',
-          end: `+=${features.length * 600}`,
-          scrub: true,
-          pin: true,
-          anticipatePin: 1,
-          onUpdate: self => {
-            const progress = self.progress * features.length;
-            const clampedProgress = Math.min(progress, features.length - 0.01);
-            const index = Math.floor(clampedProgress);
-            setActiveFeature(index);
-          },
+      ScrollTrigger.create({
+        trigger: containerRef.current,
+        start: 'top 4%',
+        end: `+=${features.length * 600}`,
+        scrub: true,
+        pin: true,
+        anticipatePin: 1,
+        onUpdate: self => {
+          const progress = self.progress * features.length;
+          const clampedProgress = Math.min(progress, features.length - 0.01);
+          const index = Math.floor(clampedProgress);
+          setActiveFeature(index);
         },
-      });
-
-      features.forEach((_, index) => {
-        tl.to(images[index], {
-          opacity: 1,
-          ease: 'power1.inOut',
-        });
-
-        if (index > 0) {
-          tl.to(
-            images[index - 1],
-            {
-              opacity: 1,
-              duration: 0.1,
-              ease: 'power1.inOut',
-            },
-            '<'
-          );
-        }
       });
     });
 
@@ -184,11 +158,9 @@ export default function WhySwiftExClient() {
               {features.map((feature, index) => (
                 <div
                   key={feature.id}
-                  className="absolute inset-0 w-full h-full"
-                  style={{
-                    opacity: activeFeature === index ? 1 : 0,
-                    display: activeFeature === index ? 'block' : 'none',
-                  }}
+                  className={`absolute inset-0 w-full h-full transition-opacity duration-500 ease-in-out ${
+                    activeFeature === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                  }`}
                 >
                   <Image
                     src={feature.image}
@@ -207,8 +179,8 @@ export default function WhySwiftExClient() {
                 <div
                   key={feature.id}
                   id={feature.id}
-                  className={`p-4 rounded-xl cursor-pointer transition-all duration-75 ${activeFeature === index
-                    ? 'bg-white border-l-4 border-[#020E46]'
+                  className={`p-4 rounded-xl cursor-pointer transition-all duration-300 ${activeFeature === index
+                    ? 'bg-white border-l-4 border-[#020E46] shadow-sm transform scale-[1.02]'
                     : 'bg-gray-50 hover:bg-gray-100 border-l-4 border-gray-50'
                     }`}
                   onClick={() => {
@@ -223,7 +195,7 @@ export default function WhySwiftExClient() {
                 >
                   <div className="flex items-center gap-4">
                     <div
-                      className={`p-3 rounded-xl ${activeFeature === index
+                      className={`p-3 rounded-xl transition-colors duration-300 ${activeFeature === index
                         ? 'bg-[#020E46] text-white'
                         : 'bg-gray-200 text-gray-600'
                         }`}

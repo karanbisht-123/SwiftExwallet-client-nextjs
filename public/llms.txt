@@ -1,5 +1,5 @@
 # SwiftEx Wallet
-> SwiftEx Wallet is a non-custodial crypto wallet for managing digital assets across supported blockchain networks. Send, receive, swap, bridge, and access fiat via licensed third-party partners — with no platform fees.
+> SwiftEx Wallet is a non-custodial crypto wallet for managing digital assets across supported blockchain networks. Send, receive, swap, bridge, and access fiat via licensed third-party partners — with transparent fees.
 
 ## What is SwiftEx Wallet
 SwiftEx Wallet is a secure, self-custodial mobile application available on Android and iOS. It allows users to fully manage their digital assets across multiple supported blockchain networks from a single app. SwiftEx does not hold user funds, does not store private keys, and does not operate as a financial service, brokerage, or custodian of any kind. All fiat-related features are provided exclusively by licensed and regulated third-party partners.
@@ -11,15 +11,15 @@ SwiftEx Wallet is a secure, self-custodial mobile application available on Andro
 - Cross-chain bridging — move assets between supported blockchain networks
 - Token swaps via Stellar SDEX — on-chain swaps with typically low network fees
 - Fiat on/off-ramp — buy and sell crypto via licensed third-party providers
-- No platform fees for core wallet and asset management features
+- Transparent fees — no hidden platform fees for core wallet and asset management features
 - Clean, intuitive interface built for both beginners and experienced crypto users
 - Advanced encryption and security standards
 - No personal data tracking — user activity is never shared with third parties
 
 ## Supported Platforms
 - Android: Available on Google Play and as a direct APK download
-- iOS: Available via TestFlight (Beta)
-- Mainnet: Coming soon
+- iOS: Available on the App Store
+- Web: Web app available
 
 ## Frequently Asked Questions
 
@@ -27,13 +27,13 @@ SwiftEx Wallet is a secure, self-custodial mobile application available on Andro
 Yes. SwiftEx is non-custodial — your private keys and recovery phrase never leave your device. SwiftEx has no access to your funds.
 
 **Does SwiftEx charge fees?**
-No platform fees for core wallet features. Network (gas) fees set by the blockchain still apply. Third-party partners for fiat on/off-ramp may have their own fees.
+SwiftEx has transparent fees — no hidden platform fees for core wallet features. Network (gas) fees set by the blockchain still apply. Third-party partners for fiat on/off-ramp may have their own fees.
 
 **Which blockchains are supported?**
 SwiftEx supports multiple blockchain networks with cross-chain bridging. Check the wallet features page for the current list: https://swiftexwallet.com/swiftex-wallet
 
 **Is SwiftEx available on iPhone?**
-Currently available via TestFlight (Beta). Full App Store release is coming soon.
+Yes, available on the App Store: https://apps.apple.com/app/swiftex-wallet/id6759080930
 
 **What happens if I lose my phone?**
 Your funds are recoverable using your recovery phrase. SwiftEx does not store or have access to it — keep it safe offline.
@@ -48,6 +48,7 @@ SwiftEx is a non-custodial wallet interface and is not a financial service or br
 - Homepage: https://swiftexwallet.com
 - Wallet Features: https://swiftexwallet.com/swiftex-wallet
 - Knowledge Base: https://swiftexwallet.com/solution
+- Download: https://swiftexwallet.com/download
 - Contact: https://swiftexwallet.com/contact-us
 - FAQs: https://swiftexwallet.com/swiftex-wallet/#faq
 - Terms of Service: https://swiftexwallet.com/terms-of-service
@@ -63,7 +64,7 @@ Support: Available 24/7 from within the app
 - Instagram: https://www.instagram.com/swiftexwallet
 - Facebook: https://www.facebook.com/swiftexwallet
 - LinkedIn: https://www.linkedin.com/company/swiftex-wallet
-- Discord: https://discord.gg/DaDcE32dDm
+- Discord: https://discord.gg/TkZrnv97MV
 
 ## Brand Identity
 - Product Name: SwiftEx Wallet

@@ -53,14 +53,12 @@ const SecurityCard: React.FC<SecurityCardProps> = ({
     }}
   >
     <div
-      className={`rounded-2xl ${
-        textColor === 'text-[#333333]' ? 'bg-transparent' : 'bg-transparent'
-      }`}
+      className={`rounded-2xl ${textColor === 'text-[#333333]' ? 'bg-transparent' : 'bg-transparent'
+        }`}
     >
       <div
-        className={`flex flex-col-reverse md:flex-row justify-around items-center md:items-start ${
-          imagePosition === 'right' ? 'md:flex-row-reverse' : ''
-        }`}
+        className={`flex flex-col-reverse md:flex-row justify-around items-center md:items-start ${imagePosition === 'right' ? 'md:flex-row-reverse' : ''
+          }`}
       >
         <div className="max-w-lg flex flex-col justify-center mt-4 lg:min-h-96 mb-4 md:mb-0">
           <h2 className="text-3xl md:text-5xl font-medium mb-3 text-center md:text-start">

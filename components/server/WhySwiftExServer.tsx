@@ -4,7 +4,7 @@ import WhySwiftExClient from '../client/WhySwiftExClient';
 export const metadata: Metadata = {
   title: 'Why Choose SwiftEx | Secure Non-Custodial Crypto Wallet',
   description:
-    'Discover why SwiftEx is a secure non-custodial crypto wallet. Manage, swap, and move digital assets with full private key control, No Platform Fees, and a seamless user experience.',
+    'Discover why SwiftEx is a secure non-custodial crypto wallet. Manage, swap, and move digital assets with full private key control, Transparent Fees, and a seamless user experience.',
   keywords: [
     'SwiftEx',
     'non-custodial wallet',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Why Choose SwiftEx - Secure Non-Custodial Crypto Wallet',
     description:
-      'Experience full control with SwiftEx’s non-custodial wallet. Manage and swap crypto assets securely with No Platform Fees.',
+      'Experience full control with SwiftEx’s non-custodial wallet. Manage and swap crypto assets securely with Transparent Fees.',
     type: 'website',
     images: [
       {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Why Choose SwiftEx - Secure Crypto Wallet',
     description:
-      'Secure non-custodial wallet with full private key control and No Platform Fees.',
+      'Secure non-custodial wallet with full private key control and Transparent Fees.',
     images: [
       'https://res.cloudinary.com/dz1xabyjf/image/upload/v1754989195/securetrade_bv62i0_kbqwwu.svg',
     ],
@@ -91,8 +91,8 @@ const structuredData = {
       {
         '@type': 'ListItem',
         position: 5,
-        name: 'No Platform Fees',
-        description: 'No platform fees for using SwiftEx wallet features',
+        name: 'Transparent Fees',
+        description: 'Transparent fees for using SwiftEx wallet features',
       },
     ],
   },
